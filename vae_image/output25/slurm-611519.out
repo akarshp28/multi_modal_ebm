@@ -1,0 +1,3465 @@
+2021-02-24 03:42:22.198701: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-02-24 03:42:22.232513: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2021-02-24 03:42:22.233597: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 03:42:22.237567: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-02-24 03:42:22.240962: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-02-24 03:42:22.242343: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-02-24 03:42:22.246102: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-02-24 03:42:22.248599: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-02-24 03:42:22.254819: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-02-24 03:42:22.257649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+Num GPUs Available:  1
+./annotations/captions_train2014.json /users/apokkunu/trial/img/train2014/
+dataset size: 82783
+temp dataset size: 82783
+<start> A piano sits on the street corner by a sign. <end>
+./annotations/captions_val2014.json /users/apokkunu/trial/img/val2014/
+dataset size: 40504
+temp dataset size: 40504
+<start> An open refrigerator with food and condiments inside of it. <end>
+./annotations/image_info_test2014.json /users/apokkunu/trial/img/test2014/
+dataset size: 40775
+temp dataset size: 40775
+
+dataset size: 82783
+2021-02-24 03:42:25.267610: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2021-02-24 03:42:25.281353: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2600000000 Hz
+2021-02-24 03:42:25.281859: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5585e00be540 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-02-24 03:42:25.281910: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-02-24 03:42:25.408962: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5585e00e1ae0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-02-24 03:42:25.409034: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2021-02-24 03:42:25.410564: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1a:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2021-02-24 03:42:25.410692: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 03:42:25.410716: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-02-24 03:42:25.410752: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-02-24 03:42:25.410778: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-02-24 03:42:25.410798: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-02-24 03:42:25.410818: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-02-24 03:42:25.410862: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-02-24 03:42:25.413033: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2021-02-24 03:42:25.413068: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 03:42:25.414810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-02-24 03:42:25.414827: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2021-02-24 03:42:25.414842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2021-02-24 03:42:25.417144: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10371 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:1a:00.0, compute capability: 6.1)
+
+dataset size: 40504
+
+dataset size: 40775
+Model: "encoder"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+encoder_input (InputLayer)      [(None, 128, 128, 3) 0                                            
+__________________________________________________________________________________________________
+conv2d (Conv2D)                 (None, 64, 64, 64)   3136        encoder_input[0][0]              
+__________________________________________________________________________________________________
+leaky_re_lu (LeakyReLU)         (None, 64, 64, 64)   0           conv2d[0][0]                     
+__________________________________________________________________________________________________
+dropout (Dropout)               (None, 64, 64, 64)   0           leaky_re_lu[0][0]                
+__________________________________________________________________________________________________
+conv2d_1 (Conv2D)               (None, 32, 32, 128)  131200      dropout[0][0]                    
+__________________________________________________________________________________________________
+leaky_re_lu_1 (LeakyReLU)       (None, 32, 32, 128)  0           conv2d_1[0][0]                   
+__________________________________________________________________________________________________
+dropout_1 (Dropout)             (None, 32, 32, 128)  0           leaky_re_lu_1[0][0]              
+__________________________________________________________________________________________________
+conv2d_2 (Conv2D)               (None, 16, 16, 256)  524544      dropout_1[0][0]                  
+__________________________________________________________________________________________________
+leaky_re_lu_2 (LeakyReLU)       (None, 16, 16, 256)  0           conv2d_2[0][0]                   
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 16, 16, 256)  0           leaky_re_lu_2[0][0]              
+__________________________________________________________________________________________________
+conv2d_3 (Conv2D)               (None, 8, 8, 512)    2097664     dropout_2[0][0]                  
+__________________________________________________________________________________________________
+leaky_re_lu_3 (LeakyReLU)       (None, 8, 8, 512)    0           conv2d_3[0][0]                   
+__________________________________________________________________________________________________
+dropout_3 (Dropout)             (None, 8, 8, 512)    0           leaky_re_lu_3[0][0]              
+__________________________________________________________________________________________________
+conv2d_4 (Conv2D)               (None, 4, 4, 1024)   8389632     dropout_3[0][0]                  
+__________________________________________________________________________________________________
+leaky_re_lu_4 (LeakyReLU)       (None, 4, 4, 1024)   0           conv2d_4[0][0]                   
+__________________________________________________________________________________________________
+dropout_4 (Dropout)             (None, 4, 4, 1024)   0           leaky_re_lu_4[0][0]              
+__________________________________________________________________________________________________
+flatten (Flatten)               (None, 16384)        0           dropout_4[0][0]                  
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 768)          12583680    flatten[0][0]                    
+__________________________________________________________________________________________________
+z_mean (Dense)                  (None, 128)          98432       dense[0][0]                      
+__________________________________________________________________________________________________
+z_log_var (Dense)               (None, 128)          98432       dense[0][0]                      
+__________________________________________________________________________________________________
+sampling (Sampling)             (None, 128)          0           z_mean[0][0]                     
+                                                                 z_log_var[0][0]                  
+==================================================================================================
+Total params: 23,926,720
+Trainable params: 23,926,720
+Non-trainable params: 0
+__________________________________________________________________________________________________
+Model: "decoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+decoder_input (InputLayer)   [(None, 128)]             0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 768)               99072     
+_________________________________________________________________
+dense_2 (Dense)              (None, 16384)             12599296  
+_________________________________________________________________
+reshape (Reshape)            (None, 4, 4, 1024)        0         
+_________________________________________________________________
+conv2d_transpose (Conv2DTran (None, 8, 8, 512)         8389120   
+_________________________________________________________________
+leaky_re_lu_5 (LeakyReLU)    (None, 8, 8, 512)         0         
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 8, 8, 512)         0         
+_________________________________________________________________
+conv2d_transpose_1 (Conv2DTr (None, 16, 16, 256)       2097408   
+_________________________________________________________________
+leaky_re_lu_6 (LeakyReLU)    (None, 16, 16, 256)       0         
+_________________________________________________________________
+dropout_6 (Dropout)          (None, 16, 16, 256)       0         
+_________________________________________________________________
+conv2d_transpose_2 (Conv2DTr (None, 32, 32, 128)       524416    
+_________________________________________________________________
+leaky_re_lu_7 (LeakyReLU)    (None, 32, 32, 128)       0         
+_________________________________________________________________
+dropout_7 (Dropout)          (None, 32, 32, 128)       0         
+_________________________________________________________________
+conv2d_transpose_3 (Conv2DTr (None, 64, 64, 64)        131136    
+_________________________________________________________________
+leaky_re_lu_8 (LeakyReLU)    (None, 64, 64, 64)        0         
+_________________________________________________________________
+dropout_8 (Dropout)          (None, 64, 64, 64)        0         
+_________________________________________________________________
+conv2d_transpose_4 (Conv2DTr (None, 128, 128, 3)       3075      
+_________________________________________________________________
+tf_op_layer_Sigmoid (TensorF [(None, 128, 128, 3)]     0         
+=================================================================
+Total params: 23,843,523
+Trainable params: 23,843,523
+Non-trainable params: 0
+_________________________________________________________________
+
+Model Hyperparameters:
+MAX_EPOCHS: 1000, LR: 0.0002, Dropout: 0.3, BS: 128, Z_DIM: 128, IMG_S: 128, KLW: 0.1
+
+
+2021-02-24 03:42:36.306830: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-02-24 03:42:36.540958: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+
+Epoch: 0
+Train ELBO: 9767.818359375, Train BCE: 9747.8427734375, Train KLD: 19.979358673095703
+Val ELBO: 9363.4208984375, Val BCE: 9336.298828125, Val KLD: 27.122665405273438
+Test ELBO: 9354.4267578125, Test BCE: 9327.232421875, Test KLD: 27.19257926940918
+
+Epoch: 1
+Train ELBO: 9296.236328125, Train BCE: 9267.5068359375, Train KLD: 28.73277473449707
+Val ELBO: 9238.4853515625, Val BCE: 9208.2705078125, Val KLD: 30.22161102294922
+Test ELBO: 9229.9365234375, Test BCE: 9199.6806640625, Test KLD: 30.256406784057617
+
+Epoch: 2
+Train ELBO: 9196.95703125, Train BCE: 9166.0341796875, Train KLD: 30.931283950805664
+Val ELBO: 9164.5048828125, Val BCE: 9133.0263671875, Val KLD: 31.484609603881836
+Test ELBO: 9156.0693359375, Test BCE: 9124.5595703125, Test KLD: 31.510337829589844
+
+Epoch: 3
+Train ELBO: 9143.08203125, Train BCE: 9110.82421875, Train KLD: 32.24734115600586
+Val ELBO: 9117.052734375, Val BCE: 9084.177734375, Val KLD: 32.87953186035156
+Test ELBO: 9108.4873046875, Test BCE: 9075.5830078125, Test KLD: 32.8975715637207
+
+Epoch: 4
+Train ELBO: 9100.5732421875, Train BCE: 9067.3447265625, Train KLD: 33.231014251708984
+Val ELBO: 9083.15625, Val BCE: 9049.666015625, Val KLD: 33.48619079589844
+Test ELBO: 9074.4580078125, Test BCE: 9040.962890625, Test KLD: 33.4925422668457
+
+Epoch: 5
+Train ELBO: 9073.6787109375, Train BCE: 9039.9296875, Train KLD: 33.75021743774414
+Val ELBO: 9066.4775390625, Val BCE: 9032.7421875, Val KLD: 33.74107360839844
+Test ELBO: 9058.357421875, Test BCE: 9024.625, Test KLD: 33.735252380371094
+
+Epoch: 6
+Train ELBO: 9057.4970703125, Train BCE: 9023.51953125, Train KLD: 33.98380661010742
+Val ELBO: 9053.5703125, Val BCE: 9020.16015625, Val KLD: 33.411434173583984
+Test ELBO: 9045.2705078125, Test BCE: 9011.86328125, Test KLD: 33.40452575683594
+
+Epoch: 7
+Train ELBO: 9047.26953125, Train BCE: 9013.3017578125, Train KLD: 33.97187423706055
+Val ELBO: 9053.7685546875, Val BCE: 9019.5146484375, Val KLD: 34.24544906616211
+Test ELBO: 9045.3515625, Test BCE: 9011.1201171875, Test KLD: 34.228145599365234
+
+Epoch: 8
+Train ELBO: 9039.716796875, Train BCE: 9005.8203125, Train KLD: 33.885162353515625
+Val ELBO: 9044.5126953125, Val BCE: 9010.5244140625, Val KLD: 33.990177154541016
+Test ELBO: 9035.908203125, Test BCE: 9001.939453125, Test KLD: 33.97123718261719
+
+Epoch: 9
+Train ELBO: 9036.677734375, Train BCE: 9002.8603515625, Train KLD: 33.81234359741211
+Val ELBO: 9041.087890625, Val BCE: 9007.1455078125, Val KLD: 33.95161056518555
+Test ELBO: 9032.5498046875, Test BCE: 8998.609375, Test KLD: 33.940513610839844
+
+Epoch: 10
+Train ELBO: 9031.3212890625, Train BCE: 8997.53125, Train KLD: 33.788883209228516
+Val ELBO: 9040.03515625, Val BCE: 9006.3271484375, Val KLD: 33.70840072631836
+Test ELBO: 9031.390625, Test BCE: 8997.685546875, Test KLD: 33.70307922363281
+
+Epoch: 11
+Train ELBO: 9027.5830078125, Train BCE: 8993.8447265625, Train KLD: 33.73712921142578
+Val ELBO: 9039.5224609375, Val BCE: 9005.48046875, Val KLD: 34.04473876953125
+Test ELBO: 9030.8515625, Test BCE: 8996.8310546875, Test KLD: 34.01806640625
+
+Epoch: 12
+Train ELBO: 9023.431640625, Train BCE: 8989.75390625, Train KLD: 33.67862319946289
+Val ELBO: 9037.1123046875, Val BCE: 9003.3779296875, Val KLD: 33.74033737182617
+Test ELBO: 9028.07421875, Test BCE: 8994.369140625, Test KLD: 33.7070426940918
+
+Epoch: 13
+Train ELBO: 9019.6015625, Train BCE: 8985.9755859375, Train KLD: 33.62050247192383
+Val ELBO: 9032.6044921875, Val BCE: 8999.4404296875, Val KLD: 33.161285400390625
+Test ELBO: 9024.609375, Test BCE: 8991.4716796875, Test KLD: 33.138275146484375
+
+Epoch: 14
+Train ELBO: 9017.5341796875, Train BCE: 8983.935546875, Train KLD: 33.58781814575195
+Val ELBO: 9040.515625, Val BCE: 9006.353515625, Val KLD: 34.16365432739258
+Test ELBO: 9032.82421875, Test BCE: 8998.6845703125, Test KLD: 34.140480041503906
+
+Epoch: 15
+Train ELBO: 9012.89453125, Train BCE: 8979.341796875, Train KLD: 33.55081558227539
+Val ELBO: 9032.546875, Val BCE: 8999.017578125, Val KLD: 33.52626037597656
+Test ELBO: 9024.8076171875, Test BCE: 8991.3173828125, Test KLD: 33.49307632446289
+
+Epoch: 16
+Train ELBO: 9010.02734375, Train BCE: 8976.4833984375, Train KLD: 33.54042434692383
+Val ELBO: 9035.0546875, Val BCE: 9001.4853515625, Val KLD: 33.57378005981445
+Test ELBO: 9026.3876953125, Test BCE: 8992.8466796875, Test KLD: 33.539085388183594
+
+Epoch: 17
+Train ELBO: 9005.5634765625, Train BCE: 8972.0498046875, Train KLD: 33.510074615478516
+Val ELBO: 9034.6083984375, Val BCE: 9001.447265625, Val KLD: 33.157264709472656
+Test ELBO: 9026.001953125, Test BCE: 8992.873046875, Test KLD: 33.12813949584961
+
+Epoch: 18
+Train ELBO: 9004.037109375, Train BCE: 8970.513671875, Train KLD: 33.520389556884766
+Val ELBO: 9037.330078125, Val BCE: 9003.9775390625, Val KLD: 33.358009338378906
+Test ELBO: 9028.6025390625, Test BCE: 8995.2919921875, Test KLD: 33.31156539916992
+
+Epoch: 19
+Train ELBO: 8999.080078125, Train BCE: 8965.5546875, Train KLD: 33.5322265625
+Val ELBO: 9037.00390625, Val BCE: 9003.251953125, Val KLD: 33.7526969909668
+Test ELBO: 9027.94140625, Test BCE: 8994.23828125, Test KLD: 33.70379638671875
+
+Epoch: 20
+Train ELBO: 8995.9248046875, Train BCE: 8962.357421875, Train KLD: 33.56365203857422
+Val ELBO: 9037.416015625, Val BCE: 9003.9326171875, Val KLD: 33.482242584228516
+Test ELBO: 9028.8232421875, Test BCE: 8995.38671875, Test KLD: 33.43290710449219
+
+Epoch: 21
+Train ELBO: 8992.0869140625, Train BCE: 8958.5087890625, Train KLD: 33.57474899291992
+Val ELBO: 9037.4306640625, Val BCE: 9003.9404296875, Val KLD: 33.491825103759766
+Test ELBO: 9029.349609375, Test BCE: 8995.90234375, Test KLD: 33.44886016845703
+
+Epoch: 22
+Train ELBO: 8988.927734375, Train BCE: 8955.32421875, Train KLD: 33.6048698425293
+Val ELBO: 9041.8583984375, Val BCE: 9008.0517578125, Val KLD: 33.804691314697266
+Test ELBO: 9032.4921875, Test BCE: 8998.734375, Test KLD: 33.755252838134766
+
+Epoch: 23
+Train ELBO: 8985.0791015625, Train BCE: 8951.4482421875, Train KLD: 33.63398742675781
+Val ELBO: 9043.908203125, Val BCE: 9010.6318359375, Val KLD: 33.277496337890625
+Test ELBO: 9034.4521484375, Test BCE: 9001.2158203125, Test KLD: 33.234527587890625
+
+Epoch: 24
+Train ELBO: 8981.7294921875, Train BCE: 8948.044921875, Train KLD: 33.6832389831543
+Val ELBO: 9042.2255859375, Val BCE: 9008.9677734375, Val KLD: 33.259578704833984
+Test ELBO: 9033.109375, Test BCE: 8999.91015625, Test KLD: 33.205074310302734
+
+Epoch: 25
+Train ELBO: 8977.5947265625, Train BCE: 8943.8798828125, Train KLD: 33.711124420166016
+Val ELBO: 9045.650390625, Val BCE: 9011.8818359375, Val KLD: 33.769439697265625
+Test ELBO: 9036.5576171875, Test BCE: 9002.845703125, Test KLD: 33.7127685546875
+
+Epoch: 26
+Train ELBO: 8974.48046875, Train BCE: 8940.712890625, Train KLD: 33.76961135864258
+Val ELBO: 9048.69921875, Val BCE: 9015.470703125, Val KLD: 33.23404312133789
+Test ELBO: 9039.2119140625, Test BCE: 9006.0234375, Test KLD: 33.181583404541016
+
+Epoch: 27
+Train ELBO: 8970.525390625, Train BCE: 8936.7060546875, Train KLD: 33.81845474243164
+Val ELBO: 9051.1455078125, Val BCE: 9017.2216796875, Val KLD: 33.921669006347656
+Test ELBO: 9042.1162109375, Test BCE: 9008.2548828125, Test KLD: 33.863739013671875
+
+Epoch: 28
+Train ELBO: 8966.7666015625, Train BCE: 8932.8935546875, Train KLD: 33.87062454223633
+Val ELBO: 9055.2822265625, Val BCE: 9021.373046875, Val KLD: 33.90752410888672
+Test ELBO: 9045.7138671875, Test BCE: 9011.869140625, Test KLD: 33.846378326416016
+
+Epoch: 29
+Train ELBO: 8963.83984375, Train BCE: 8929.9111328125, Train KLD: 33.9288444519043
+Val ELBO: 9055.7451171875, Val BCE: 9021.9912109375, Val KLD: 33.74838638305664
+Test ELBO: 9046.255859375, Test BCE: 9012.56640625, Test KLD: 33.67942810058594
+
+Epoch: 30
+Train ELBO: 8959.4345703125, Train BCE: 8925.4541015625, Train KLD: 33.974586486816406
+Val ELBO: 9059.2275390625, Val BCE: 9024.6328125, Val KLD: 34.59511184692383
+Test ELBO: 9050.0107421875, Test BCE: 9015.484375, Test KLD: 34.52356719970703
+
+Epoch: 31
+Train ELBO: 8956.7890625, Train BCE: 8922.76953125, Train KLD: 34.01628112792969
+Val ELBO: 9058.818359375, Val BCE: 9024.83984375, Val KLD: 33.97830581665039
+Test ELBO: 9049.4765625, Test BCE: 9015.5771484375, Test KLD: 33.90522766113281
+
+Epoch: 32
+Train ELBO: 8952.7138671875, Train BCE: 8918.642578125, Train KLD: 34.06708526611328
+Val ELBO: 9061.5263671875, Val BCE: 9027.287109375, Val KLD: 34.23494338989258
+Test ELBO: 9052.255859375, Test BCE: 9018.0927734375, Test KLD: 34.161312103271484
+
+Epoch: 33
+Train ELBO: 8950.4169921875, Train BCE: 8916.2978515625, Train KLD: 34.11907958984375
+Val ELBO: 9065.8134765625, Val BCE: 9031.544921875, Val KLD: 34.268802642822266
+Test ELBO: 9056.11328125, Test BCE: 9021.9267578125, Test KLD: 34.19084548950195
+
+Epoch: 34
+Train ELBO: 8946.2294921875, Train BCE: 8912.0498046875, Train KLD: 34.176021575927734
+Val ELBO: 9069.65625, Val BCE: 9035.076171875, Val KLD: 34.57350540161133
+Test ELBO: 9060.439453125, Test BCE: 9025.93359375, Test KLD: 34.502506256103516
+
+Epoch: 35
+Train ELBO: 8943.431640625, Train BCE: 8909.2060546875, Train KLD: 34.2264404296875
+Val ELBO: 9066.5810546875, Val BCE: 9032.3447265625, Val KLD: 34.23492431640625
+Test ELBO: 9057.013671875, Test BCE: 9022.85546875, Test KLD: 34.15719985961914
+
+Epoch: 36
+Train ELBO: 8940.869140625, Train BCE: 8906.564453125, Train KLD: 34.299415588378906
+Val ELBO: 9072.0673828125, Val BCE: 9037.7314453125, Val KLD: 34.3375244140625
+Test ELBO: 9062.4345703125, Test BCE: 9028.1787109375, Test KLD: 34.26124572753906
+
+Epoch: 37
+Train ELBO: 8936.95703125, Train BCE: 8902.6064453125, Train KLD: 34.346336364746094
+Val ELBO: 9079.5546875, Val BCE: 9044.724609375, Val KLD: 34.82549285888672
+Test ELBO: 9069.46875, Test BCE: 9034.7255859375, Test KLD: 34.745147705078125
+
+Epoch: 38
+Train ELBO: 8934.82421875, Train BCE: 8900.4296875, Train KLD: 34.39295196533203
+Val ELBO: 9077.2744140625, Val BCE: 9042.65234375, Val KLD: 34.62153625488281
+Test ELBO: 9067.91015625, Test BCE: 9033.3740234375, Test KLD: 34.54396057128906
+
+Epoch: 39
+Train ELBO: 8931.4677734375, Train BCE: 8897.0400390625, Train KLD: 34.435218811035156
+Val ELBO: 9080.4248046875, Val BCE: 9045.525390625, Val KLD: 34.890663146972656
+Test ELBO: 9071.3984375, Test BCE: 9036.58984375, Test KLD: 34.80491256713867
+
+Epoch: 40
+Train ELBO: 8928.916015625, Train BCE: 8894.4091796875, Train KLD: 34.49858856201172
+Val ELBO: 9082.2978515625, Val BCE: 9047.7890625, Val KLD: 34.50929260253906
+Test ELBO: 9072.6455078125, Test BCE: 9038.2275390625, Test KLD: 34.42015838623047
+
+Epoch: 41
+Train ELBO: 8926.396484375, Train BCE: 8891.8505859375, Train KLD: 34.54212188720703
+Val ELBO: 9080.7216796875, Val BCE: 9046.3037109375, Val KLD: 34.424930572509766
+Test ELBO: 9071.0654296875, Test BCE: 9036.712890625, Test KLD: 34.350608825683594
+
+Epoch: 42
+Train ELBO: 8923.177734375, Train BCE: 8888.5888671875, Train KLD: 34.58659362792969
+Val ELBO: 9085.8095703125, Val BCE: 9051.2763671875, Val KLD: 34.5347785949707
+Test ELBO: 9075.724609375, Test BCE: 9041.275390625, Test KLD: 34.45471954345703
+
+Epoch: 43
+Train ELBO: 8920.58984375, Train BCE: 8885.96484375, Train KLD: 34.62892532348633
+Val ELBO: 9082.37109375, Val BCE: 9047.3212890625, Val KLD: 35.04777526855469
+Test ELBO: 9072.3515625, Test BCE: 9037.392578125, Test KLD: 34.958370208740234
+
+Epoch: 44
+Train ELBO: 8918.4560546875, Train BCE: 8883.79296875, Train KLD: 34.662208557128906
+Val ELBO: 9088.314453125, Val BCE: 9053.671875, Val KLD: 34.650062561035156
+Test ELBO: 9078.4453125, Test BCE: 9043.8896484375, Test KLD: 34.55707931518555
+
+Epoch: 45
+Train ELBO: 8915.6083984375, Train BCE: 8880.88671875, Train KLD: 34.72332763671875
+Val ELBO: 9084.4140625, Val BCE: 9049.83203125, Val KLD: 34.58064651489258
+Test ELBO: 9074.5244140625, Test BCE: 9040.0224609375, Test KLD: 34.49850082397461
+
+Epoch: 46
+Train ELBO: 8913.64453125, Train BCE: 8878.8857421875, Train KLD: 34.7557258605957
+Val ELBO: 9088.7060546875, Val BCE: 9054.345703125, Val KLD: 34.36648178100586
+Test ELBO: 9078.91015625, Test BCE: 9044.6279296875, Test KLD: 34.28129577636719
+
+Epoch: 47
+Train ELBO: 8910.5927734375, Train BCE: 8875.791015625, Train KLD: 34.79679489135742
+Val ELBO: 9097.673828125, Val BCE: 9062.720703125, Val KLD: 34.947628021240234
+Test ELBO: 9087.2568359375, Test BCE: 9052.4072265625, Test KLD: 34.85454559326172
+
+Epoch: 48
+Train ELBO: 8908.6298828125, Train BCE: 8873.7880859375, Train KLD: 34.845420837402344
+Val ELBO: 9096.0458984375, Val BCE: 9061.4345703125, Val KLD: 34.607730865478516
+Test ELBO: 9086.73828125, Test BCE: 9052.2158203125, Test KLD: 34.518890380859375
+
+Epoch: 49
+Train ELBO: 8906.4677734375, Train BCE: 8871.58984375, Train KLD: 34.880615234375
+Val ELBO: 9095.7236328125, Val BCE: 9060.6298828125, Val KLD: 35.089881896972656
+Test ELBO: 9086.248046875, Test BCE: 9051.251953125, Test KLD: 34.99909210205078
+
+Epoch: 50
+Train ELBO: 8904.021484375, Train BCE: 8869.0966796875, Train KLD: 34.92015838623047
+Val ELBO: 9098.8876953125, Val BCE: 9064.05859375, Val KLD: 34.8278694152832
+Test ELBO: 9089.2880859375, Test BCE: 9054.5517578125, Test KLD: 34.738128662109375
+
+Epoch: 51
+Train ELBO: 8901.8037109375, Train BCE: 8866.841796875, Train KLD: 34.958518981933594
+Val ELBO: 9097.6376953125, Val BCE: 9062.69921875, Val KLD: 34.93907165527344
+Test ELBO: 9087.7451171875, Test BCE: 9052.900390625, Test KLD: 34.84647750854492
+
+Epoch: 52
+Train ELBO: 8899.6982421875, Train BCE: 8864.6943359375, Train KLD: 35.00031280517578
+Val ELBO: 9100.8388671875, Val BCE: 9065.8671875, Val KLD: 34.96563720703125
+Test ELBO: 9090.48828125, Test BCE: 9055.623046875, Test KLD: 34.86977005004883
+
+Epoch: 53
+Train ELBO: 8897.83984375, Train BCE: 8862.796875, Train KLD: 35.03547668457031
+Val ELBO: 9103.283203125, Val BCE: 9068.154296875, Val KLD: 35.12527084350586
+Test ELBO: 9093.8955078125, Test BCE: 9058.87890625, Test KLD: 35.023685455322266
+
+Epoch: 54
+Train ELBO: 8895.7607421875, Train BCE: 8860.6923828125, Train KLD: 35.06544494628906
+Val ELBO: 9104.5595703125, Val BCE: 9069.13671875, Val KLD: 35.42009735107422
+Test ELBO: 9093.37109375, Test BCE: 9058.0546875, Test KLD: 35.31623077392578
+
+Epoch: 55
+Train ELBO: 8893.712890625, Train BCE: 8858.59765625, Train KLD: 35.119510650634766
+Val ELBO: 9104.8896484375, Val BCE: 9069.9521484375, Val KLD: 34.93793869018555
+Test ELBO: 9094.3388671875, Test BCE: 9059.501953125, Test KLD: 34.83272171020508
+
+Epoch: 56
+Train ELBO: 8891.8681640625, Train BCE: 8856.716796875, Train KLD: 35.1549186706543
+Val ELBO: 9109.8154296875, Val BCE: 9074.6240234375, Val KLD: 35.19624328613281
+Test ELBO: 9099.67578125, Test BCE: 9064.57421875, Test KLD: 35.09754943847656
+
+Epoch: 57
+Train ELBO: 8889.794921875, Train BCE: 8854.623046875, Train KLD: 35.16331481933594
+Val ELBO: 9113.7060546875, Val BCE: 9077.80078125, Val KLD: 35.90765380859375
+Test ELBO: 9103.236328125, Test BCE: 9067.43359375, Test KLD: 35.80624771118164
+
+Epoch: 58
+Train ELBO: 8888.3349609375, Train BCE: 8853.1318359375, Train KLD: 35.215152740478516
+Val ELBO: 9111.1826171875, Val BCE: 9076.2998046875, Val KLD: 34.87837219238281
+Test ELBO: 9100.5126953125, Test BCE: 9065.734375, Test KLD: 34.780792236328125
+
+Epoch: 59
+Train ELBO: 8886.4609375, Train BCE: 8851.2041015625, Train KLD: 35.25825881958008
+Val ELBO: 9109.6552734375, Val BCE: 9074.8837890625, Val KLD: 34.77355194091797
+Test ELBO: 9099.5732421875, Test BCE: 9064.908203125, Test KLD: 34.668182373046875
+
+Epoch: 60
+Train ELBO: 8884.150390625, Train BCE: 8848.8759765625, Train KLD: 35.2735710144043
+Val ELBO: 9111.2939453125, Val BCE: 9075.96484375, Val KLD: 35.32716369628906
+Test ELBO: 9100.974609375, Test BCE: 9065.7568359375, Test KLD: 35.220680236816406
+
+Epoch: 61
+Train ELBO: 8882.814453125, Train BCE: 8847.48828125, Train KLD: 35.31768035888672
+Val ELBO: 9115.9501953125, Val BCE: 9080.642578125, Val KLD: 35.30877685546875
+Test ELBO: 9105.3076171875, Test BCE: 9070.1103515625, Test KLD: 35.20273208618164
+
+Epoch: 62
+Train ELBO: 8881.4072265625, Train BCE: 8846.0537109375, Train KLD: 35.35266876220703
+Val ELBO: 9116.4140625, Val BCE: 9080.953125, Val KLD: 35.46033477783203
+Test ELBO: 9105.9228515625, Test BCE: 9070.5751953125, Test KLD: 35.351097106933594
+
+Epoch: 63
+Train ELBO: 8879.064453125, Train BCE: 8843.6943359375, Train KLD: 35.37446975708008
+Val ELBO: 9111.681640625, Val BCE: 9076.5146484375, Val KLD: 35.16941833496094
+Test ELBO: 9101.62890625, Test BCE: 9066.5654296875, Test KLD: 35.064632415771484
+
+Epoch: 64
+Train ELBO: 8878.3095703125, Train BCE: 8842.892578125, Train KLD: 35.418251037597656
+Val ELBO: 9115.330078125, Val BCE: 9079.970703125, Val KLD: 35.35503387451172
+Test ELBO: 9104.583984375, Test BCE: 9069.3466796875, Test KLD: 35.24451446533203
+
+Epoch: 65
+Train ELBO: 8876.0498046875, Train BCE: 8840.603515625, Train KLD: 35.4451904296875
+Val ELBO: 9119.1826171875, Val BCE: 9083.828125, Val KLD: 35.35634231567383
+Test ELBO: 9108.5615234375, Test BCE: 9073.3056640625, Test KLD: 35.250572204589844
+
+Epoch: 66
+Train ELBO: 8874.66796875, Train BCE: 8839.2021484375, Train KLD: 35.470001220703125
+Val ELBO: 9119.658203125, Val BCE: 9084.259765625, Val KLD: 35.39399337768555
+Test ELBO: 9108.8466796875, Test BCE: 9073.556640625, Test KLD: 35.28519821166992
+
+Epoch: 67
+Train ELBO: 8872.869140625, Train BCE: 8837.3681640625, Train KLD: 35.4968147277832
+Val ELBO: 9119.3212890625, Val BCE: 9083.923828125, Val KLD: 35.39773178100586
+Test ELBO: 9109.2939453125, Test BCE: 9074.005859375, Test KLD: 35.290061950683594
+
+Epoch: 68
+Train ELBO: 8871.7314453125, Train BCE: 8836.208984375, Train KLD: 35.52399444580078
+Val ELBO: 9120.244140625, Val BCE: 9084.7607421875, Val KLD: 35.477630615234375
+Test ELBO: 9109.58984375, Test BCE: 9074.232421875, Test KLD: 35.36306381225586
+
+Epoch: 69
+Train ELBO: 8870.15234375, Train BCE: 8834.60546875, Train KLD: 35.54512023925781
+Val ELBO: 9123.0224609375, Val BCE: 9087.8056640625, Val KLD: 35.21653366088867
+Test ELBO: 9112.744140625, Test BCE: 9077.6416015625, Test KLD: 35.10432052612305
+
+Epoch: 70
+Train ELBO: 8868.7470703125, Train BCE: 8833.1611328125, Train KLD: 35.58172607421875
+Val ELBO: 9128.521484375, Val BCE: 9093.255859375, Val KLD: 35.26723098754883
+Test ELBO: 9118.37109375, Test BCE: 9083.2158203125, Test KLD: 35.15463638305664
+
+Epoch: 71
+Train ELBO: 8867.361328125, Train BCE: 8831.7646484375, Train KLD: 35.60430908203125
+Val ELBO: 9129.9208984375, Val BCE: 9093.8984375, Val KLD: 36.02236557006836
+Test ELBO: 9119.3212890625, Test BCE: 9083.4091796875, Test KLD: 35.91315460205078
+
+Epoch: 72
+Train ELBO: 8865.8251953125, Train BCE: 8830.1865234375, Train KLD: 35.6424446105957
+Val ELBO: 9129.4619140625, Val BCE: 9093.669921875, Val KLD: 35.79511260986328
+Test ELBO: 9118.259765625, Test BCE: 9082.5830078125, Test KLD: 35.68189239501953
+
+Epoch: 73
+Train ELBO: 8864.32421875, Train BCE: 8828.646484375, Train KLD: 35.67461395263672
+Val ELBO: 9119.388671875, Val BCE: 9083.869140625, Val KLD: 35.52155303955078
+Test ELBO: 9109.3076171875, Test BCE: 9073.88671875, Test KLD: 35.41497039794922
+
+Epoch: 74
+Train ELBO: 8863.18359375, Train BCE: 8827.498046875, Train KLD: 35.685386657714844
+Val ELBO: 9129.60546875, Val BCE: 9093.6572265625, Val KLD: 35.94944381713867
+Test ELBO: 9119.2724609375, Test BCE: 9083.4404296875, Test KLD: 35.8338508605957
+
+Epoch: 75
+Train ELBO: 8861.6279296875, Train BCE: 8825.9189453125, Train KLD: 35.71192932128906
+Val ELBO: 9131.37109375, Val BCE: 9096.1396484375, Val KLD: 35.22821044921875
+Test ELBO: 9119.9306640625, Test BCE: 9084.8173828125, Test KLD: 35.10988998413086
+
+Epoch: 76
+Train ELBO: 8860.8349609375, Train BCE: 8825.103515625, Train KLD: 35.73664855957031
+Val ELBO: 9142.82421875, Val BCE: 9106.9287109375, Val KLD: 35.89238739013672
+Test ELBO: 9131.775390625, Test BCE: 9096.009765625, Test KLD: 35.76884078979492
+
+Epoch: 77
+Train ELBO: 8859.1875, Train BCE: 8823.4111328125, Train KLD: 35.77421951293945
+Val ELBO: 9137.4130859375, Val BCE: 9101.6318359375, Val KLD: 35.782569885253906
+Test ELBO: 9126.044921875, Test BCE: 9090.3828125, Test KLD: 35.66365051269531
+
+Epoch: 78
+Train ELBO: 8858.0341796875, Train BCE: 8822.2607421875, Train KLD: 35.783409118652344
+Val ELBO: 9134.7373046875, Val BCE: 9098.939453125, Val KLD: 35.79666519165039
+Test ELBO: 9123.5810546875, Test BCE: 9087.8984375, Test KLD: 35.67655944824219
+
+Epoch: 79
+Train ELBO: 8857.0166015625, Train BCE: 8821.1904296875, Train KLD: 35.82685852050781
+Val ELBO: 9132.6689453125, Val BCE: 9097.5712890625, Val KLD: 35.09977722167969
+Test ELBO: 9122.0849609375, Test BCE: 9087.09765625, Test KLD: 34.97908020019531
+
+Epoch: 80
+Train ELBO: 8855.45703125, Train BCE: 8819.6171875, Train KLD: 35.84468460083008
+Val ELBO: 9135.53515625, Val BCE: 9099.923828125, Val KLD: 35.60873794555664
+Test ELBO: 9124.64453125, Test BCE: 9089.1484375, Test KLD: 35.49641799926758
+
+Epoch: 81
+Train ELBO: 8854.3623046875, Train BCE: 8818.5087890625, Train KLD: 35.861549377441406
+Val ELBO: 9141.69921875, Val BCE: 9105.9072265625, Val KLD: 35.79985427856445
+Test ELBO: 9130.8525390625, Test BCE: 9095.173828125, Test KLD: 35.67458724975586
+
+Epoch: 82
+Train ELBO: 8853.58984375, Train BCE: 8817.703125, Train KLD: 35.894901275634766
+Val ELBO: 9145.5556640625, Val BCE: 9109.7373046875, Val KLD: 35.81193161010742
+Test ELBO: 9134.501953125, Test BCE: 9098.8193359375, Test KLD: 35.686824798583984
+
+Epoch: 83
+Train ELBO: 8851.7158203125, Train BCE: 8815.810546875, Train KLD: 35.906700134277344
+Val ELBO: 9137.916015625, Val BCE: 9102.4990234375, Val KLD: 35.423789978027344
+Test ELBO: 9126.3310546875, Test BCE: 9091.025390625, Test KLD: 35.30036926269531
+
+Epoch: 84
+Train ELBO: 8851.0673828125, Train BCE: 8815.1298828125, Train KLD: 35.935089111328125
+Val ELBO: 9137.818359375, Val BCE: 9102.1337890625, Val KLD: 35.67822265625
+Test ELBO: 9127.107421875, Test BCE: 9091.5546875, Test KLD: 35.549251556396484
+
+Epoch: 85
+Train ELBO: 8850.0908203125, Train BCE: 8814.1240234375, Train KLD: 35.962581634521484
+Val ELBO: 9144.5830078125, Val BCE: 9108.59375, Val KLD: 35.9962158203125
+Test ELBO: 9133.6962890625, Test BCE: 9097.8232421875, Test KLD: 35.87598419189453
+
+Epoch: 86
+Train ELBO: 8848.673828125, Train BCE: 8812.6884765625, Train KLD: 35.99154281616211
+Val ELBO: 9138.345703125, Val BCE: 9103.005859375, Val KLD: 35.33937454223633
+Test ELBO: 9127.0615234375, Test BCE: 9091.837890625, Test KLD: 35.22810363769531
+
+Epoch: 87
+Train ELBO: 8847.6865234375, Train BCE: 8811.673828125, Train KLD: 36.00897216796875
+Val ELBO: 9140.6181640625, Val BCE: 9104.5634765625, Val KLD: 36.04912567138672
+Test ELBO: 9129.478515625, Test BCE: 9093.5615234375, Test KLD: 35.9144172668457
+
+Epoch: 88
+Train ELBO: 8846.515625, Train BCE: 8810.4921875, Train KLD: 36.02288055419922
+Val ELBO: 9144.595703125, Val BCE: 9108.8994140625, Val KLD: 35.69717025756836
+Test ELBO: 9133.787109375, Test BCE: 9098.2119140625, Test KLD: 35.579463958740234
+
+Epoch: 89
+Train ELBO: 8845.7392578125, Train BCE: 8809.685546875, Train KLD: 36.05539321899414
+Val ELBO: 9141.6640625, Val BCE: 9106.013671875, Val KLD: 35.64533615112305
+Test ELBO: 9130.8544921875, Test BCE: 9095.326171875, Test KLD: 35.52659225463867
+
+Epoch: 90
+Train ELBO: 8844.8408203125, Train BCE: 8808.7685546875, Train KLD: 36.074005126953125
+Val ELBO: 9148.6298828125, Val BCE: 9112.912109375, Val KLD: 35.724552154541016
+Test ELBO: 9137.005859375, Test BCE: 9101.4140625, Test KLD: 35.60122299194336
+
+Epoch: 91
+Train ELBO: 8843.25, Train BCE: 8807.1533203125, Train KLD: 36.09653854370117
+Val ELBO: 9150.76953125, Val BCE: 9114.625, Val KLD: 36.147911071777344
+Test ELBO: 9138.390625, Test BCE: 9102.361328125, Test KLD: 36.02280807495117
+
+Epoch: 92
+Train ELBO: 8842.4296875, Train BCE: 8806.3125, Train KLD: 36.112030029296875
+Val ELBO: 9150.70703125, Val BCE: 9114.6171875, Val KLD: 36.0908317565918
+Test ELBO: 9139.8310546875, Test BCE: 9103.8515625, Test KLD: 35.97800827026367
+
+Epoch: 93
+Train ELBO: 8842.0595703125, Train BCE: 8805.923828125, Train KLD: 36.139923095703125
+Val ELBO: 9149.240234375, Val BCE: 9113.1513671875, Val KLD: 36.09126281738281
+Test ELBO: 9137.8359375, Test BCE: 9101.8720703125, Test KLD: 35.96665954589844
+
+Epoch: 94
+Train ELBO: 8840.5634765625, Train BCE: 8804.3955078125, Train KLD: 36.157859802246094
+Val ELBO: 9153.26953125, Val BCE: 9117.189453125, Val KLD: 36.08102798461914
+Test ELBO: 9142.494140625, Test BCE: 9106.5458984375, Test KLD: 35.950435638427734
+
+Epoch: 95
+Train ELBO: 8839.7900390625, Train BCE: 8803.6171875, Train KLD: 36.18073654174805
+Val ELBO: 9154.390625, Val BCE: 9118.5205078125, Val KLD: 35.867610931396484
+Test ELBO: 9142.78125, Test BCE: 9107.0419921875, Test KLD: 35.737571716308594
+
+Epoch: 96
+Train ELBO: 8838.8154296875, Train BCE: 8802.6103515625, Train KLD: 36.204166412353516
+Val ELBO: 9151.951171875, Val BCE: 9115.2705078125, Val KLD: 36.67953109741211
+Test ELBO: 9140.2880859375, Test BCE: 9103.7392578125, Test KLD: 36.55254364013672
+
+Epoch: 97
+Train ELBO: 8837.9951171875, Train BCE: 8801.7724609375, Train KLD: 36.22124481201172
+Val ELBO: 9155.173828125, Val BCE: 9118.8232421875, Val KLD: 36.35344314575195
+Test ELBO: 9144.0625, Test BCE: 9107.8359375, Test KLD: 36.22325134277344
+
+Epoch: 98
+Train ELBO: 8836.833984375, Train BCE: 8800.6044921875, Train KLD: 36.237205505371094
+Val ELBO: 9151.4345703125, Val BCE: 9115.1181640625, Val KLD: 36.3162841796875
+Test ELBO: 9140.6259765625, Test BCE: 9104.4189453125, Test KLD: 36.198486328125
+
+Epoch: 99
+Train ELBO: 8835.9775390625, Train BCE: 8799.708984375, Train KLD: 36.26045227050781
+Val ELBO: 9150.5185546875, Val BCE: 9114.4404296875, Val KLD: 36.07697296142578
+Test ELBO: 9139.3818359375, Test BCE: 9103.4423828125, Test KLD: 35.94916915893555
+
+Epoch: 100
+Train ELBO: 8835.3349609375, Train BCE: 8799.064453125, Train KLD: 36.278202056884766
+Val ELBO: 9152.6884765625, Val BCE: 9116.70703125, Val KLD: 35.985023498535156
+Test ELBO: 9141.2177734375, Test BCE: 9105.359375, Test KLD: 35.8587760925293
+
+Epoch: 101
+Train ELBO: 8834.4541015625, Train BCE: 8798.1611328125, Train KLD: 36.2968864440918
+Val ELBO: 9153.140625, Val BCE: 9117.2529296875, Val KLD: 35.88899230957031
+Test ELBO: 9141.7509765625, Test BCE: 9105.978515625, Test KLD: 35.766685485839844
+
+Epoch: 102
+Train ELBO: 8833.3935546875, Train BCE: 8797.076171875, Train KLD: 36.31346893310547
+Val ELBO: 9153.908203125, Val BCE: 9117.3994140625, Val KLD: 36.51443862915039
+Test ELBO: 9142.759765625, Test BCE: 9106.369140625, Test KLD: 36.386619567871094
+
+Epoch: 103
+Train ELBO: 8832.5830078125, Train BCE: 8796.2412109375, Train KLD: 36.3423957824707
+Val ELBO: 9157.0712890625, Val BCE: 9120.5859375, Val KLD: 36.48329544067383
+Test ELBO: 9146.3203125, Test BCE: 9109.9619140625, Test KLD: 36.35738754272461
+
+Epoch: 104
+Train ELBO: 8832.0302734375, Train BCE: 8795.6875, Train KLD: 36.35739517211914
+Val ELBO: 9155.408203125, Val BCE: 9119.0673828125, Val KLD: 36.34153366088867
+Test ELBO: 9144.1240234375, Test BCE: 9107.9189453125, Test KLD: 36.212074279785156
+
+Epoch: 105
+Train ELBO: 8830.853515625, Train BCE: 8794.4560546875, Train KLD: 36.39455032348633
+Val ELBO: 9156.0888671875, Val BCE: 9119.4169921875, Val KLD: 36.67182159423828
+Test ELBO: 9144.7841796875, Test BCE: 9108.240234375, Test KLD: 36.541221618652344
+
+Epoch: 106
+Train ELBO: 8830.1796875, Train BCE: 8793.7763671875, Train KLD: 36.40073013305664
+Val ELBO: 9165.0078125, Val BCE: 9128.7978515625, Val KLD: 36.21040344238281
+Test ELBO: 9153.5185546875, Test BCE: 9117.4365234375, Test KLD: 36.082435607910156
+
+Epoch: 107
+Train ELBO: 8829.4052734375, Train BCE: 8792.9833984375, Train KLD: 36.42302322387695
+Val ELBO: 9158.5439453125, Val BCE: 9122.46484375, Val KLD: 36.08677291870117
+Test ELBO: 9147.283203125, Test BCE: 9111.318359375, Test KLD: 35.95653533935547
+
+Epoch: 108
+Train ELBO: 8828.8837890625, Train BCE: 8792.466796875, Train KLD: 36.416595458984375
+Val ELBO: 9154.748046875, Val BCE: 9118.6044921875, Val KLD: 36.14446258544922
+Test ELBO: 9143.7607421875, Test BCE: 9107.7373046875, Test KLD: 36.01866149902344
+
+Epoch: 109
+Train ELBO: 8827.865234375, Train BCE: 8791.4130859375, Train KLD: 36.452552795410156
+Val ELBO: 9159.400390625, Val BCE: 9123.1533203125, Val KLD: 36.246917724609375
+Test ELBO: 9148.1689453125, Test BCE: 9112.0439453125, Test KLD: 36.12375259399414
+
+Epoch: 110
+Train ELBO: 8827.091796875, Train BCE: 8790.6279296875, Train KLD: 36.46247863769531
+Val ELBO: 9156.3330078125, Val BCE: 9120.423828125, Val KLD: 35.904483795166016
+Test ELBO: 9145.1259765625, Test BCE: 9109.34375, Test KLD: 35.777774810791016
+
+Epoch: 111
+Train ELBO: 8826.4052734375, Train BCE: 8789.919921875, Train KLD: 36.485538482666016
+Val ELBO: 9154.6708984375, Val BCE: 9118.771484375, Val KLD: 35.903255462646484
+Test ELBO: 9144.2255859375, Test BCE: 9108.4501953125, Test KLD: 35.7743034362793
+
+Epoch: 112
+Train ELBO: 8825.5390625, Train BCE: 8789.03515625, Train KLD: 36.502437591552734
+Val ELBO: 9165.3701171875, Val BCE: 9128.654296875, Val KLD: 36.71699142456055
+Test ELBO: 9154.072265625, Test BCE: 9117.478515625, Test KLD: 36.59095001220703
+
+Epoch: 113
+Train ELBO: 8824.9853515625, Train BCE: 8788.46484375, Train KLD: 36.5176887512207
+Val ELBO: 9162.2734375, Val BCE: 9125.9365234375, Val KLD: 36.34278106689453
+Test ELBO: 9150.638671875, Test BCE: 9114.4267578125, Test KLD: 36.211795806884766
+
+Epoch: 114
+Train ELBO: 8824.052734375, Train BCE: 8787.517578125, Train KLD: 36.530967712402344
+Val ELBO: 9163.6513671875, Val BCE: 9127.1298828125, Val KLD: 36.52323913574219
+Test ELBO: 9151.982421875, Test BCE: 9115.5849609375, Test KLD: 36.394351959228516
+
+Epoch: 115
+Train ELBO: 8823.5390625, Train BCE: 8786.9755859375, Train KLD: 36.56404495239258
+Val ELBO: 9165.2265625, Val BCE: 9128.6171875, Val KLD: 36.60724639892578
+Test ELBO: 9153.578125, Test BCE: 9117.10546875, Test KLD: 36.479835510253906
+
+Epoch: 116
+Train ELBO: 8822.4921875, Train BCE: 8785.9306640625, Train KLD: 36.56581115722656
+Val ELBO: 9163.8857421875, Val BCE: 9127.79296875, Val KLD: 36.09394836425781
+Test ELBO: 9152.46484375, Test BCE: 9116.486328125, Test KLD: 35.97662353515625
+
+Epoch: 117
+Train ELBO: 8822.0654296875, Train BCE: 8785.46875, Train KLD: 36.59210205078125
+Val ELBO: 9165.068359375, Val BCE: 9128.7412109375, Val KLD: 36.32558059692383
+Test ELBO: 9153.4189453125, Test BCE: 9117.2236328125, Test KLD: 36.195613861083984
+
+Epoch: 118
+Train ELBO: 8821.3310546875, Train BCE: 8784.7265625, Train KLD: 36.60023880004883
+Val ELBO: 9168.65625, Val BCE: 9132.1083984375, Val KLD: 36.54176712036133
+Test ELBO: 9156.9892578125, Test BCE: 9120.5810546875, Test KLD: 36.41022491455078
+
+Epoch: 119
+Train ELBO: 8820.55078125, Train BCE: 8783.9296875, Train KLD: 36.61723709106445
+Val ELBO: 9169.794921875, Val BCE: 9133.11328125, Val KLD: 36.68153762817383
+Test ELBO: 9158.3173828125, Test BCE: 9121.76171875, Test KLD: 36.55632400512695
+
+Epoch: 120
+Train ELBO: 8820.2451171875, Train BCE: 8783.611328125, Train KLD: 36.63600158691406
+Val ELBO: 9167.484375, Val BCE: 9130.7373046875, Val KLD: 36.74683380126953
+Test ELBO: 9155.513671875, Test BCE: 9118.896484375, Test KLD: 36.622135162353516
+
+Epoch: 121
+Train ELBO: 8819.3935546875, Train BCE: 8782.75, Train KLD: 36.64099884033203
+Val ELBO: 9167.9892578125, Val BCE: 9131.6240234375, Val KLD: 36.361427307128906
+Test ELBO: 9156.1552734375, Test BCE: 9119.9248046875, Test KLD: 36.23447799682617
+
+Epoch: 122
+Train ELBO: 8818.48046875, Train BCE: 8781.794921875, Train KLD: 36.682762145996094
+Val ELBO: 9179.57421875, Val BCE: 9142.755859375, Val KLD: 36.812015533447266
+Test ELBO: 9167.640625, Test BCE: 9130.955078125, Test KLD: 36.68075180053711
+
+Epoch: 123
+Train ELBO: 8818.009765625, Train BCE: 8781.318359375, Train KLD: 36.68974685668945
+Val ELBO: 9177.4482421875, Val BCE: 9140.505859375, Val KLD: 36.939205169677734
+Test ELBO: 9165.9150390625, Test BCE: 9129.111328125, Test KLD: 36.807979583740234
+
+Epoch: 124
+Train ELBO: 8817.552734375, Train BCE: 8780.861328125, Train KLD: 36.696773529052734
+Val ELBO: 9166.8310546875, Val BCE: 9130.751953125, Val KLD: 36.073917388916016
+Test ELBO: 9155.505859375, Test BCE: 9119.5693359375, Test KLD: 35.93634033203125
+
+Epoch: 125
+Train ELBO: 8816.607421875, Train BCE: 8779.8935546875, Train KLD: 36.71174621582031
+Val ELBO: 9167.3447265625, Val BCE: 9130.681640625, Val KLD: 36.664798736572266
+Test ELBO: 9155.966796875, Test BCE: 9119.4296875, Test KLD: 36.536781311035156
+
+Epoch: 126
+Train ELBO: 8815.7646484375, Train BCE: 8779.041015625, Train KLD: 36.72102355957031
+Val ELBO: 9183.5556640625, Val BCE: 9146.6923828125, Val KLD: 36.856773376464844
+Test ELBO: 9171.6259765625, Test BCE: 9134.8974609375, Test KLD: 36.72814178466797
+
+Epoch: 127
+Train ELBO: 8815.470703125, Train BCE: 8778.72265625, Train KLD: 36.75284957885742
+Val ELBO: 9171.30078125, Val BCE: 9134.994140625, Val KLD: 36.302486419677734
+Test ELBO: 9159.5029296875, Test BCE: 9123.3359375, Test KLD: 36.16338348388672
+
+Epoch: 128
+Train ELBO: 8814.9638671875, Train BCE: 8778.1923828125, Train KLD: 36.77628707885742
+Val ELBO: 9175.369140625, Val BCE: 9138.591796875, Val KLD: 36.77307891845703
+Test ELBO: 9163.6806640625, Test BCE: 9127.0478515625, Test KLD: 36.634883880615234
+
+Epoch: 129
+Train ELBO: 8814.4912109375, Train BCE: 8777.6982421875, Train KLD: 36.78548049926758
+Val ELBO: 9176.037109375, Val BCE: 9139.443359375, Val KLD: 36.59663772583008
+Test ELBO: 9164.455078125, Test BCE: 9127.9931640625, Test KLD: 36.45637893676758
+
+Epoch: 130
+Train ELBO: 8813.728515625, Train BCE: 8776.9306640625, Train KLD: 36.79624938964844
+Val ELBO: 9175.005859375, Val BCE: 9138.5458984375, Val KLD: 36.4660530090332
+Test ELBO: 9162.978515625, Test BCE: 9126.65234375, Test KLD: 36.32282257080078
+
+Epoch: 131
+Train ELBO: 8812.896484375, Train BCE: 8776.07421875, Train KLD: 36.819271087646484
+Val ELBO: 9183.70703125, Val BCE: 9146.740234375, Val KLD: 36.96308135986328
+Test ELBO: 9172.201171875, Test BCE: 9135.3828125, Test KLD: 36.82757568359375
+
+Epoch: 132
+Train ELBO: 8812.4130859375, Train BCE: 8775.6083984375, Train KLD: 36.81374740600586
+Val ELBO: 9170.712890625, Val BCE: 9134.232421875, Val KLD: 36.48052978515625
+Test ELBO: 9159.603515625, Test BCE: 9123.2548828125, Test KLD: 36.34408950805664
+
+Epoch: 133
+Train ELBO: 8812.1845703125, Train BCE: 8775.3515625, Train KLD: 36.826908111572266
+Val ELBO: 9176.322265625, Val BCE: 9139.259765625, Val KLD: 37.05653762817383
+Test ELBO: 9165.4169921875, Test BCE: 9128.505859375, Test KLD: 36.91425704956055
+
+Epoch: 134
+Train ELBO: 8811.115234375, Train BCE: 8774.25390625, Train KLD: 36.86280822753906
+Val ELBO: 9175.17578125, Val BCE: 9138.21875, Val KLD: 36.9599723815918
+Test ELBO: 9163.396484375, Test BCE: 9126.572265625, Test KLD: 36.82648468017578
+
+Epoch: 135
+Train ELBO: 8810.431640625, Train BCE: 8773.564453125, Train KLD: 36.86871337890625
+Val ELBO: 9188.8642578125, Val BCE: 9151.916015625, Val KLD: 36.94694137573242
+Test ELBO: 9176.8818359375, Test BCE: 9140.07421875, Test KLD: 36.80701446533203
+
+Epoch: 136
+Train ELBO: 8810.26171875, Train BCE: 8773.373046875, Train KLD: 36.888160705566406
+Val ELBO: 9173.8544921875, Val BCE: 9136.8212890625, Val KLD: 37.03663635253906
+Test ELBO: 9162.42578125, Test BCE: 9125.525390625, Test KLD: 36.897483825683594
+
+Epoch: 137
+Train ELBO: 8809.6689453125, Train BCE: 8772.7744140625, Train KLD: 36.8976936340332
+Val ELBO: 9175.6787109375, Val BCE: 9139.421875, Val KLD: 36.2566032409668
+Test ELBO: 9164.3173828125, Test BCE: 9128.2001953125, Test KLD: 36.11952209472656
+
+Epoch: 138
+Train ELBO: 8809.201171875, Train BCE: 8772.2861328125, Train KLD: 36.907737731933594
+Val ELBO: 9176.01953125, Val BCE: 9139.58984375, Val KLD: 36.427085876464844
+Test ELBO: 9163.7705078125, Test BCE: 9127.478515625, Test KLD: 36.29191207885742
+
+Epoch: 139
+Train ELBO: 8808.6611328125, Train BCE: 8771.7373046875, Train KLD: 36.92893981933594
+Val ELBO: 9181.2236328125, Val BCE: 9144.5888671875, Val KLD: 36.62977981567383
+Test ELBO: 9169.71875, Test BCE: 9133.224609375, Test KLD: 36.496826171875
+
+Epoch: 140
+Train ELBO: 8808.0009765625, Train BCE: 8771.0517578125, Train KLD: 36.939353942871094
+Val ELBO: 9181.14453125, Val BCE: 9144.3154296875, Val KLD: 36.83040237426758
+Test ELBO: 9169.771484375, Test BCE: 9133.0751953125, Test KLD: 36.694129943847656
+
+Epoch: 141
+Train ELBO: 8807.5400390625, Train BCE: 8770.591796875, Train KLD: 36.94834518432617
+Val ELBO: 9185.60546875, Val BCE: 9148.44921875, Val KLD: 37.15843963623047
+Test ELBO: 9174.208984375, Test BCE: 9137.1884765625, Test KLD: 37.02287292480469
+
+Epoch: 142
+Train ELBO: 8806.8515625, Train BCE: 8769.8798828125, Train KLD: 36.974124908447266
+Val ELBO: 9178.873046875, Val BCE: 9142.1943359375, Val KLD: 36.68073654174805
+Test ELBO: 9167.923828125, Test BCE: 9131.373046875, Test KLD: 36.550758361816406
+
+Epoch: 143
+Train ELBO: 8806.349609375, Train BCE: 8769.3583984375, Train KLD: 36.988739013671875
+Val ELBO: 9189.2880859375, Val BCE: 9152.00390625, Val KLD: 37.28720474243164
+Test ELBO: 9177.0693359375, Test BCE: 9139.9189453125, Test KLD: 37.148773193359375
+
+Epoch: 144
+Train ELBO: 8805.90625, Train BCE: 8768.919921875, Train KLD: 36.99470520019531
+Val ELBO: 9193.908203125, Val BCE: 9156.8388671875, Val KLD: 37.069358825683594
+Test ELBO: 9181.9169921875, Test BCE: 9144.98828125, Test KLD: 36.930747985839844
+
+Epoch: 145
+Train ELBO: 8805.3642578125, Train BCE: 8768.3544921875, Train KLD: 37.00674057006836
+Val ELBO: 9178.791015625, Val BCE: 9142.455078125, Val KLD: 36.33408737182617
+Test ELBO: 9167.248046875, Test BCE: 9131.0341796875, Test KLD: 36.208641052246094
+
+Epoch: 146
+Train ELBO: 8804.712890625, Train BCE: 8767.6650390625, Train KLD: 37.04001998901367
+Val ELBO: 9180.837890625, Val BCE: 9144.08984375, Val KLD: 36.7446403503418
+Test ELBO: 9169.6943359375, Test BCE: 9133.072265625, Test KLD: 36.614723205566406
+
+Epoch: 147
+Train ELBO: 8804.4248046875, Train BCE: 8767.3876953125, Train KLD: 37.03519821166992
+Val ELBO: 9187.4482421875, Val BCE: 9150.6279296875, Val KLD: 36.820289611816406
+Test ELBO: 9175.326171875, Test BCE: 9138.6328125, Test KLD: 36.68910217285156
+
+Epoch: 148
+Train ELBO: 8803.9169921875, Train BCE: 8766.873046875, Train KLD: 37.04359817504883
+Val ELBO: 9189.04296875, Val BCE: 9152.091796875, Val KLD: 36.957462310791016
+Test ELBO: 9176.76171875, Test BCE: 9139.9423828125, Test KLD: 36.81882858276367
+
+Epoch: 149
+Train ELBO: 8803.376953125, Train BCE: 8766.3203125, Train KLD: 37.057167053222656
+Val ELBO: 9197.3447265625, Val BCE: 9160.12109375, Val KLD: 37.224605560302734
+Test ELBO: 9185.06640625, Test BCE: 9147.9765625, Test KLD: 37.085575103759766
+
+Epoch: 150
+Train ELBO: 8803.02734375, Train BCE: 8765.94140625, Train KLD: 37.0908203125
+Val ELBO: 9186.1259765625, Val BCE: 9149.0166015625, Val KLD: 37.11077880859375
+Test ELBO: 9174.5029296875, Test BCE: 9137.5234375, Test KLD: 36.97576141357422
+
+Epoch: 151
+Train ELBO: 8802.4462890625, Train BCE: 8765.3564453125, Train KLD: 37.08949661254883
+Val ELBO: 9191.1005859375, Val BCE: 9153.7861328125, Val KLD: 37.31902313232422
+Test ELBO: 9178.720703125, Test BCE: 9141.5380859375, Test KLD: 37.181983947753906
+
+Epoch: 152
+Train ELBO: 8802.0302734375, Train BCE: 8764.9365234375, Train KLD: 37.1004524230957
+Val ELBO: 9188.6044921875, Val BCE: 9151.357421875, Val KLD: 37.250144958496094
+Test ELBO: 9176.263671875, Test BCE: 9139.1484375, Test KLD: 37.11513137817383
+
+Epoch: 153
+Train ELBO: 8801.5576171875, Train BCE: 8764.4404296875, Train KLD: 37.11286163330078
+Val ELBO: 9191.740234375, Val BCE: 9154.73828125, Val KLD: 36.997108459472656
+Test ELBO: 9179.61328125, Test BCE: 9142.75, Test KLD: 36.86062240600586
+
+Epoch: 154
+Train ELBO: 8801.1181640625, Train BCE: 8764.001953125, Train KLD: 37.11776351928711
+Val ELBO: 9185.6416015625, Val BCE: 9148.375, Val KLD: 37.26337432861328
+Test ELBO: 9173.4072265625, Test BCE: 9136.267578125, Test KLD: 37.13231658935547
+
+Epoch: 155
+Train ELBO: 8800.5908203125, Train BCE: 8763.4453125, Train KLD: 37.14371109008789
+Val ELBO: 9187.5419921875, Val BCE: 9150.4921875, Val KLD: 37.046993255615234
+Test ELBO: 9176.1171875, Test BCE: 9139.212890625, Test KLD: 36.906375885009766
+
+Epoch: 156
+Train ELBO: 8800.11328125, Train BCE: 8762.951171875, Train KLD: 37.16232681274414
+Val ELBO: 9189.19921875, Val BCE: 9152.271484375, Val KLD: 36.92578125
+Test ELBO: 9178.068359375, Test BCE: 9141.2822265625, Test KLD: 36.791263580322266
+
+Epoch: 157
+Train ELBO: 8799.5107421875, Train BCE: 8762.357421875, Train KLD: 37.15928268432617
+Val ELBO: 9193.8349609375, Val BCE: 9156.6005859375, Val KLD: 37.2324333190918
+Test ELBO: 9182.1806640625, Test BCE: 9145.0849609375, Test KLD: 37.09616470336914
+
+Epoch: 158
+Train ELBO: 8799.265625, Train BCE: 8762.095703125, Train KLD: 37.167884826660156
+Val ELBO: 9190.21875, Val BCE: 9152.931640625, Val KLD: 37.287193298339844
+Test ELBO: 9178.6494140625, Test BCE: 9141.4990234375, Test KLD: 37.151588439941406
+
+Epoch: 159
+Train ELBO: 8798.9677734375, Train BCE: 8761.765625, Train KLD: 37.19789505004883
+Val ELBO: 9187.1328125, Val BCE: 9150.0966796875, Val KLD: 37.03573989868164
+Test ELBO: 9175.39453125, Test BCE: 9138.5009765625, Test KLD: 36.897064208984375
+
+Epoch: 160
+Train ELBO: 8798.2109375, Train BCE: 8761.009765625, Train KLD: 37.20351791381836
+Val ELBO: 9191.353515625, Val BCE: 9154.15625, Val KLD: 37.192813873291016
+Test ELBO: 9179.5341796875, Test BCE: 9142.478515625, Test KLD: 37.05149841308594
+
+Epoch: 161
+Train ELBO: 8797.875, Train BCE: 8760.6552734375, Train KLD: 37.21134567260742
+Val ELBO: 9190.490234375, Val BCE: 9153.1943359375, Val KLD: 37.29278564453125
+Test ELBO: 9178.9384765625, Test BCE: 9141.77734375, Test KLD: 37.161312103271484
+
+Epoch: 162
+Train ELBO: 8797.578125, Train BCE: 8760.3505859375, Train KLD: 37.23452377319336
+Val ELBO: 9197.1171875, Val BCE: 9160.0703125, Val KLD: 37.04509353637695
+Test ELBO: 9185.1669921875, Test BCE: 9148.26171875, Test KLD: 36.90554428100586
+
+Epoch: 163
+Train ELBO: 8796.9609375, Train BCE: 8759.7109375, Train KLD: 37.25493621826172
+Val ELBO: 9195.673828125, Val BCE: 9158.24609375, Val KLD: 37.426849365234375
+Test ELBO: 9183.8720703125, Test BCE: 9146.5888671875, Test KLD: 37.28778839111328
+
+Epoch: 164
+Train ELBO: 8796.4873046875, Train BCE: 8759.2421875, Train KLD: 37.242645263671875
+Val ELBO: 9198.701171875, Val BCE: 9161.435546875, Val KLD: 37.26182174682617
+Test ELBO: 9186.001953125, Test BCE: 9148.875, Test KLD: 37.126991271972656
+
+Epoch: 165
+Train ELBO: 8795.931640625, Train BCE: 8758.6669921875, Train KLD: 37.26871871948242
+Val ELBO: 9186.8017578125, Val BCE: 9150.1826171875, Val KLD: 36.62401580810547
+Test ELBO: 9175.6318359375, Test BCE: 9139.1396484375, Test KLD: 36.493980407714844
+
+Epoch: 166
+Train ELBO: 8795.8359375, Train BCE: 8758.572265625, Train KLD: 37.26579284667969
+Val ELBO: 9198.5361328125, Val BCE: 9161.0556640625, Val KLD: 37.48126220703125
+Test ELBO: 9186.421875, Test BCE: 9149.07421875, Test KLD: 37.345821380615234
+
+Epoch: 167
+Train ELBO: 8795.5693359375, Train BCE: 8758.2666015625, Train KLD: 37.29295349121094
+Val ELBO: 9194.6748046875, Val BCE: 9157.15234375, Val KLD: 37.52317428588867
+Test ELBO: 9182.37109375, Test BCE: 9144.9912109375, Test KLD: 37.3840217590332
+
+Epoch: 168
+Train ELBO: 8794.830078125, Train BCE: 8757.5341796875, Train KLD: 37.2965202331543
+Val ELBO: 9182.6748046875, Val BCE: 9145.71484375, Val KLD: 36.96106719970703
+Test ELBO: 9171.1396484375, Test BCE: 9134.3134765625, Test KLD: 36.82084274291992
+
+Epoch: 169
+Train ELBO: 8794.8017578125, Train BCE: 8757.4794921875, Train KLD: 37.32135009765625
+Val ELBO: 9191.02734375, Val BCE: 9153.9404296875, Val KLD: 37.08799362182617
+Test ELBO: 9178.8466796875, Test BCE: 9141.8955078125, Test KLD: 36.947906494140625
+
+Epoch: 170
+Train ELBO: 8794.0576171875, Train BCE: 8756.720703125, Train KLD: 37.3334846496582
+Val ELBO: 9197.7822265625, Val BCE: 9160.541015625, Val KLD: 37.24079895019531
+Test ELBO: 9185.7939453125, Test BCE: 9148.6982421875, Test KLD: 37.09327697753906
+
+Epoch: 171
+Train ELBO: 8793.728515625, Train BCE: 8756.4052734375, Train KLD: 37.332210540771484
+Val ELBO: 9202.470703125, Val BCE: 9164.8837890625, Val KLD: 37.58700180053711
+Test ELBO: 9190.23828125, Test BCE: 9152.7841796875, Test KLD: 37.453243255615234
+
+Epoch: 172
+Train ELBO: 8793.33984375, Train BCE: 8755.9833984375, Train KLD: 37.35040283203125
+Val ELBO: 9186.0947265625, Val BCE: 9149.064453125, Val KLD: 37.03551483154297
+Test ELBO: 9174.0966796875, Test BCE: 9137.197265625, Test KLD: 36.900970458984375
+
+Epoch: 173
+Train ELBO: 8793.1650390625, Train BCE: 8755.8056640625, Train KLD: 37.358642578125
+Val ELBO: 9198.037109375, Val BCE: 9160.6083984375, Val KLD: 37.42430877685547
+Test ELBO: 9185.2646484375, Test BCE: 9147.986328125, Test KLD: 37.2818603515625
+
+Epoch: 174
+Train ELBO: 8792.908203125, Train BCE: 8755.53515625, Train KLD: 37.36503601074219
+Val ELBO: 9206.9326171875, Val BCE: 9169.1435546875, Val KLD: 37.790470123291016
+Test ELBO: 9194.509765625, Test BCE: 9156.8701171875, Test KLD: 37.644752502441406
+
+Epoch: 175
+Train ELBO: 8791.94921875, Train BCE: 8754.5654296875, Train KLD: 37.385292053222656
+Val ELBO: 9197.478515625, Val BCE: 9160.01171875, Val KLD: 37.47499084472656
+Test ELBO: 9185.2958984375, Test BCE: 9147.9619140625, Test KLD: 37.33562088012695
+
+Epoch: 176
+Train ELBO: 8791.7978515625, Train BCE: 8754.419921875, Train KLD: 37.3806037902832
+Val ELBO: 9198.576171875, Val BCE: 9161.5966796875, Val KLD: 36.98480987548828
+Test ELBO: 9185.9833984375, Test BCE: 9149.13671875, Test KLD: 36.84640121459961
+
+Epoch: 177
+Train ELBO: 8791.6123046875, Train BCE: 8754.20703125, Train KLD: 37.40439224243164
+Val ELBO: 9198.875, Val BCE: 9161.521484375, Val KLD: 37.348331451416016
+Test ELBO: 9186.814453125, Test BCE: 9149.6064453125, Test KLD: 37.20344543457031
+
+Epoch: 178
+Train ELBO: 8790.9755859375, Train BCE: 8753.5673828125, Train KLD: 37.408714294433594
+Val ELBO: 9207.44140625, Val BCE: 9170.0986328125, Val KLD: 37.34303283691406
+Test ELBO: 9195.84375, Test BCE: 9158.63671875, Test KLD: 37.20322799682617
+
+Epoch: 179
+Train ELBO: 8790.75390625, Train BCE: 8753.3388671875, Train KLD: 37.41449737548828
+Val ELBO: 9199.845703125, Val BCE: 9162.50390625, Val KLD: 37.340110778808594
+Test ELBO: 9188.0302734375, Test BCE: 9150.8271484375, Test KLD: 37.199886322021484
+
+Epoch: 180
+Train ELBO: 8790.3447265625, Train BCE: 8752.900390625, Train KLD: 37.43773651123047
+Val ELBO: 9204.330078125, Val BCE: 9167.0380859375, Val KLD: 37.29789733886719
+Test ELBO: 9192.712890625, Test BCE: 9155.5654296875, Test KLD: 37.14680862426758
+
+Epoch: 181
+Train ELBO: 8789.958984375, Train BCE: 8752.5087890625, Train KLD: 37.44650650024414
+Val ELBO: 9204.0263671875, Val BCE: 9166.2333984375, Val KLD: 37.793704986572266
+Test ELBO: 9191.728515625, Test BCE: 9154.0849609375, Test KLD: 37.64474105834961
+
+Epoch: 182
+Train ELBO: 8789.248046875, Train BCE: 8751.8046875, Train KLD: 37.45074462890625
+Val ELBO: 9200.74609375, Val BCE: 9163.697265625, Val KLD: 37.04716110229492
+Test ELBO: 9188.572265625, Test BCE: 9151.6728515625, Test KLD: 36.903053283691406
+
+Epoch: 183
+Train ELBO: 8789.3173828125, Train BCE: 8751.8515625, Train KLD: 37.469268798828125
+Val ELBO: 9201.2568359375, Val BCE: 9163.771484375, Val KLD: 37.4908332824707
+Test ELBO: 9189.2626953125, Test BCE: 9151.9111328125, Test KLD: 37.35316467285156
+
+Epoch: 184
+Train ELBO: 8788.97265625, Train BCE: 8751.501953125, Train KLD: 37.476078033447266
+Val ELBO: 9198.6748046875, Val BCE: 9161.009765625, Val KLD: 37.662628173828125
+Test ELBO: 9186.75, Test BCE: 9149.2255859375, Test KLD: 37.52677917480469
+
+Epoch: 185
+Train ELBO: 8788.509765625, Train BCE: 8751.03125, Train KLD: 37.479801177978516
+Val ELBO: 9207.6865234375, Val BCE: 9170.5859375, Val KLD: 37.09865951538086
+Test ELBO: 9195.4951171875, Test BCE: 9158.5361328125, Test KLD: 36.95684814453125
+
+Epoch: 186
+Train ELBO: 8788.24609375, Train BCE: 8750.7392578125, Train KLD: 37.506473541259766
+Val ELBO: 9198.0556640625, Val BCE: 9160.947265625, Val KLD: 37.10700988769531
+Test ELBO: 9186.326171875, Test BCE: 9149.3515625, Test KLD: 36.972747802734375
+
+Epoch: 187
+Train ELBO: 8787.794921875, Train BCE: 8750.279296875, Train KLD: 37.50999450683594
+Val ELBO: 9195.4482421875, Val BCE: 9158.3955078125, Val KLD: 37.057640075683594
+Test ELBO: 9184.046875, Test BCE: 9147.12890625, Test KLD: 36.918479919433594
+
+Epoch: 188
+Train ELBO: 8787.38671875, Train BCE: 8749.86328125, Train KLD: 37.52894592285156
+Val ELBO: 9204.9375, Val BCE: 9167.0732421875, Val KLD: 37.87080001831055
+Test ELBO: 9192.4248046875, Test BCE: 9154.7001953125, Test KLD: 37.72947692871094
+
+Epoch: 189
+Train ELBO: 8787.2578125, Train BCE: 8749.7197265625, Train KLD: 37.53965377807617
+Val ELBO: 9207.2685546875, Val BCE: 9169.333984375, Val KLD: 37.9402961730957
+Test ELBO: 9195.5595703125, Test BCE: 9157.7548828125, Test KLD: 37.80263900756836
+
+Epoch: 190
+Train ELBO: 8786.8525390625, Train BCE: 8749.31640625, Train KLD: 37.53436279296875
+Val ELBO: 9198.1865234375, Val BCE: 9161.021484375, Val KLD: 37.160499572753906
+Test ELBO: 9185.7587890625, Test BCE: 9148.740234375, Test KLD: 37.01938247680664
+
+Epoch: 191
+Train ELBO: 8786.173828125, Train BCE: 8748.6162109375, Train KLD: 37.55295944213867
+Val ELBO: 9206.541015625, Val BCE: 9168.9306640625, Val KLD: 37.60868835449219
+Test ELBO: 9194.021484375, Test BCE: 9156.5595703125, Test KLD: 37.46194839477539
+
+Epoch: 192
+Train ELBO: 8786.212890625, Train BCE: 8748.671875, Train KLD: 37.5454216003418
+Val ELBO: 9211.69140625, Val BCE: 9174.421875, Val KLD: 37.27141571044922
+Test ELBO: 9199.8837890625, Test BCE: 9162.7646484375, Test KLD: 37.12472152709961
+
+Epoch: 193
+Train ELBO: 8785.794921875, Train BCE: 8748.2353515625, Train KLD: 37.564109802246094
+Val ELBO: 9204.1259765625, Val BCE: 9166.7763671875, Val KLD: 37.3565788269043
+Test ELBO: 9192.2177734375, Test BCE: 9155.009765625, Test KLD: 37.21202850341797
+
+Epoch: 194
+Train ELBO: 8785.54296875, Train BCE: 8747.9462890625, Train KLD: 37.58689498901367
+Val ELBO: 9203.56640625, Val BCE: 9166.064453125, Val KLD: 37.49345397949219
+Test ELBO: 9191.673828125, Test BCE: 9154.3271484375, Test KLD: 37.35291290283203
+
+Epoch: 195
+Train ELBO: 8785.2646484375, Train BCE: 8747.6806640625, Train KLD: 37.57936477661133
+Val ELBO: 9200.9970703125, Val BCE: 9163.8662109375, Val KLD: 37.12873077392578
+Test ELBO: 9188.759765625, Test BCE: 9151.775390625, Test KLD: 36.99008560180664
+
+Epoch: 196
+Train ELBO: 8784.4765625, Train BCE: 8746.8857421875, Train KLD: 37.58671188354492
+Val ELBO: 9209.353515625, Val BCE: 9172.0703125, Val KLD: 37.27931594848633
+Test ELBO: 9197.474609375, Test BCE: 9160.3349609375, Test KLD: 37.13909912109375
+
+Epoch: 197
+Train ELBO: 8784.5146484375, Train BCE: 8746.916015625, Train KLD: 37.60162353515625
+Val ELBO: 9208.01171875, Val BCE: 9170.130859375, Val KLD: 37.87451934814453
+Test ELBO: 9195.34375, Test BCE: 9157.615234375, Test KLD: 37.72784423828125
+
+Epoch: 198
+Train ELBO: 8784.1484375, Train BCE: 8746.5322265625, Train KLD: 37.61954116821289
+Val ELBO: 9209.3173828125, Val BCE: 9171.333984375, Val KLD: 37.98994827270508
+Test ELBO: 9197.0166015625, Test BCE: 9159.1728515625, Test KLD: 37.84852600097656
+
+Epoch: 199
+Train ELBO: 8783.791015625, Train BCE: 8746.1650390625, Train KLD: 37.621368408203125
+Val ELBO: 9198.40625, Val BCE: 9160.822265625, Val KLD: 37.58393096923828
+Test ELBO: 9186.693359375, Test BCE: 9149.2568359375, Test KLD: 37.438175201416016
+
+Epoch: 200
+Train ELBO: 8783.6123046875, Train BCE: 8745.9736328125, Train KLD: 37.636783599853516
+Val ELBO: 9204.12109375, Val BCE: 9166.7216796875, Val KLD: 37.4030876159668
+Test ELBO: 9191.880859375, Test BCE: 9154.6171875, Test KLD: 37.26533889770508
+
+Epoch: 201
+Train ELBO: 8783.2177734375, Train BCE: 8745.564453125, Train KLD: 37.64869689941406
+Val ELBO: 9218.70703125, Val BCE: 9180.87109375, Val KLD: 37.845367431640625
+Test ELBO: 9205.7255859375, Test BCE: 9168.021484375, Test KLD: 37.70173263549805
+
+Epoch: 202
+Train ELBO: 8783.0625, Train BCE: 8745.40625, Train KLD: 37.65423583984375
+Val ELBO: 9216.8828125, Val BCE: 9178.9140625, Val KLD: 37.97600173950195
+Test ELBO: 9205.251953125, Test BCE: 9167.412109375, Test KLD: 37.83756637573242
+
+Epoch: 203
+Train ELBO: 8782.392578125, Train BCE: 8744.7236328125, Train KLD: 37.67189407348633
+Val ELBO: 9210.76171875, Val BCE: 9173.3447265625, Val KLD: 37.417320251464844
+Test ELBO: 9199.1630859375, Test BCE: 9161.8779296875, Test KLD: 37.27947998046875
+
+Epoch: 204
+Train ELBO: 8782.1953125, Train BCE: 8744.5126953125, Train KLD: 37.68008041381836
+Val ELBO: 9204.5673828125, Val BCE: 9166.9951171875, Val KLD: 37.57442092895508
+Test ELBO: 9192.279296875, Test BCE: 9154.8447265625, Test KLD: 37.43376541137695
+
+Epoch: 205
+Train ELBO: 8782.0830078125, Train BCE: 8744.4052734375, Train KLD: 37.67863845825195
+Val ELBO: 9208.4404296875, Val BCE: 9170.5146484375, Val KLD: 37.92379379272461
+Test ELBO: 9195.7294921875, Test BCE: 9157.9482421875, Test KLD: 37.780174255371094
+
+Epoch: 206
+Train ELBO: 8781.5458984375, Train BCE: 8743.8466796875, Train KLD: 37.69612121582031
+Val ELBO: 9201.5263671875, Val BCE: 9164.73828125, Val KLD: 36.79082107543945
+Test ELBO: 9189.001953125, Test BCE: 9152.345703125, Test KLD: 36.65449142456055
+
+Epoch: 207
+Train ELBO: 8781.634765625, Train BCE: 8743.9248046875, Train KLD: 37.71048355102539
+Val ELBO: 9207.2890625, Val BCE: 9169.921875, Val KLD: 37.37188720703125
+Test ELBO: 9195.7861328125, Test BCE: 9158.5546875, Test KLD: 37.2303581237793
+
+Epoch: 208
+Train ELBO: 8781.025390625, Train BCE: 8743.30859375, Train KLD: 37.71171951293945
+Val ELBO: 9211.125, Val BCE: 9173.5400390625, Val KLD: 37.586570739746094
+Test ELBO: 9199.400390625, Test BCE: 9161.9599609375, Test KLD: 37.4427490234375
+
+Epoch: 209
+Train ELBO: 8780.8310546875, Train BCE: 8743.0986328125, Train KLD: 37.729793548583984
+Val ELBO: 9206.6767578125, Val BCE: 9168.951171875, Val KLD: 37.72429275512695
+Test ELBO: 9194.2353515625, Test BCE: 9156.6494140625, Test KLD: 37.5853385925293
+
+Epoch: 210
+Train ELBO: 8780.5087890625, Train BCE: 8742.7666015625, Train KLD: 37.74351501464844
+Val ELBO: 9213.5166015625, Val BCE: 9176.115234375, Val KLD: 37.3968620300293
+Test ELBO: 9201.1376953125, Test BCE: 9163.88671875, Test KLD: 37.25315475463867
+
+Epoch: 211
+Train ELBO: 8780.0908203125, Train BCE: 8742.34375, Train KLD: 37.74631881713867
+Val ELBO: 9209.3916015625, Val BCE: 9171.6494140625, Val KLD: 37.740699768066406
+Test ELBO: 9197.6083984375, Test BCE: 9160.0048828125, Test KLD: 37.596702575683594
+
+Epoch: 212
+Train ELBO: 8779.9169921875, Train BCE: 8742.1533203125, Train KLD: 37.75469970703125
+Val ELBO: 9206.490234375, Val BCE: 9168.978515625, Val KLD: 37.50923538208008
+Test ELBO: 9194.2890625, Test BCE: 9156.9130859375, Test KLD: 37.3773307800293
+
+Epoch: 213
+Train ELBO: 8779.6279296875, Train BCE: 8741.8720703125, Train KLD: 37.75899124145508
+Val ELBO: 9211.859375, Val BCE: 9174.2890625, Val KLD: 37.569374084472656
+Test ELBO: 9199.3310546875, Test BCE: 9161.9091796875, Test KLD: 37.42026138305664
+
+Epoch: 214
+Train ELBO: 8779.2529296875, Train BCE: 8741.4892578125, Train KLD: 37.77060317993164
+Val ELBO: 9214.6328125, Val BCE: 9177.0771484375, Val KLD: 37.55142593383789
+Test ELBO: 9202.529296875, Test BCE: 9165.134765625, Test KLD: 37.39958953857422
+
+Epoch: 215
+Train ELBO: 8779.279296875, Train BCE: 8741.501953125, Train KLD: 37.784217834472656
+Val ELBO: 9213.7373046875, Val BCE: 9175.8544921875, Val KLD: 37.88420104980469
+Test ELBO: 9201.654296875, Test BCE: 9163.9150390625, Test KLD: 37.73538589477539
+
+Epoch: 216
+Train ELBO: 8778.58203125, Train BCE: 8740.7958984375, Train KLD: 37.78588104248047
+Val ELBO: 9208.201171875, Val BCE: 9170.46484375, Val KLD: 37.73224639892578
+Test ELBO: 9195.9794921875, Test BCE: 9158.3955078125, Test KLD: 37.58534240722656
+
+Epoch: 217
+Train ELBO: 8778.1123046875, Train BCE: 8740.3154296875, Train KLD: 37.79821014404297
+Val ELBO: 9204.154296875, Val BCE: 9166.490234375, Val KLD: 37.66439437866211
+Test ELBO: 9192.443359375, Test BCE: 9154.9267578125, Test KLD: 37.52598571777344
+
+Epoch: 218
+Train ELBO: 8778.5361328125, Train BCE: 8740.73828125, Train KLD: 37.801902770996094
+Val ELBO: 9223.2490234375, Val BCE: 9185.3896484375, Val KLD: 37.85688781738281
+Test ELBO: 9211.0849609375, Test BCE: 9173.3759765625, Test KLD: 37.70907211303711
+
+Epoch: 219
+Train ELBO: 8777.970703125, Train BCE: 8740.1650390625, Train KLD: 37.81268310546875
+Val ELBO: 9216.0546875, Val BCE: 9178.2373046875, Val KLD: 37.816131591796875
+Test ELBO: 9203.6708984375, Test BCE: 9166.0078125, Test KLD: 37.6692008972168
+
+Epoch: 220
+Train ELBO: 8777.369140625, Train BCE: 8739.54296875, Train KLD: 37.82771301269531
+Val ELBO: 9222.9658203125, Val BCE: 9184.9951171875, Val KLD: 37.968997955322266
+Test ELBO: 9210.26171875, Test BCE: 9172.4345703125, Test KLD: 37.823978424072266
+
+Epoch: 221
+Train ELBO: 8777.3486328125, Train BCE: 8739.5166015625, Train KLD: 37.828975677490234
+Val ELBO: 9208.4697265625, Val BCE: 9170.9248046875, Val KLD: 37.544029235839844
+Test ELBO: 9196.5068359375, Test BCE: 9159.09765625, Test KLD: 37.40769577026367
+
+Epoch: 222
+Train ELBO: 8777.2626953125, Train BCE: 8739.4169921875, Train KLD: 37.84033966064453
+Val ELBO: 9219.53515625, Val BCE: 9181.9052734375, Val KLD: 37.62535858154297
+Test ELBO: 9207.7578125, Test BCE: 9170.2724609375, Test KLD: 37.48330307006836
+
+Epoch: 223
+Train ELBO: 8776.82421875, Train BCE: 8738.9765625, Train KLD: 37.851409912109375
+Val ELBO: 9205.6865234375, Val BCE: 9168.103515625, Val KLD: 37.581443786621094
+Test ELBO: 9193.583984375, Test BCE: 9156.1337890625, Test KLD: 37.4478759765625
+
+Epoch: 224
+Train ELBO: 8776.576171875, Train BCE: 8738.7275390625, Train KLD: 37.84958267211914
+Val ELBO: 9207.7021484375, Val BCE: 9169.9140625, Val KLD: 37.782588958740234
+Test ELBO: 9195.0234375, Test BCE: 9157.3759765625, Test KLD: 37.643428802490234
+
+Epoch: 225
+Train ELBO: 8776.24609375, Train BCE: 8738.3671875, Train KLD: 37.87128448486328
+Val ELBO: 9217.0009765625, Val BCE: 9179.294921875, Val KLD: 37.70335006713867
+Test ELBO: 9204.7099609375, Test BCE: 9167.1474609375, Test KLD: 37.56296920776367
+
+Epoch: 226
+Train ELBO: 8776.0029296875, Train BCE: 8738.1318359375, Train KLD: 37.875823974609375
+Val ELBO: 9206.638671875, Val BCE: 9169.09765625, Val KLD: 37.5424690246582
+Test ELBO: 9195.0888671875, Test BCE: 9157.6845703125, Test KLD: 37.4046630859375
+
+Epoch: 227
+Train ELBO: 8776.013671875, Train BCE: 8738.1025390625, Train KLD: 37.90509796142578
+Val ELBO: 9221.708984375, Val BCE: 9184.0087890625, Val KLD: 37.70151901245117
+Test ELBO: 9209.2724609375, Test BCE: 9171.734375, Test KLD: 37.54689025878906
+
+Epoch: 228
+Train ELBO: 8775.5546875, Train BCE: 8737.671875, Train KLD: 37.88356018066406
+Val ELBO: 9217.029296875, Val BCE: 9179.12890625, Val KLD: 37.898590087890625
+Test ELBO: 9204.794921875, Test BCE: 9167.0341796875, Test KLD: 37.75700759887695
+
+Epoch: 229
+Train ELBO: 8774.68359375, Train BCE: 8736.775390625, Train KLD: 37.91035842895508
+Val ELBO: 9217.6728515625, Val BCE: 9180.259765625, Val KLD: 37.41106033325195
+Test ELBO: 9205.2802734375, Test BCE: 9168.0107421875, Test KLD: 37.26653289794922
+
+Epoch: 230
+Train ELBO: 8775.0673828125, Train BCE: 8737.1474609375, Train KLD: 37.91529083251953
+Val ELBO: 9213.876953125, Val BCE: 9176.189453125, Val KLD: 37.6894645690918
+Test ELBO: 9201.2021484375, Test BCE: 9163.6572265625, Test KLD: 37.544063568115234
+
+Epoch: 231
+Train ELBO: 8774.4736328125, Train BCE: 8736.5498046875, Train KLD: 37.92061233520508
+Val ELBO: 9213.4404296875, Val BCE: 9176.087890625, Val KLD: 37.355064392089844
+Test ELBO: 9201.2158203125, Test BCE: 9164.009765625, Test KLD: 37.20934295654297
+
+Epoch: 232
+Train ELBO: 8774.669921875, Train BCE: 8736.740234375, Train KLD: 37.92739486694336
+Val ELBO: 9210.9365234375, Val BCE: 9173.7509765625, Val KLD: 37.187355041503906
+Test ELBO: 9197.7783203125, Test BCE: 9160.7255859375, Test KLD: 37.04903793334961
+
+Epoch: 233
+Train ELBO: 8774.26171875, Train BCE: 8736.3115234375, Train KLD: 37.94899368286133
+Val ELBO: 9225.27734375, Val BCE: 9187.6162109375, Val KLD: 37.6633415222168
+Test ELBO: 9212.79296875, Test BCE: 9175.2763671875, Test KLD: 37.51255798339844
+
+Epoch: 234
+Train ELBO: 8773.732421875, Train BCE: 8735.787109375, Train KLD: 37.94187545776367
+Val ELBO: 9222.671875, Val BCE: 9184.79296875, Val KLD: 37.87705612182617
+Test ELBO: 9210.267578125, Test BCE: 9172.5302734375, Test KLD: 37.73538589477539
+
+Epoch: 235
+Train ELBO: 8773.8193359375, Train BCE: 8735.8720703125, Train KLD: 37.9500617980957
+Val ELBO: 9215.935546875, Val BCE: 9177.7529296875, Val KLD: 38.178653717041016
+Test ELBO: 9203.6103515625, Test BCE: 9165.5849609375, Test KLD: 38.02901077270508
+
+Epoch: 236
+Train ELBO: 8773.724609375, Train BCE: 8735.75, Train KLD: 37.97295379638672
+Val ELBO: 9222.291015625, Val BCE: 9184.3369140625, Val KLD: 37.957252502441406
+Test ELBO: 9209.6181640625, Test BCE: 9171.8037109375, Test KLD: 37.811439514160156
+
+Epoch: 237
+Train ELBO: 8773.0576171875, Train BCE: 8735.0947265625, Train KLD: 37.96757125854492
+Val ELBO: 9224.7099609375, Val BCE: 9186.41015625, Val KLD: 38.29768371582031
+Test ELBO: 9211.935546875, Test BCE: 9173.7822265625, Test KLD: 38.14988708496094
+
+Epoch: 238
+Train ELBO: 8773.2900390625, Train BCE: 8735.3173828125, Train KLD: 37.97349548339844
+Val ELBO: 9218.4775390625, Val BCE: 9180.640625, Val KLD: 37.83257293701172
+Test ELBO: 9206.140625, Test BCE: 9168.4443359375, Test KLD: 37.6909294128418
+
+Epoch: 239
+Train ELBO: 8772.552734375, Train BCE: 8734.5712890625, Train KLD: 37.98891067504883
+Val ELBO: 9223.6552734375, Val BCE: 9185.4794921875, Val KLD: 38.17768859863281
+Test ELBO: 9211.4326171875, Test BCE: 9173.408203125, Test KLD: 38.02781677246094
+
+Epoch: 240
+Train ELBO: 8772.5849609375, Train BCE: 8734.5986328125, Train KLD: 37.99308776855469
+Val ELBO: 9208.3212890625, Val BCE: 9170.5166015625, Val KLD: 37.804195404052734
+Test ELBO: 9195.8525390625, Test BCE: 9158.19140625, Test KLD: 37.665283203125
+
+Epoch: 241
+Train ELBO: 8772.2958984375, Train BCE: 8734.2939453125, Train KLD: 38.00736999511719
+Val ELBO: 9219.27734375, Val BCE: 9181.1396484375, Val KLD: 38.1368293762207
+Test ELBO: 9206.7880859375, Test BCE: 9168.78515625, Test KLD: 37.9983024597168
+
+Epoch: 242
+Train ELBO: 8771.677734375, Train BCE: 8733.6669921875, Train KLD: 38.00543975830078
+Val ELBO: 9222.7578125, Val BCE: 9184.875, Val KLD: 37.88175582885742
+Test ELBO: 9210.310546875, Test BCE: 9172.5771484375, Test KLD: 37.73466873168945
+
+Epoch: 243
+Train ELBO: 8771.6640625, Train BCE: 8733.6611328125, Train KLD: 38.00890350341797
+Val ELBO: 9220.0673828125, Val BCE: 9182.0146484375, Val KLD: 38.049049377441406
+Test ELBO: 9207.8056640625, Test BCE: 9169.8994140625, Test KLD: 37.89832305908203
+
+Epoch: 244
+Train ELBO: 8771.9228515625, Train BCE: 8733.88671875, Train KLD: 38.022274017333984
+Val ELBO: 9216.6416015625, Val BCE: 9178.6865234375, Val KLD: 37.958805084228516
+Test ELBO: 9204.1337890625, Test BCE: 9166.326171875, Test KLD: 37.806114196777344
+
+Epoch: 245
+Train ELBO: 8771.1923828125, Train BCE: 8733.16015625, Train KLD: 38.03977966308594
+Val ELBO: 9221.0771484375, Val BCE: 9183.4697265625, Val KLD: 37.61066818237305
+Test ELBO: 9209.2294921875, Test BCE: 9171.7646484375, Test KLD: 37.46429443359375
+
+Epoch: 246
+Train ELBO: 8770.9208984375, Train BCE: 8732.8798828125, Train KLD: 38.036869049072266
+Val ELBO: 9224.2685546875, Val BCE: 9186.708984375, Val KLD: 37.560970306396484
+Test ELBO: 9211.49609375, Test BCE: 9174.0849609375, Test KLD: 37.41429901123047
+
+Epoch: 247
+Train ELBO: 8770.9853515625, Train BCE: 8732.939453125, Train KLD: 38.042171478271484
+Val ELBO: 9225.5693359375, Val BCE: 9187.6328125, Val KLD: 37.936790466308594
+Test ELBO: 9212.857421875, Test BCE: 9175.0693359375, Test KLD: 37.789581298828125
+
+Epoch: 248
+Train ELBO: 8770.689453125, Train BCE: 8732.634765625, Train KLD: 38.06071472167969
+Val ELBO: 9226.40625, Val BCE: 9188.55859375, Val KLD: 37.855533599853516
+Test ELBO: 9213.3076171875, Test BCE: 9175.59375, Test KLD: 37.71001052856445
+
+Epoch: 249
+Train ELBO: 8770.4853515625, Train BCE: 8732.4111328125, Train KLD: 38.0749626159668
+Val ELBO: 9221.97265625, Val BCE: 9183.8583984375, Val KLD: 38.11484146118164
+Test ELBO: 9209.2041015625, Test BCE: 9171.234375, Test KLD: 37.97645950317383
+
+Epoch: 250
+Train ELBO: 8770.2265625, Train BCE: 8732.1572265625, Train KLD: 38.073055267333984
+Val ELBO: 9226.541015625, Val BCE: 9188.8212890625, Val KLD: 37.72427749633789
+Test ELBO: 9213.85546875, Test BCE: 9176.27734375, Test KLD: 37.575748443603516
+
+Epoch: 251
+Train ELBO: 8769.978515625, Train BCE: 8731.89453125, Train KLD: 38.08158874511719
+Val ELBO: 9223.765625, Val BCE: 9186.0615234375, Val KLD: 37.7023811340332
+Test ELBO: 9211.4033203125, Test BCE: 9173.8515625, Test KLD: 37.5511474609375
+
+Epoch: 252
+Train ELBO: 8769.7861328125, Train BCE: 8731.6962890625, Train KLD: 38.08827590942383
+Val ELBO: 9225.724609375, Val BCE: 9187.80078125, Val KLD: 37.92055892944336
+Test ELBO: 9213.1640625, Test BCE: 9175.38671875, Test KLD: 37.77617645263672
+
+Epoch: 253
+Train ELBO: 8769.3857421875, Train BCE: 8731.287109375, Train KLD: 38.107181549072266
+Val ELBO: 9221.1015625, Val BCE: 9183.3193359375, Val KLD: 37.78200912475586
+Test ELBO: 9208.9404296875, Test BCE: 9171.298828125, Test KLD: 37.639163970947266
+
+Epoch: 254
+Train ELBO: 8769.283203125, Train BCE: 8731.173828125, Train KLD: 38.103694915771484
+Val ELBO: 9231.2490234375, Val BCE: 9192.78515625, Val KLD: 38.46422576904297
+Test ELBO: 9218.8251953125, Test BCE: 9180.5205078125, Test KLD: 38.311161041259766
+
+Epoch: 255
+Train ELBO: 8768.888671875, Train BCE: 8730.779296875, Train KLD: 38.11164093017578
+Val ELBO: 9226.375, Val BCE: 9188.068359375, Val KLD: 38.30165100097656
+Test ELBO: 9213.609375, Test BCE: 9175.458984375, Test KLD: 38.15120315551758
+
+Epoch: 256
+Train ELBO: 8769.11328125, Train BCE: 8730.9755859375, Train KLD: 38.12862014770508
+Val ELBO: 9220.6240234375, Val BCE: 9182.9873046875, Val KLD: 37.647117614746094
+Test ELBO: 9207.220703125, Test BCE: 9169.7138671875, Test KLD: 37.50419235229492
+
+Epoch: 257
+Train ELBO: 8768.5791015625, Train BCE: 8730.4599609375, Train KLD: 38.12036895751953
+Val ELBO: 9220.052734375, Val BCE: 9182.6220703125, Val KLD: 37.434478759765625
+Test ELBO: 9207.8828125, Test BCE: 9170.6005859375, Test KLD: 37.284141540527344
+
+Epoch: 258
+Train ELBO: 8768.3203125, Train BCE: 8730.1650390625, Train KLD: 38.15212631225586
+Val ELBO: 9225.7060546875, Val BCE: 9187.740234375, Val KLD: 37.967525482177734
+Test ELBO: 9212.978515625, Test BCE: 9175.158203125, Test KLD: 37.817325592041016
+
+Epoch: 259
+Train ELBO: 8767.9912109375, Train BCE: 8729.857421875, Train KLD: 38.14073181152344
+Val ELBO: 9248.43359375, Val BCE: 9210.3828125, Val KLD: 38.04767608642578
+Test ELBO: 9235.068359375, Test BCE: 9197.158203125, Test KLD: 37.90167236328125
+
+Epoch: 260
+Train ELBO: 8768.119140625, Train BCE: 8729.982421875, Train KLD: 38.137935638427734
+Val ELBO: 9232.861328125, Val BCE: 9195.154296875, Val KLD: 37.70829772949219
+Test ELBO: 9220.0029296875, Test BCE: 9182.4345703125, Test KLD: 37.56290054321289
+
+Epoch: 261
+Train ELBO: 8767.80859375, Train BCE: 8729.6416015625, Train KLD: 38.16387939453125
+Val ELBO: 9233.3935546875, Val BCE: 9194.8505859375, Val KLD: 38.542415618896484
+Test ELBO: 9220.556640625, Test BCE: 9182.162109375, Test KLD: 38.397613525390625
+
+Epoch: 262
+Train ELBO: 8767.556640625, Train BCE: 8729.39453125, Train KLD: 38.16709899902344
+Val ELBO: 9231.603515625, Val BCE: 9193.8251953125, Val KLD: 37.78062438964844
+Test ELBO: 9218.4072265625, Test BCE: 9180.7744140625, Test KLD: 37.62913513183594
+
+Epoch: 263
+Train ELBO: 8767.4072265625, Train BCE: 8729.24609375, Train KLD: 38.16716384887695
+Val ELBO: 9235.353515625, Val BCE: 9197.0205078125, Val KLD: 38.338375091552734
+Test ELBO: 9222.7734375, Test BCE: 9184.5751953125, Test KLD: 38.19281005859375
+
+Epoch: 264
+Train ELBO: 8767.046875, Train BCE: 8728.857421875, Train KLD: 38.18400192260742
+Val ELBO: 9231.474609375, Val BCE: 9193.490234375, Val KLD: 37.980857849121094
+Test ELBO: 9218.6845703125, Test BCE: 9180.8564453125, Test KLD: 37.83148193359375
+
+Epoch: 265
+Train ELBO: 8766.8134765625, Train BCE: 8728.6279296875, Train KLD: 38.18025588989258
+Val ELBO: 9226.1025390625, Val BCE: 9188.3076171875, Val KLD: 37.79757308959961
+Test ELBO: 9213.111328125, Test BCE: 9175.4638671875, Test KLD: 37.65163803100586
+
+Epoch: 266
+Train ELBO: 8766.5947265625, Train BCE: 8728.40625, Train KLD: 38.191165924072266
+Val ELBO: 9224.1416015625, Val BCE: 9186.185546875, Val KLD: 37.95321273803711
+Test ELBO: 9212.0966796875, Test BCE: 9174.2939453125, Test KLD: 37.805416107177734
+
+Epoch: 267
+Train ELBO: 8766.7412109375, Train BCE: 8728.55078125, Train KLD: 38.18933868408203
+Val ELBO: 9229.0166015625, Val BCE: 9191.3037109375, Val KLD: 37.717796325683594
+Test ELBO: 9216.279296875, Test BCE: 9178.71484375, Test KLD: 37.56570053100586
+
+Epoch: 268
+Train ELBO: 8766.2197265625, Train BCE: 8728.0244140625, Train KLD: 38.201900482177734
+Val ELBO: 9236.2802734375, Val BCE: 9197.83984375, Val KLD: 38.44417953491211
+Test ELBO: 9223.125, Test BCE: 9184.8271484375, Test KLD: 38.29121398925781
+
+Epoch: 269
+Train ELBO: 8766.154296875, Train BCE: 8727.9453125, Train KLD: 38.211341857910156
+Val ELBO: 9226.3349609375, Val BCE: 9188.1689453125, Val KLD: 38.16669464111328
+Test ELBO: 9213.5009765625, Test BCE: 9175.4775390625, Test KLD: 38.024837493896484
+
+Epoch: 270
+Train ELBO: 8765.87890625, Train BCE: 8727.6494140625, Train KLD: 38.22446060180664
+Val ELBO: 9230.4326171875, Val BCE: 9192.412109375, Val KLD: 38.02158737182617
+Test ELBO: 9218.4619140625, Test BCE: 9180.6015625, Test KLD: 37.870513916015625
+
+Epoch: 271
+Train ELBO: 8765.7431640625, Train BCE: 8727.5166015625, Train KLD: 38.225181579589844
+Val ELBO: 9229.6298828125, Val BCE: 9191.669921875, Val KLD: 37.960899353027344
+Test ELBO: 9217.12890625, Test BCE: 9179.3134765625, Test KLD: 37.81293869018555
+
+Epoch: 272
+Train ELBO: 8765.4462890625, Train BCE: 8727.2255859375, Train KLD: 38.22350311279297
+Val ELBO: 9231.4375, Val BCE: 9193.52734375, Val KLD: 37.90864944458008
+Test ELBO: 9219.5107421875, Test BCE: 9181.74609375, Test KLD: 37.76106643676758
+
+Epoch: 273
+Train ELBO: 8765.3017578125, Train BCE: 8727.076171875, Train KLD: 38.22568130493164
+Val ELBO: 9231.5595703125, Val BCE: 9193.59375, Val KLD: 37.97040557861328
+Test ELBO: 9218.8681640625, Test BCE: 9181.0517578125, Test KLD: 37.82188034057617
+
+Epoch: 274
+Train ELBO: 8765.064453125, Train BCE: 8726.8251953125, Train KLD: 38.23860168457031
+Val ELBO: 9235.6767578125, Val BCE: 9197.3466796875, Val KLD: 38.32866668701172
+Test ELBO: 9223.2255859375, Test BCE: 9185.04296875, Test KLD: 38.18238067626953
+
+Epoch: 275
+Train ELBO: 8765.064453125, Train BCE: 8726.806640625, Train KLD: 38.25582504272461
+Val ELBO: 9238.056640625, Val BCE: 9199.8134765625, Val KLD: 38.24396896362305
+Test ELBO: 9224.9580078125, Test BCE: 9186.8603515625, Test KLD: 38.09482955932617
+
+Epoch: 276
+Train ELBO: 8764.580078125, Train BCE: 8726.3203125, Train KLD: 38.26042556762695
+Val ELBO: 9236.857421875, Val BCE: 9198.4482421875, Val KLD: 38.407840728759766
+Test ELBO: 9224.2001953125, Test BCE: 9185.943359375, Test KLD: 38.25865936279297
+
+Epoch: 277
+Train ELBO: 8764.43359375, Train BCE: 8726.1689453125, Train KLD: 38.26799392700195
+Val ELBO: 9225.01953125, Val BCE: 9187.23046875, Val KLD: 37.78757095336914
+Test ELBO: 9212.470703125, Test BCE: 9174.8251953125, Test KLD: 37.64280700683594
+
+Epoch: 278
+Train ELBO: 8764.3271484375, Train BCE: 8726.037109375, Train KLD: 38.2818717956543
+Val ELBO: 9238.6142578125, Val BCE: 9200.2314453125, Val KLD: 38.38015365600586
+Test ELBO: 9225.1982421875, Test BCE: 9186.9658203125, Test KLD: 38.23530197143555
+
+Epoch: 279
+Train ELBO: 8764.0263671875, Train BCE: 8725.732421875, Train KLD: 38.29861831665039
+Val ELBO: 9231.8310546875, Val BCE: 9193.7763671875, Val KLD: 38.056617736816406
+Test ELBO: 9218.9091796875, Test BCE: 9181.009765625, Test KLD: 37.90460205078125
+
+Epoch: 280
+Train ELBO: 8763.998046875, Train BCE: 8725.716796875, Train KLD: 38.284629821777344
+Val ELBO: 9245.54296875, Val BCE: 9206.82421875, Val KLD: 38.7219352722168
+Test ELBO: 9232.21484375, Test BCE: 9193.640625, Test KLD: 38.57512664794922
+
+Epoch: 281
+Train ELBO: 8763.728515625, Train BCE: 8725.4326171875, Train KLD: 38.29494094848633
+Val ELBO: 9236.3662109375, Val BCE: 9198.416015625, Val KLD: 37.9522590637207
+Test ELBO: 9223.7880859375, Test BCE: 9185.978515625, Test KLD: 37.80862808227539
+
+Epoch: 282
+Train ELBO: 8763.525390625, Train BCE: 8725.2138671875, Train KLD: 38.31135177612305
+Val ELBO: 9236.1708984375, Val BCE: 9198.017578125, Val KLD: 38.16069412231445
+Test ELBO: 9223.5361328125, Test BCE: 9185.517578125, Test KLD: 38.01716995239258
+
+Epoch: 283
+Train ELBO: 8763.3984375, Train BCE: 8725.09375, Train KLD: 38.305992126464844
+Val ELBO: 9235.2431640625, Val BCE: 9196.8701171875, Val KLD: 38.36967086791992
+Test ELBO: 9221.8984375, Test BCE: 9183.673828125, Test KLD: 38.22218322753906
+
+Epoch: 284
+Train ELBO: 8763.1796875, Train BCE: 8724.8427734375, Train KLD: 38.32516860961914
+Val ELBO: 9234.62890625, Val BCE: 9196.66796875, Val KLD: 37.96611404418945
+Test ELBO: 9221.8037109375, Test BCE: 9183.9921875, Test KLD: 37.818626403808594
+
+Epoch: 285
+Train ELBO: 8763.0869140625, Train BCE: 8724.7470703125, Train KLD: 38.33220672607422
+Val ELBO: 9243.1884765625, Val BCE: 9204.998046875, Val KLD: 38.196136474609375
+Test ELBO: 9229.759765625, Test BCE: 9191.7080078125, Test KLD: 38.049827575683594
+
+Epoch: 286
+Train ELBO: 8762.638671875, Train BCE: 8724.3125, Train KLD: 38.332096099853516
+Val ELBO: 9235.8876953125, Val BCE: 9197.4951171875, Val KLD: 38.3889045715332
+Test ELBO: 9222.76953125, Test BCE: 9184.52734375, Test KLD: 38.24220657348633
+
+Epoch: 287
+Train ELBO: 8762.876953125, Train BCE: 8724.5322265625, Train KLD: 38.34321594238281
+Val ELBO: 9241.505859375, Val BCE: 9203.078125, Val KLD: 38.42839050292969
+Test ELBO: 9228.9482421875, Test BCE: 9190.6630859375, Test KLD: 38.27972412109375
+
+Epoch: 288
+Train ELBO: 8762.4384765625, Train BCE: 8724.0986328125, Train KLD: 38.34012985229492
+Val ELBO: 9234.107421875, Val BCE: 9195.90234375, Val KLD: 38.2033576965332
+Test ELBO: 9221.0703125, Test BCE: 9183.0263671875, Test KLD: 38.04523849487305
+
+Epoch: 289
+Train ELBO: 8762.0205078125, Train BCE: 8723.6689453125, Train KLD: 38.35078430175781
+Val ELBO: 9237.9384765625, Val BCE: 9200.037109375, Val KLD: 37.89272689819336
+Test ELBO: 9225.33984375, Test BCE: 9187.6064453125, Test KLD: 37.73967742919922
+
+Epoch: 290
+Train ELBO: 8762.0068359375, Train BCE: 8723.6611328125, Train KLD: 38.35242462158203
+Val ELBO: 9245.55859375, Val BCE: 9207.2890625, Val KLD: 38.262451171875
+Test ELBO: 9232.6689453125, Test BCE: 9194.5595703125, Test KLD: 38.110408782958984
+
+Epoch: 291
+Train ELBO: 8761.9365234375, Train BCE: 8723.5830078125, Train KLD: 38.360389709472656
+Val ELBO: 9249.8955078125, Val BCE: 9211.1474609375, Val KLD: 38.746490478515625
+Test ELBO: 9236.9365234375, Test BCE: 9198.3388671875, Test KLD: 38.59759521484375
+
+Epoch: 292
+Train ELBO: 8761.7314453125, Train BCE: 8723.357421875, Train KLD: 38.3724250793457
+Val ELBO: 9238.1103515625, Val BCE: 9199.669921875, Val KLD: 38.44662857055664
+Test ELBO: 9225.1455078125, Test BCE: 9186.83984375, Test KLD: 38.302486419677734
+
+Epoch: 293
+Train ELBO: 8761.3759765625, Train BCE: 8722.9931640625, Train KLD: 38.38189697265625
+Val ELBO: 9241.439453125, Val BCE: 9202.9794921875, Val KLD: 38.4625129699707
+Test ELBO: 9228.80078125, Test BCE: 9190.494140625, Test KLD: 38.30440139770508
+
+Epoch: 294
+Train ELBO: 8761.46484375, Train BCE: 8723.087890625, Train KLD: 38.38467025756836
+Val ELBO: 9247.66015625, Val BCE: 9209.1513671875, Val KLD: 38.507999420166016
+Test ELBO: 9235.359375, Test BCE: 9197.00390625, Test KLD: 38.358131408691406
+
+Epoch: 295
+Train ELBO: 8761.001953125, Train BCE: 8722.607421875, Train KLD: 38.40169906616211
+Val ELBO: 9242.857421875, Val BCE: 9204.7763671875, Val KLD: 38.07963562011719
+Test ELBO: 9229.8056640625, Test BCE: 9191.8818359375, Test KLD: 37.92814636230469
+
+Epoch: 296
+Train ELBO: 8760.6591796875, Train BCE: 8722.25390625, Train KLD: 38.411014556884766
+Val ELBO: 9234.0537109375, Val BCE: 9195.5556640625, Val KLD: 38.497554779052734
+Test ELBO: 9221.05859375, Test BCE: 9182.7099609375, Test KLD: 38.350807189941406
+
+Epoch: 297
+Train ELBO: 8760.828125, Train BCE: 8722.4169921875, Train KLD: 38.40904235839844
+Val ELBO: 9232.978515625, Val BCE: 9194.890625, Val KLD: 38.08915710449219
+Test ELBO: 9220.3505859375, Test BCE: 9182.404296875, Test KLD: 37.94416046142578
+
+Epoch: 298
+Train ELBO: 8760.6787109375, Train BCE: 8722.2724609375, Train KLD: 38.4024658203125
+Val ELBO: 9244.830078125, Val BCE: 9206.576171875, Val KLD: 38.24763870239258
+Test ELBO: 9231.3671875, Test BCE: 9193.263671875, Test KLD: 38.0993537902832
+
+Epoch: 299
+Train ELBO: 8760.421875, Train BCE: 8722.0146484375, Train KLD: 38.40941619873047
+Val ELBO: 9228.841796875, Val BCE: 9190.599609375, Val KLD: 38.24519729614258
+Test ELBO: 9217.1103515625, Test BCE: 9179.013671875, Test KLD: 38.097721099853516
+
+Epoch: 300
+Train ELBO: 8760.150390625, Train BCE: 8721.73046875, Train KLD: 38.41868209838867
+Val ELBO: 9245.015625, Val BCE: 9206.833984375, Val KLD: 38.18051528930664
+Test ELBO: 9231.7080078125, Test BCE: 9193.685546875, Test KLD: 38.02821731567383
+
+Epoch: 301
+Train ELBO: 8760.212890625, Train BCE: 8721.794921875, Train KLD: 38.426719665527344
+Val ELBO: 9235.97265625, Val BCE: 9197.9775390625, Val KLD: 37.99810028076172
+Test ELBO: 9223.3310546875, Test BCE: 9185.4873046875, Test KLD: 37.84420394897461
+
+Epoch: 302
+Train ELBO: 8760.05078125, Train BCE: 8721.6171875, Train KLD: 38.43009948730469
+Val ELBO: 9236.326171875, Val BCE: 9198.185546875, Val KLD: 38.1418571472168
+Test ELBO: 9223.38671875, Test BCE: 9185.390625, Test KLD: 37.99582290649414
+
+Epoch: 303
+Train ELBO: 8759.59375, Train BCE: 8721.146484375, Train KLD: 38.4434700012207
+Val ELBO: 9248.1943359375, Val BCE: 9209.8173828125, Val KLD: 38.3814582824707
+Test ELBO: 9234.8505859375, Test BCE: 9196.634765625, Test KLD: 38.224552154541016
+
+Epoch: 304
+Train ELBO: 8759.478515625, Train BCE: 8721.0400390625, Train KLD: 38.4432373046875
+Val ELBO: 9246.2529296875, Val BCE: 9207.7783203125, Val KLD: 38.472599029541016
+Test ELBO: 9233.583984375, Test BCE: 9195.265625, Test KLD: 38.3192024230957
+
+Epoch: 305
+Train ELBO: 8759.431640625, Train BCE: 8720.9755859375, Train KLD: 38.45877456665039
+Val ELBO: 9240.59765625, Val BCE: 9202.2861328125, Val KLD: 38.31254959106445
+Test ELBO: 9227.5732421875, Test BCE: 9189.4150390625, Test KLD: 38.15861511230469
+
+Epoch: 306
+Train ELBO: 8759.216796875, Train BCE: 8720.7568359375, Train KLD: 38.457942962646484
+Val ELBO: 9232.6904296875, Val BCE: 9194.64453125, Val KLD: 38.04318618774414
+Test ELBO: 9220.0927734375, Test BCE: 9182.19921875, Test KLD: 37.898841857910156
+
+Epoch: 307
+Train ELBO: 8758.9541015625, Train BCE: 8720.4912109375, Train KLD: 38.4580192565918
+Val ELBO: 9249.8173828125, Val BCE: 9211.4775390625, Val KLD: 38.340362548828125
+Test ELBO: 9236.53515625, Test BCE: 9198.3447265625, Test KLD: 38.18967819213867
+
+Epoch: 308
+Train ELBO: 8758.98828125, Train BCE: 8720.5244140625, Train KLD: 38.47288131713867
+Val ELBO: 9246.2578125, Val BCE: 9207.8212890625, Val KLD: 38.432464599609375
+Test ELBO: 9233.1025390625, Test BCE: 9194.8310546875, Test KLD: 38.27865219116211
+
+Epoch: 309
+Train ELBO: 8758.64453125, Train BCE: 8720.18359375, Train KLD: 38.47220230102539
+Val ELBO: 9238.0419921875, Val BCE: 9199.7314453125, Val KLD: 38.30708312988281
+Test ELBO: 9225.6630859375, Test BCE: 9187.513671875, Test KLD: 38.15493392944336
+
+Epoch: 310
+Train ELBO: 8758.630859375, Train BCE: 8720.14453125, Train KLD: 38.48777770996094
+Val ELBO: 9242.560546875, Val BCE: 9204.0390625, Val KLD: 38.52366256713867
+Test ELBO: 9229.521484375, Test BCE: 9191.14453125, Test KLD: 38.378360748291016
+
+Epoch: 311
+Train ELBO: 8758.447265625, Train BCE: 8719.95703125, Train KLD: 38.491485595703125
+Val ELBO: 9235.673828125, Val BCE: 9197.44140625, Val KLD: 38.24095916748047
+Test ELBO: 9223.140625, Test BCE: 9185.046875, Test KLD: 38.088905334472656
+
+Epoch: 312
+Train ELBO: 8758.2626953125, Train BCE: 8719.763671875, Train KLD: 38.495445251464844
+Val ELBO: 9249.099609375, Val BCE: 9210.4541015625, Val KLD: 38.64616775512695
+Test ELBO: 9235.9013671875, Test BCE: 9197.3994140625, Test KLD: 38.49717712402344
+
+Epoch: 313
+Train ELBO: 8758.0322265625, Train BCE: 8719.5185546875, Train KLD: 38.511436462402344
+Val ELBO: 9244.173828125, Val BCE: 9205.4658203125, Val KLD: 38.70974349975586
+Test ELBO: 9230.8125, Test BCE: 9192.2529296875, Test KLD: 38.55937576293945
+
+Epoch: 314
+Train ELBO: 8757.91796875, Train BCE: 8719.4013671875, Train KLD: 38.50971221923828
+Val ELBO: 9240.2470703125, Val BCE: 9201.5595703125, Val KLD: 38.68348693847656
+Test ELBO: 9227.4375, Test BCE: 9188.91015625, Test KLD: 38.52892303466797
+
+Epoch: 315
+Train ELBO: 8757.9423828125, Train BCE: 8719.4453125, Train KLD: 38.50128936767578
+Val ELBO: 9242.5654296875, Val BCE: 9203.8671875, Val KLD: 38.69948959350586
+Test ELBO: 9230.37890625, Test BCE: 9191.826171875, Test KLD: 38.54965591430664
+
+Epoch: 316
+Train ELBO: 8757.3896484375, Train BCE: 8718.87109375, Train KLD: 38.52045440673828
+Val ELBO: 9244.076171875, Val BCE: 9205.7998046875, Val KLD: 38.27249526977539
+Test ELBO: 9231.193359375, Test BCE: 9193.0771484375, Test KLD: 38.11817169189453
+
+Epoch: 317
+Train ELBO: 8757.4111328125, Train BCE: 8718.880859375, Train KLD: 38.53122329711914
+Val ELBO: 9246.419921875, Val BCE: 9207.53515625, Val KLD: 38.88278579711914
+Test ELBO: 9233.359375, Test BCE: 9194.623046875, Test KLD: 38.73542022705078
+
+Epoch: 318
+Train ELBO: 8757.130859375, Train BCE: 8718.6142578125, Train KLD: 38.51976776123047
+Val ELBO: 9236.744140625, Val BCE: 9198.2646484375, Val KLD: 38.48435592651367
+Test ELBO: 9224.419921875, Test BCE: 9186.0869140625, Test KLD: 38.33364486694336
+
+Epoch: 319
+Train ELBO: 8757.103515625, Train BCE: 8718.568359375, Train KLD: 38.538307189941406
+Val ELBO: 9239.296875, Val BCE: 9201.0029296875, Val KLD: 38.29513168334961
+Test ELBO: 9225.900390625, Test BCE: 9187.7548828125, Test KLD: 38.140289306640625
+
+Epoch: 320
+Train ELBO: 8757.0029296875, Train BCE: 8718.4443359375, Train KLD: 38.55891418457031
+Val ELBO: 9245.69921875, Val BCE: 9207.2939453125, Val KLD: 38.40900421142578
+Test ELBO: 9232.6484375, Test BCE: 9194.384765625, Test KLD: 38.26703643798828
+
+Epoch: 321
+Train ELBO: 8756.7685546875, Train BCE: 8718.2275390625, Train KLD: 38.547428131103516
+Val ELBO: 9238.4091796875, Val BCE: 9200.00390625, Val KLD: 38.40146255493164
+Test ELBO: 9226.0400390625, Test BCE: 9187.787109375, Test KLD: 38.250938415527344
+
+Epoch: 322
+Train ELBO: 8756.921875, Train BCE: 8718.3701171875, Train KLD: 38.550106048583984
+Val ELBO: 9243.5947265625, Val BCE: 9204.9482421875, Val KLD: 38.64674377441406
+Test ELBO: 9231.1806640625, Test BCE: 9192.6845703125, Test KLD: 38.494972229003906
+
+Epoch: 323
+Train ELBO: 8756.3095703125, Train BCE: 8717.74609375, Train KLD: 38.558597564697266
+Val ELBO: 9236.12890625, Val BCE: 9197.791015625, Val KLD: 38.339420318603516
+Test ELBO: 9223.99609375, Test BCE: 9185.8037109375, Test KLD: 38.19252395629883
+
+Epoch: 324
+Train ELBO: 8756.02734375, Train BCE: 8717.462890625, Train KLD: 38.56775665283203
+Val ELBO: 9236.3330078125, Val BCE: 9198.1376953125, Val KLD: 38.203468322753906
+Test ELBO: 9224.01171875, Test BCE: 9185.958984375, Test KLD: 38.0525016784668
+
+Epoch: 325
+Train ELBO: 8756.3349609375, Train BCE: 8717.7646484375, Train KLD: 38.57600021362305
+Val ELBO: 9237.3046875, Val BCE: 9198.697265625, Val KLD: 38.60057067871094
+Test ELBO: 9224.2314453125, Test BCE: 9185.7802734375, Test KLD: 38.449886322021484
+
+Epoch: 326
+Train ELBO: 8755.95703125, Train BCE: 8717.3671875, Train KLD: 38.58230209350586
+Val ELBO: 9240.6279296875, Val BCE: 9202.54296875, Val KLD: 38.08505630493164
+Test ELBO: 9228.23046875, Test BCE: 9190.2919921875, Test KLD: 37.9343376159668
+
+Epoch: 327
+Train ELBO: 8755.8935546875, Train BCE: 8717.3115234375, Train KLD: 38.58623123168945
+Val ELBO: 9237.4326171875, Val BCE: 9198.751953125, Val KLD: 38.679229736328125
+Test ELBO: 9224.09375, Test BCE: 9185.5654296875, Test KLD: 38.530818939208984
+
+Epoch: 328
+Train ELBO: 8756.0751953125, Train BCE: 8717.486328125, Train KLD: 38.58961868286133
+Val ELBO: 9235.96484375, Val BCE: 9197.7333984375, Val KLD: 38.228721618652344
+Test ELBO: 9223.2724609375, Test BCE: 9185.1875, Test KLD: 38.083744049072266
+
+Epoch: 329
+Train ELBO: 8755.5166015625, Train BCE: 8716.9267578125, Train KLD: 38.59264373779297
+Val ELBO: 9243.2646484375, Val BCE: 9204.6650390625, Val KLD: 38.594276428222656
+Test ELBO: 9231.09375, Test BCE: 9192.658203125, Test KLD: 38.43534469604492
+
+Epoch: 330
+Train ELBO: 8755.40234375, Train BCE: 8716.7900390625, Train KLD: 38.6079216003418
+Val ELBO: 9255.4619140625, Val BCE: 9216.9560546875, Val KLD: 38.50688171386719
+Test ELBO: 9242.3828125, Test BCE: 9204.0234375, Test KLD: 38.36013412475586
+
+Epoch: 331
+Train ELBO: 8755.5517578125, Train BCE: 8716.921875, Train KLD: 38.622554779052734
+Val ELBO: 9244.5927734375, Val BCE: 9206.4130859375, Val KLD: 38.17511749267578
+Test ELBO: 9231.3671875, Test BCE: 9193.3447265625, Test KLD: 38.02189254760742
+
+Epoch: 332
+Train ELBO: 8755.04296875, Train BCE: 8716.4306640625, Train KLD: 38.615760803222656
+Val ELBO: 9246.966796875, Val BCE: 9208.359375, Val KLD: 38.60525131225586
+Test ELBO: 9234.2373046875, Test BCE: 9195.779296875, Test KLD: 38.454280853271484
+
+Epoch: 333
+Train ELBO: 8754.9619140625, Train BCE: 8716.3427734375, Train KLD: 38.6195068359375
+Val ELBO: 9241.9580078125, Val BCE: 9203.8671875, Val KLD: 38.09129333496094
+Test ELBO: 9229.0537109375, Test BCE: 9191.1064453125, Test KLD: 37.94937515258789
+
+Epoch: 334
+Train ELBO: 8754.7197265625, Train BCE: 8716.091796875, Train KLD: 38.6307373046875
+Val ELBO: 9248.3388671875, Val BCE: 9209.8916015625, Val KLD: 38.44461441040039
+Test ELBO: 9236.001953125, Test BCE: 9197.70703125, Test KLD: 38.295616149902344
+
+Epoch: 335
+Train ELBO: 8754.48828125, Train BCE: 8715.84375, Train KLD: 38.637386322021484
+Val ELBO: 9243.158203125, Val BCE: 9204.40234375, Val KLD: 38.754364013671875
+Test ELBO: 9230.890625, Test BCE: 9192.2890625, Test KLD: 38.60015106201172
+
+Epoch: 336
+Train ELBO: 8754.5390625, Train BCE: 8715.8935546875, Train KLD: 38.63975143432617
+Val ELBO: 9260.7021484375, Val BCE: 9221.6572265625, Val KLD: 39.045475006103516
+Test ELBO: 9247.978515625, Test BCE: 9209.0927734375, Test KLD: 38.886539459228516
+
+Epoch: 337
+Train ELBO: 8754.69140625, Train BCE: 8716.05078125, Train KLD: 38.641151428222656
+Val ELBO: 9249.6826171875, Val BCE: 9210.900390625, Val KLD: 38.78213119506836
+Test ELBO: 9236.525390625, Test BCE: 9197.892578125, Test KLD: 38.63124465942383
+
+Epoch: 338
+Train ELBO: 8754.2412109375, Train BCE: 8715.603515625, Train KLD: 38.6375617980957
+Val ELBO: 9251.60546875, Val BCE: 9212.736328125, Val KLD: 38.872684478759766
+Test ELBO: 9238.646484375, Test BCE: 9199.9267578125, Test KLD: 38.716495513916016
+
+Epoch: 339
+Train ELBO: 8753.9697265625, Train BCE: 8715.3095703125, Train KLD: 38.66114044189453
+Val ELBO: 9245.73828125, Val BCE: 9207.2578125, Val KLD: 38.48255157470703
+Test ELBO: 9232.67578125, Test BCE: 9194.3544921875, Test KLD: 38.326908111572266
+
+Epoch: 340
+Train ELBO: 8754.0703125, Train BCE: 8715.404296875, Train KLD: 38.66128921508789
+Val ELBO: 9242.353515625, Val BCE: 9203.740234375, Val KLD: 38.617149353027344
+Test ELBO: 9229.068359375, Test BCE: 9190.591796875, Test KLD: 38.471290588378906
+
+Epoch: 341
+Train ELBO: 8753.3447265625, Train BCE: 8714.6865234375, Train KLD: 38.66401290893555
+Val ELBO: 9249.4150390625, Val BCE: 9210.6435546875, Val KLD: 38.77523422241211
+Test ELBO: 9236.2880859375, Test BCE: 9197.6611328125, Test KLD: 38.62531661987305
+
+Epoch: 342
+Train ELBO: 8754.013671875, Train BCE: 8715.341796875, Train KLD: 38.67170715332031
+Val ELBO: 9240.4287109375, Val BCE: 9201.931640625, Val KLD: 38.498207092285156
+Test ELBO: 9227.8642578125, Test BCE: 9189.521484375, Test KLD: 38.34727478027344
+
+Epoch: 343
+Train ELBO: 8753.5615234375, Train BCE: 8714.8837890625, Train KLD: 38.673187255859375
+Val ELBO: 9252.7275390625, Val BCE: 9214.8876953125, Val KLD: 37.840797424316406
+Test ELBO: 9239.5986328125, Test BCE: 9201.9091796875, Test KLD: 37.688934326171875
+
+Epoch: 344
+Train ELBO: 8753.189453125, Train BCE: 8714.509765625, Train KLD: 38.681114196777344
+Val ELBO: 9252.5048828125, Val BCE: 9213.6875, Val KLD: 38.820526123046875
+Test ELBO: 9240.0966796875, Test BCE: 9201.4189453125, Test KLD: 38.676998138427734
+
+Epoch: 345
+Train ELBO: 8753.2998046875, Train BCE: 8714.6201171875, Train KLD: 38.68511199951172
+Val ELBO: 9239.859375, Val BCE: 9201.265625, Val KLD: 38.59196472167969
+Test ELBO: 9226.8876953125, Test BCE: 9188.4384765625, Test KLD: 38.445552825927734
+
+Epoch: 346
+Train ELBO: 8752.9794921875, Train BCE: 8714.2890625, Train KLD: 38.69267654418945
+Val ELBO: 9265.39453125, Val BCE: 9226.68359375, Val KLD: 38.70502471923828
+Test ELBO: 9252.6064453125, Test BCE: 9214.0576171875, Test KLD: 38.55222702026367
+
+Epoch: 347
+Train ELBO: 8753.0869140625, Train BCE: 8714.3935546875, Train KLD: 38.69767761230469
+Val ELBO: 9252.171875, Val BCE: 9213.248046875, Val KLD: 38.92703628540039
+Test ELBO: 9239.6044921875, Test BCE: 9200.8310546875, Test KLD: 38.776641845703125
+
+Epoch: 348
+Train ELBO: 8752.7353515625, Train BCE: 8714.017578125, Train KLD: 38.71220397949219
+Val ELBO: 9256.205078125, Val BCE: 9217.52734375, Val KLD: 38.684112548828125
+Test ELBO: 9242.421875, Test BCE: 9203.8828125, Test KLD: 38.53445816040039
+
+Epoch: 349
+Train ELBO: 8752.71484375, Train BCE: 8713.9970703125, Train KLD: 38.71577835083008
+Val ELBO: 9243.123046875, Val BCE: 9204.57421875, Val KLD: 38.55607986450195
+Test ELBO: 9231.009765625, Test BCE: 9192.5927734375, Test KLD: 38.41142272949219
+
+Epoch: 350
+Train ELBO: 8752.564453125, Train BCE: 8713.8515625, Train KLD: 38.71751403808594
+Val ELBO: 9256.373046875, Val BCE: 9217.5263671875, Val KLD: 38.848331451416016
+Test ELBO: 9243.01953125, Test BCE: 9204.326171875, Test KLD: 38.69676971435547
+
+Epoch: 351
+Train ELBO: 8752.3466796875, Train BCE: 8713.6357421875, Train KLD: 38.71236038208008
+Val ELBO: 9254.15234375, Val BCE: 9215.662109375, Val KLD: 38.48623275756836
+Test ELBO: 9240.9345703125, Test BCE: 9202.5986328125, Test KLD: 38.33607482910156
+
+Epoch: 352
+Train ELBO: 8752.1796875, Train BCE: 8713.4423828125, Train KLD: 38.74007034301758
+Val ELBO: 9246.12109375, Val BCE: 9207.2197265625, Val KLD: 38.89738845825195
+Test ELBO: 9232.85546875, Test BCE: 9194.1064453125, Test KLD: 38.74745178222656
+
+Epoch: 353
+Train ELBO: 8752.1220703125, Train BCE: 8713.3837890625, Train KLD: 38.73556900024414
+Val ELBO: 9260.63671875, Val BCE: 9221.8994140625, Val KLD: 38.736900329589844
+Test ELBO: 9247.5966796875, Test BCE: 9209.0068359375, Test KLD: 38.58824157714844
+
+Epoch: 354
+Train ELBO: 8752.044921875, Train BCE: 8713.3056640625, Train KLD: 38.735233306884766
+Val ELBO: 9239.6943359375, Val BCE: 9201.05078125, Val KLD: 38.6470947265625
+Test ELBO: 9226.64453125, Test BCE: 9188.146484375, Test KLD: 38.498416900634766
+
+Epoch: 355
+Train ELBO: 8752.046875, Train BCE: 8713.30859375, Train KLD: 38.74034881591797
+Val ELBO: 9252.8798828125, Val BCE: 9214.3291015625, Val KLD: 38.551570892333984
+Test ELBO: 9240.482421875, Test BCE: 9202.087890625, Test KLD: 38.398677825927734
+
+Epoch: 356
+Train ELBO: 8751.5537109375, Train BCE: 8712.81640625, Train KLD: 38.73603439331055
+Val ELBO: 9247.919921875, Val BCE: 9209.4345703125, Val KLD: 38.48701095581055
+Test ELBO: 9235.33203125, Test BCE: 9196.998046875, Test KLD: 38.336238861083984
+
+Epoch: 357
+Train ELBO: 8751.5419921875, Train BCE: 8712.791015625, Train KLD: 38.751930236816406
+Val ELBO: 9246.2451171875, Val BCE: 9207.6298828125, Val KLD: 38.6219482421875
+Test ELBO: 9233.728515625, Test BCE: 9195.244140625, Test KLD: 38.47484588623047
+
+Epoch: 358
+Train ELBO: 8751.5390625, Train BCE: 8712.77734375, Train KLD: 38.753597259521484
+Val ELBO: 9260.2802734375, Val BCE: 9222.0283203125, Val KLD: 38.252681732177734
+Test ELBO: 9246.7841796875, Test BCE: 9208.693359375, Test KLD: 38.0911750793457
+
+Epoch: 359
+Train ELBO: 8751.365234375, Train BCE: 8712.607421875, Train KLD: 38.762290954589844
+Val ELBO: 9254.49609375, Val BCE: 9215.94140625, Val KLD: 38.552215576171875
+Test ELBO: 9240.9287109375, Test BCE: 9202.5263671875, Test KLD: 38.40394973754883
+
+Epoch: 360
+Train ELBO: 8750.9091796875, Train BCE: 8712.138671875, Train KLD: 38.76907730102539
+Val ELBO: 9254.3828125, Val BCE: 9215.5810546875, Val KLD: 38.804073333740234
+Test ELBO: 9241.5556640625, Test BCE: 9202.89453125, Test KLD: 38.65876007080078
+
+Epoch: 361
+Train ELBO: 8751.10546875, Train BCE: 8712.3330078125, Train KLD: 38.77252960205078
+Val ELBO: 9250.1376953125, Val BCE: 9211.7841796875, Val KLD: 38.350563049316406
+Test ELBO: 9238.34375, Test BCE: 9200.14453125, Test KLD: 38.203861236572266
+
+Epoch: 362
+Train ELBO: 8750.8466796875, Train BCE: 8712.068359375, Train KLD: 38.77937698364258
+Val ELBO: 9247.9501953125, Val BCE: 9209.1767578125, Val KLD: 38.770973205566406
+Test ELBO: 9235.9794921875, Test BCE: 9197.36328125, Test KLD: 38.612205505371094
+
+Epoch: 363
+Train ELBO: 8750.814453125, Train BCE: 8712.02734375, Train KLD: 38.77976989746094
+Val ELBO: 9253.6552734375, Val BCE: 9215.2314453125, Val KLD: 38.41938781738281
+Test ELBO: 9240.755859375, Test BCE: 9202.48046875, Test KLD: 38.27415466308594
+
+Epoch: 364
+Train ELBO: 8750.720703125, Train BCE: 8711.939453125, Train KLD: 38.78324508666992
+Val ELBO: 9252.744140625, Val BCE: 9213.65625, Val KLD: 39.0909538269043
+Test ELBO: 9239.8330078125, Test BCE: 9200.8994140625, Test KLD: 38.937042236328125
+
+Epoch: 365
+Train ELBO: 8750.4404296875, Train BCE: 8711.6484375, Train KLD: 38.79289245605469
+Val ELBO: 9248.1669921875, Val BCE: 9209.4716796875, Val KLD: 38.692726135253906
+Test ELBO: 9236.0576171875, Test BCE: 9197.509765625, Test KLD: 38.54413986206055
+
+Epoch: 366
+Train ELBO: 8750.4453125, Train BCE: 8711.64453125, Train KLD: 38.79529571533203
+Val ELBO: 9264.814453125, Val BCE: 9225.943359375, Val KLD: 38.86964797973633
+Test ELBO: 9251.6552734375, Test BCE: 9212.9423828125, Test KLD: 38.71391677856445
+
+Epoch: 367
+Train ELBO: 8750.16015625, Train BCE: 8711.359375, Train KLD: 38.80320358276367
+Val ELBO: 9255.10546875, Val BCE: 9216.3681640625, Val KLD: 38.73782730102539
+Test ELBO: 9242.3251953125, Test BCE: 9203.7333984375, Test KLD: 38.588050842285156
+
+Epoch: 368
+Train ELBO: 8750.130859375, Train BCE: 8711.3095703125, Train KLD: 38.81443786621094
+Val ELBO: 9244.501953125, Val BCE: 9206.1435546875, Val KLD: 38.35761260986328
+Test ELBO: 9231.6689453125, Test BCE: 9193.4658203125, Test KLD: 38.208526611328125
+
+Epoch: 369
+Train ELBO: 8750.05859375, Train BCE: 8711.232421875, Train KLD: 38.823978424072266
+Val ELBO: 9246.1396484375, Val BCE: 9207.2197265625, Val KLD: 38.91669464111328
+Test ELBO: 9233.423828125, Test BCE: 9194.6630859375, Test KLD: 38.762489318847656
+
+Epoch: 370
+Train ELBO: 8749.6474609375, Train BCE: 8710.828125, Train KLD: 38.820133209228516
+Val ELBO: 9263.3232421875, Val BCE: 9224.337890625, Val KLD: 38.9869384765625
+Test ELBO: 9250.6240234375, Test BCE: 9211.7861328125, Test KLD: 38.8359375
+
+Epoch: 371
+Train ELBO: 8749.619140625, Train BCE: 8710.796875, Train KLD: 38.81962585449219
+Val ELBO: 9263.572265625, Val BCE: 9224.580078125, Val KLD: 38.994834899902344
+Test ELBO: 9250.4814453125, Test BCE: 9211.6416015625, Test KLD: 38.836753845214844
+
+Epoch: 372
+Train ELBO: 8749.78515625, Train BCE: 8710.96484375, Train KLD: 38.82329177856445
+Val ELBO: 9255.8115234375, Val BCE: 9217.2998046875, Val KLD: 38.50835037231445
+Test ELBO: 9242.3037109375, Test BCE: 9203.9423828125, Test KLD: 38.3604736328125
+
+Epoch: 373
+Train ELBO: 8749.4013671875, Train BCE: 8710.5712890625, Train KLD: 38.835472106933594
+Val ELBO: 9243.576171875, Val BCE: 9205.0517578125, Val KLD: 38.524200439453125
+Test ELBO: 9230.9755859375, Test BCE: 9192.6025390625, Test KLD: 38.37723159790039
+
+Epoch: 374
+Train ELBO: 8749.3349609375, Train BCE: 8710.4912109375, Train KLD: 38.84829330444336
+Val ELBO: 9249.2646484375, Val BCE: 9210.8681640625, Val KLD: 38.39591598510742
+Test ELBO: 9236.5810546875, Test BCE: 9198.3369140625, Test KLD: 38.24301528930664
+
+Epoch: 375
+Train ELBO: 8749.3642578125, Train BCE: 8710.5166015625, Train KLD: 38.84462356567383
+Val ELBO: 9259.1904296875, Val BCE: 9220.421875, Val KLD: 38.77291488647461
+Test ELBO: 9246.3671875, Test BCE: 9207.748046875, Test KLD: 38.623443603515625
+
+Epoch: 376
+Train ELBO: 8749.0537109375, Train BCE: 8710.2099609375, Train KLD: 38.85075759887695
+Val ELBO: 9262.3740234375, Val BCE: 9223.6494140625, Val KLD: 38.722991943359375
+Test ELBO: 9250.056640625, Test BCE: 9211.490234375, Test KLD: 38.56867218017578
+
+Epoch: 377
+Train ELBO: 8748.9677734375, Train BCE: 8710.1171875, Train KLD: 38.85163116455078
+Val ELBO: 9247.83203125, Val BCE: 9209.3388671875, Val KLD: 38.49291229248047
+Test ELBO: 9235.470703125, Test BCE: 9197.1376953125, Test KLD: 38.33792495727539
+
+Epoch: 378
+Train ELBO: 8748.9345703125, Train BCE: 8710.08203125, Train KLD: 38.84807205200195
+Val ELBO: 9247.1015625, Val BCE: 9208.521484375, Val KLD: 38.58016586303711
+Test ELBO: 9234.6796875, Test BCE: 9196.236328125, Test KLD: 38.43663787841797
+
+Epoch: 379
+Train ELBO: 8748.705078125, Train BCE: 8709.83203125, Train KLD: 38.862159729003906
+Val ELBO: 9250.0107421875, Val BCE: 9210.9658203125, Val KLD: 39.043697357177734
+Test ELBO: 9236.8544921875, Test BCE: 9197.958984375, Test KLD: 38.893043518066406
+
+Epoch: 380
+Train ELBO: 8748.7353515625, Train BCE: 8709.86328125, Train KLD: 38.86592102050781
+Val ELBO: 9252.890625, Val BCE: 9214.46484375, Val KLD: 38.422611236572266
+Test ELBO: 9240.068359375, Test BCE: 9201.7939453125, Test KLD: 38.26978302001953
+
+Epoch: 381
+Train ELBO: 8748.37890625, Train BCE: 8709.50390625, Train KLD: 38.871944427490234
+Val ELBO: 9248.3662109375, Val BCE: 9209.6171875, Val KLD: 38.747528076171875
+Test ELBO: 9235.513671875, Test BCE: 9196.916015625, Test KLD: 38.59587860107422
+
+Epoch: 382
+Train ELBO: 8748.216796875, Train BCE: 8709.3388671875, Train KLD: 38.87623977661133
+Val ELBO: 9260.533203125, Val BCE: 9221.927734375, Val KLD: 38.6037483215332
+Test ELBO: 9247.7158203125, Test BCE: 9209.2646484375, Test KLD: 38.45249938964844
+
+Epoch: 383
+Train ELBO: 8748.1806640625, Train BCE: 8709.291015625, Train KLD: 38.883201599121094
+Val ELBO: 9257.158203125, Val BCE: 9218.1640625, Val KLD: 38.998722076416016
+Test ELBO: 9244.66796875, Test BCE: 9205.8251953125, Test KLD: 38.845951080322266
+
+Epoch: 384
+Train ELBO: 8748.064453125, Train BCE: 8709.177734375, Train KLD: 38.88393783569336
+Val ELBO: 9251.8896484375, Val BCE: 9213.4638671875, Val KLD: 38.43284606933594
+Test ELBO: 9239.361328125, Test BCE: 9201.0732421875, Test KLD: 38.289093017578125
+
+Epoch: 385
+Train ELBO: 8748.1328125, Train BCE: 8709.23046875, Train KLD: 38.90239334106445
+Val ELBO: 9256.5927734375, Val BCE: 9218.1865234375, Val KLD: 38.409393310546875
+Test ELBO: 9243.6806640625, Test BCE: 9205.4228515625, Test KLD: 38.25820541381836
+
+Epoch: 386
+Train ELBO: 8747.876953125, Train BCE: 8708.9697265625, Train KLD: 38.90835952758789
+Val ELBO: 9255.201171875, Val BCE: 9216.74609375, Val KLD: 38.4544792175293
+Test ELBO: 9242.357421875, Test BCE: 9204.0615234375, Test KLD: 38.295631408691406
+
+Epoch: 387
+Train ELBO: 8747.75, Train BCE: 8708.841796875, Train KLD: 38.90839767456055
+Val ELBO: 9254.3154296875, Val BCE: 9215.6025390625, Val KLD: 38.71417999267578
+Test ELBO: 9241.1328125, Test BCE: 9202.5654296875, Test KLD: 38.57011032104492
+
+Epoch: 388
+Train ELBO: 8747.47265625, Train BCE: 8708.5546875, Train KLD: 38.9178466796875
+Val ELBO: 9253.6025390625, Val BCE: 9215.0107421875, Val KLD: 38.595680236816406
+Test ELBO: 9240.599609375, Test BCE: 9202.1669921875, Test KLD: 38.43910598754883
+
+Epoch: 389
+Train ELBO: 8747.544921875, Train BCE: 8708.6357421875, Train KLD: 38.91150665283203
+Val ELBO: 9248.4814453125, Val BCE: 9209.677734375, Val KLD: 38.81049346923828
+Test ELBO: 9235.751953125, Test BCE: 9197.08984375, Test KLD: 38.66423416137695
+
+Epoch: 390
+Train ELBO: 8747.572265625, Train BCE: 8708.666015625, Train KLD: 38.91214370727539
+Val ELBO: 9251.7919921875, Val BCE: 9213.296875, Val KLD: 38.4997673034668
+Test ELBO: 9238.51953125, Test BCE: 9200.16796875, Test KLD: 38.35265350341797
+
+Epoch: 391
+Train ELBO: 8747.40625, Train BCE: 8708.4951171875, Train KLD: 38.90754699707031
+Val ELBO: 9253.69921875, Val BCE: 9214.7685546875, Val KLD: 38.92959213256836
+Test ELBO: 9240.4716796875, Test BCE: 9201.69140625, Test KLD: 38.78063201904297
+
+Epoch: 392
+Train ELBO: 8747.4345703125, Train BCE: 8708.515625, Train KLD: 38.922637939453125
+Val ELBO: 9266.8056640625, Val BCE: 9228.1376953125, Val KLD: 38.67308044433594
+Test ELBO: 9253.060546875, Test BCE: 9214.5498046875, Test KLD: 38.519142150878906
+
+Epoch: 393
+Train ELBO: 8746.8017578125, Train BCE: 8707.861328125, Train KLD: 38.93313980102539
+Val ELBO: 9257.8671875, Val BCE: 9219.09375, Val KLD: 38.77363967895508
+Test ELBO: 9244.837890625, Test BCE: 9206.2216796875, Test KLD: 38.6209716796875
+
+Epoch: 394
+Train ELBO: 8746.943359375, Train BCE: 8707.998046875, Train KLD: 38.940608978271484
+Val ELBO: 9253.9775390625, Val BCE: 9215.0185546875, Val KLD: 38.95486831665039
+Test ELBO: 9241.3955078125, Test BCE: 9202.5869140625, Test KLD: 38.80962371826172
+
+Epoch: 395
+Train ELBO: 8746.794921875, Train BCE: 8707.84765625, Train KLD: 38.944610595703125
+Val ELBO: 9268.8271484375, Val BCE: 9229.607421875, Val KLD: 39.222511291503906
+Test ELBO: 9255.375, Test BCE: 9216.2978515625, Test KLD: 39.07572555541992
+
+Epoch: 396
+Train ELBO: 8746.7548828125, Train BCE: 8707.8125, Train KLD: 38.9424934387207
+Val ELBO: 9257.94921875, Val BCE: 9219.23046875, Val KLD: 38.71755599975586
+Test ELBO: 9245.2802734375, Test BCE: 9206.7041015625, Test KLD: 38.56765365600586
+
+Epoch: 397
+Train ELBO: 8746.498046875, Train BCE: 8707.5458984375, Train KLD: 38.95488357543945
+Val ELBO: 9254.7275390625, Val BCE: 9215.7431640625, Val KLD: 38.982337951660156
+Test ELBO: 9241.8232421875, Test BCE: 9203.001953125, Test KLD: 38.82042694091797
+
+Epoch: 398
+Train ELBO: 8746.64453125, Train BCE: 8707.6904296875, Train KLD: 38.96090316772461
+Val ELBO: 9258.8212890625, Val BCE: 9220.3125, Val KLD: 38.513031005859375
+Test ELBO: 9245.50390625, Test BCE: 9207.1484375, Test KLD: 38.353511810302734
+
+Epoch: 399
+Train ELBO: 8746.1767578125, Train BCE: 8707.212890625, Train KLD: 38.96250534057617
+Val ELBO: 9248.8330078125, Val BCE: 9209.9140625, Val KLD: 38.9141731262207
+Test ELBO: 9236.1015625, Test BCE: 9197.3388671875, Test KLD: 38.76113510131836
+
+Epoch: 400
+Train ELBO: 8746.2802734375, Train BCE: 8707.31640625, Train KLD: 38.961429595947266
+Val ELBO: 9262.064453125, Val BCE: 9223.1943359375, Val KLD: 38.86994934082031
+Test ELBO: 9249.359375, Test BCE: 9210.638671875, Test KLD: 38.713680267333984
+
+Epoch: 401
+Train ELBO: 8746.109375, Train BCE: 8707.146484375, Train KLD: 38.96854019165039
+Val ELBO: 9247.4365234375, Val BCE: 9208.568359375, Val KLD: 38.868473052978516
+Test ELBO: 9235.310546875, Test BCE: 9196.6005859375, Test KLD: 38.7148551940918
+
+Epoch: 402
+Train ELBO: 8745.88671875, Train BCE: 8706.919921875, Train KLD: 38.972312927246094
+Val ELBO: 9264.3701171875, Val BCE: 9225.4326171875, Val KLD: 38.939422607421875
+Test ELBO: 9251.03515625, Test BCE: 9212.251953125, Test KLD: 38.78009796142578
+
+Epoch: 403
+Train ELBO: 8746.1630859375, Train BCE: 8707.1806640625, Train KLD: 38.981929779052734
+Val ELBO: 9250.12109375, Val BCE: 9211.21484375, Val KLD: 38.90411376953125
+Test ELBO: 9238.4619140625, Test BCE: 9199.7109375, Test KLD: 38.75487518310547
+
+Epoch: 404
+Train ELBO: 8746.142578125, Train BCE: 8707.1611328125, Train KLD: 38.98310852050781
+Val ELBO: 9252.6904296875, Val BCE: 9213.3525390625, Val KLD: 39.34186553955078
+Test ELBO: 9239.814453125, Test BCE: 9200.62890625, Test KLD: 39.190242767333984
+
+Epoch: 405
+Train ELBO: 8745.4638671875, Train BCE: 8706.4580078125, Train KLD: 38.997474670410156
+Val ELBO: 9267.3251953125, Val BCE: 9228.6201171875, Val KLD: 38.70675277709961
+Test ELBO: 9254.1298828125, Test BCE: 9215.5751953125, Test KLD: 38.55695724487305
+
+Epoch: 406
+Train ELBO: 8745.583984375, Train BCE: 8706.572265625, Train KLD: 38.99827575683594
+Val ELBO: 9248.78515625, Val BCE: 9210.287109375, Val KLD: 38.49959945678711
+Test ELBO: 9235.9970703125, Test BCE: 9197.6484375, Test KLD: 38.35326385498047
+
+Epoch: 407
+Train ELBO: 8745.6982421875, Train BCE: 8706.708984375, Train KLD: 38.98860549926758
+Val ELBO: 9260.6328125, Val BCE: 9222.1630859375, Val KLD: 38.46690368652344
+Test ELBO: 9247.5185546875, Test BCE: 9209.2080078125, Test KLD: 38.31195831298828
+
+Epoch: 408
+Train ELBO: 8745.447265625, Train BCE: 8706.4375, Train KLD: 39.00455093383789
+Val ELBO: 9243.521484375, Val BCE: 9204.96484375, Val KLD: 38.55604553222656
+Test ELBO: 9232.12109375, Test BCE: 9193.7265625, Test KLD: 38.4000244140625
+
+Epoch: 409
+Train ELBO: 8745.1123046875, Train BCE: 8706.1240234375, Train KLD: 38.9927864074707
+Val ELBO: 9253.509765625, Val BCE: 9214.8876953125, Val KLD: 38.62156295776367
+Test ELBO: 9240.7080078125, Test BCE: 9202.232421875, Test KLD: 38.47123718261719
+
+Epoch: 410
+Train ELBO: 8744.95703125, Train BCE: 8705.9423828125, Train KLD: 39.01453399658203
+Val ELBO: 9257.447265625, Val BCE: 9218.6044921875, Val KLD: 38.83993911743164
+Test ELBO: 9244.0830078125, Test BCE: 9205.4013671875, Test KLD: 38.687965393066406
+
+Epoch: 411
+Train ELBO: 8744.8603515625, Train BCE: 8705.8349609375, Train KLD: 39.02217102050781
+Val ELBO: 9259.654296875, Val BCE: 9220.8408203125, Val KLD: 38.81547927856445
+Test ELBO: 9246.7080078125, Test BCE: 9208.0419921875, Test KLD: 38.66582107543945
+
+Epoch: 412
+Train ELBO: 8745.0908203125, Train BCE: 8706.0830078125, Train KLD: 39.01447677612305
+Val ELBO: 9260.1904296875, Val BCE: 9221.3427734375, Val KLD: 38.8435173034668
+Test ELBO: 9247.185546875, Test BCE: 9208.4912109375, Test KLD: 38.69416046142578
+
+Epoch: 413
+Train ELBO: 8744.783203125, Train BCE: 8705.7529296875, Train KLD: 39.025543212890625
+Val ELBO: 9258.0390625, Val BCE: 9219.001953125, Val KLD: 39.03658676147461
+Test ELBO: 9244.962890625, Test BCE: 9206.083984375, Test KLD: 38.88176727294922
+
+Epoch: 414
+Train ELBO: 8744.779296875, Train BCE: 8705.7421875, Train KLD: 39.03572082519531
+Val ELBO: 9262.6748046875, Val BCE: 9223.701171875, Val KLD: 38.978607177734375
+Test ELBO: 9250.1875, Test BCE: 9211.36328125, Test KLD: 38.82574462890625
+
+Epoch: 415
+Train ELBO: 8744.490234375, Train BCE: 8705.4560546875, Train KLD: 39.03799819946289
+Val ELBO: 9259.5966796875, Val BCE: 9220.501953125, Val KLD: 39.095359802246094
+Test ELBO: 9246.5341796875, Test BCE: 9207.5888671875, Test KLD: 38.945735931396484
+
+Epoch: 416
+Train ELBO: 8744.48828125, Train BCE: 8705.4462890625, Train KLD: 39.04445266723633
+Val ELBO: 9267.794921875, Val BCE: 9228.830078125, Val KLD: 38.9620361328125
+Test ELBO: 9254.943359375, Test BCE: 9216.1298828125, Test KLD: 38.81626892089844
+
+Epoch: 417
+Train ELBO: 8744.2236328125, Train BCE: 8705.1796875, Train KLD: 39.05015563964844
+Val ELBO: 9250.587890625, Val BCE: 9212.1884765625, Val KLD: 38.40058517456055
+Test ELBO: 9238.1015625, Test BCE: 9199.8583984375, Test KLD: 38.24967956542969
+
+Epoch: 418
+Train ELBO: 8744.4296875, Train BCE: 8705.38671875, Train KLD: 39.04403305053711
+Val ELBO: 9252.5224609375, Val BCE: 9213.50390625, Val KLD: 39.009952545166016
+Test ELBO: 9239.873046875, Test BCE: 9201.0146484375, Test KLD: 38.86151885986328
+
+Epoch: 419
+Train ELBO: 8743.935546875, Train BCE: 8704.8837890625, Train KLD: 39.04510498046875
+Val ELBO: 9262.96875, Val BCE: 9223.626953125, Val KLD: 39.343894958496094
+Test ELBO: 9249.7958984375, Test BCE: 9210.6083984375, Test KLD: 39.18831253051758
+
+Epoch: 420
+Train ELBO: 8743.9736328125, Train BCE: 8704.919921875, Train KLD: 39.051029205322266
+Val ELBO: 9267.3193359375, Val BCE: 9228.3798828125, Val KLD: 38.94020080566406
+Test ELBO: 9254.044921875, Test BCE: 9215.2568359375, Test KLD: 38.788021087646484
+
+Epoch: 421
+Train ELBO: 8744.04296875, Train BCE: 8704.994140625, Train KLD: 39.04706954956055
+Val ELBO: 9262.08203125, Val BCE: 9222.94140625, Val KLD: 39.141143798828125
+Test ELBO: 9249.0830078125, Test BCE: 9210.10546875, Test KLD: 38.98284912109375
+
+Epoch: 422
+Train ELBO: 8743.97265625, Train BCE: 8704.9033203125, Train KLD: 39.07163619995117
+Val ELBO: 9260.029296875, Val BCE: 9220.9580078125, Val KLD: 39.069454193115234
+Test ELBO: 9246.6591796875, Test BCE: 9207.732421875, Test KLD: 38.92154312133789
+
+Epoch: 423
+Train ELBO: 8743.478515625, Train BCE: 8704.4189453125, Train KLD: 39.06414031982422
+Val ELBO: 9255.3505859375, Val BCE: 9216.716796875, Val KLD: 38.635074615478516
+Test ELBO: 9242.794921875, Test BCE: 9204.3115234375, Test KLD: 38.48408126831055
+
+Epoch: 424
+Train ELBO: 8743.826171875, Train BCE: 8704.75, Train KLD: 39.07670211791992
+Val ELBO: 9253.5771484375, Val BCE: 9214.9033203125, Val KLD: 38.67156982421875
+Test ELBO: 9240.58984375, Test BCE: 9202.0693359375, Test KLD: 38.52222442626953
+
+Epoch: 425
+Train ELBO: 8743.2431640625, Train BCE: 8704.1787109375, Train KLD: 39.067508697509766
+Val ELBO: 9247.67578125, Val BCE: 9209.1005859375, Val KLD: 38.57719039916992
+Test ELBO: 9234.6064453125, Test BCE: 9196.185546875, Test KLD: 38.422332763671875
+
+Epoch: 426
+Train ELBO: 8743.39453125, Train BCE: 8704.31640625, Train KLD: 39.0851936340332
+Val ELBO: 9258.09375, Val BCE: 9218.9794921875, Val KLD: 39.10955810546875
+Test ELBO: 9245.5166015625, Test BCE: 9206.556640625, Test KLD: 38.95936965942383
+
+Epoch: 427
+Train ELBO: 8743.3095703125, Train BCE: 8704.2158203125, Train KLD: 39.093048095703125
+Val ELBO: 9264.74609375, Val BCE: 9226.236328125, Val KLD: 38.50564956665039
+Test ELBO: 9252.1962890625, Test BCE: 9213.8544921875, Test KLD: 38.34168243408203
+
+Epoch: 428
+Train ELBO: 8743.1904296875, Train BCE: 8704.10546875, Train KLD: 39.0804328918457
+Val ELBO: 9264.828125, Val BCE: 9224.798828125, Val KLD: 40.0361442565918
+Test ELBO: 9252.35546875, Test BCE: 9212.474609375, Test KLD: 39.88511276245117
+
+Epoch: 429
+Train ELBO: 8743.0859375, Train BCE: 8703.9736328125, Train KLD: 39.1053352355957
+Val ELBO: 9261.666015625, Val BCE: 9222.7900390625, Val KLD: 38.87662887573242
+Test ELBO: 9248.5537109375, Test BCE: 9209.8310546875, Test KLD: 38.71965026855469
+
+Epoch: 430
+Train ELBO: 8742.927734375, Train BCE: 8703.8232421875, Train KLD: 39.10283660888672
+Val ELBO: 9263.662109375, Val BCE: 9224.7099609375, Val KLD: 38.95362091064453
+Test ELBO: 9250.4013671875, Test BCE: 9211.6005859375, Test KLD: 38.80019760131836
+
+Epoch: 431
+Train ELBO: 8742.8759765625, Train BCE: 8703.76171875, Train KLD: 39.11516571044922
+Val ELBO: 9259.1357421875, Val BCE: 9220.21484375, Val KLD: 38.92744445800781
+Test ELBO: 9246.669921875, Test BCE: 9207.8876953125, Test KLD: 38.77753829956055
+
+Epoch: 432
+Train ELBO: 8742.7158203125, Train BCE: 8703.6171875, Train KLD: 39.100894927978516
+Val ELBO: 9272.1142578125, Val BCE: 9232.9833984375, Val KLD: 39.129886627197266
+Test ELBO: 9258.7431640625, Test BCE: 9219.763671875, Test KLD: 38.97820281982422
+
+Epoch: 433
+Train ELBO: 8742.685546875, Train BCE: 8703.57421875, Train KLD: 39.11076354980469
+Val ELBO: 9264.4052734375, Val BCE: 9225.5390625, Val KLD: 38.87649917602539
+Test ELBO: 9250.3486328125, Test BCE: 9211.6162109375, Test KLD: 38.72669219970703
+
+Epoch: 434
+Train ELBO: 8742.6328125, Train BCE: 8703.51953125, Train KLD: 39.10976028442383
+Val ELBO: 9267.9873046875, Val BCE: 9229.26171875, Val KLD: 38.72539520263672
+Test ELBO: 9255.0732421875, Test BCE: 9216.505859375, Test KLD: 38.578269958496094
+
+Epoch: 435
+Train ELBO: 8742.4609375, Train BCE: 8703.3486328125, Train KLD: 39.119232177734375
+Val ELBO: 9265.9482421875, Val BCE: 9226.9501953125, Val KLD: 39.003395080566406
+Test ELBO: 9252.896484375, Test BCE: 9214.046875, Test KLD: 38.85053253173828
+
+Epoch: 436
+Train ELBO: 8742.267578125, Train BCE: 8703.138671875, Train KLD: 39.1324577331543
+Val ELBO: 9249.912109375, Val BCE: 9211.3056640625, Val KLD: 38.60803985595703
+Test ELBO: 9237.744140625, Test BCE: 9199.2841796875, Test KLD: 38.462799072265625
+
+Epoch: 437
+Train ELBO: 8742.4658203125, Train BCE: 8703.3369140625, Train KLD: 39.12831115722656
+Val ELBO: 9259.1552734375, Val BCE: 9220.453125, Val KLD: 38.700931549072266
+Test ELBO: 9246.48046875, Test BCE: 9207.9267578125, Test KLD: 38.55323791503906
+
+Epoch: 438
+Train ELBO: 8742.279296875, Train BCE: 8703.1376953125, Train KLD: 39.13520812988281
+Val ELBO: 9261.8779296875, Val BCE: 9223.3173828125, Val KLD: 38.56740188598633
+Test ELBO: 9248.4267578125, Test BCE: 9210.001953125, Test KLD: 38.42446517944336
+
+Epoch: 439
+Train ELBO: 8742.0927734375, Train BCE: 8702.951171875, Train KLD: 39.14387130737305
+Val ELBO: 9258.1669921875, Val BCE: 9218.9033203125, Val KLD: 39.26688003540039
+Test ELBO: 9245.8701171875, Test BCE: 9206.7568359375, Test KLD: 39.11185836791992
+
+Epoch: 440
+Train ELBO: 8742.1650390625, Train BCE: 8703.0322265625, Train KLD: 39.13856887817383
+Val ELBO: 9257.607421875, Val BCE: 9218.92578125, Val KLD: 38.68029022216797
+Test ELBO: 9245.31640625, Test BCE: 9206.798828125, Test KLD: 38.5229606628418
+
+Epoch: 441
+Train ELBO: 8741.75, Train BCE: 8702.5966796875, Train KLD: 39.15158462524414
+Val ELBO: 9270.5693359375, Val BCE: 9231.103515625, Val KLD: 39.47084045410156
+Test ELBO: 9257.3310546875, Test BCE: 9218.0078125, Test KLD: 39.32388687133789
+
+Epoch: 442
+Train ELBO: 8741.6806640625, Train BCE: 8702.5234375, Train KLD: 39.15243148803711
+Val ELBO: 9251.2705078125, Val BCE: 9212.24609375, Val KLD: 39.02462387084961
+Test ELBO: 9238.4384765625, Test BCE: 9199.5615234375, Test KLD: 38.87335205078125
+
+Epoch: 443
+Train ELBO: 8741.7216796875, Train BCE: 8702.560546875, Train KLD: 39.15883255004883
+Val ELBO: 9262.1298828125, Val BCE: 9223.3955078125, Val KLD: 38.73372268676758
+Test ELBO: 9248.8349609375, Test BCE: 9210.248046875, Test KLD: 38.5853271484375
+
+Epoch: 444
+Train ELBO: 8741.748046875, Train BCE: 8702.599609375, Train KLD: 39.14516067504883
+Val ELBO: 9264.53125, Val BCE: 9225.15234375, Val KLD: 39.38127899169922
+Test ELBO: 9251.9306640625, Test BCE: 9212.708984375, Test KLD: 39.22731399536133
+
+Epoch: 445
+Train ELBO: 8741.669921875, Train BCE: 8702.5166015625, Train KLD: 39.1591911315918
+Val ELBO: 9269.34765625, Val BCE: 9230.236328125, Val KLD: 39.11763381958008
+Test ELBO: 9255.482421875, Test BCE: 9216.5166015625, Test KLD: 38.96375274658203
+
+Epoch: 446
+Train ELBO: 8741.212890625, Train BCE: 8702.048828125, Train KLD: 39.16035461425781
+Val ELBO: 9268.6875, Val BCE: 9229.697265625, Val KLD: 38.990238189697266
+Test ELBO: 9255.9384765625, Test BCE: 9217.1044921875, Test KLD: 38.83510971069336
+
+Epoch: 447
+Train ELBO: 8741.14453125, Train BCE: 8701.9619140625, Train KLD: 39.17600631713867
+Val ELBO: 9267.8173828125, Val BCE: 9228.916015625, Val KLD: 38.89873504638672
+Test ELBO: 9255.6591796875, Test BCE: 9216.91796875, Test KLD: 38.742408752441406
+
+Epoch: 448
+Train ELBO: 8741.416015625, Train BCE: 8702.2421875, Train KLD: 39.169315338134766
+Val ELBO: 9256.1044921875, Val BCE: 9217.32421875, Val KLD: 38.783447265625
+Test ELBO: 9243.0517578125, Test BCE: 9204.4130859375, Test KLD: 38.64053726196289
+
+Epoch: 449
+Train ELBO: 8740.9833984375, Train BCE: 8701.7978515625, Train KLD: 39.18296432495117
+Val ELBO: 9274.0517578125, Val BCE: 9235.064453125, Val KLD: 38.988807678222656
+Test ELBO: 9261.068359375, Test BCE: 9222.234375, Test KLD: 38.83315658569336
+
+Epoch: 450
+Train ELBO: 8741.0830078125, Train BCE: 8701.8974609375, Train KLD: 39.1821403503418
+Val ELBO: 9268.685546875, Val BCE: 9229.7236328125, Val KLD: 38.96005630493164
+Test ELBO: 9255.7646484375, Test BCE: 9216.962890625, Test KLD: 38.808292388916016
+
+Epoch: 451
+Train ELBO: 8740.783203125, Train BCE: 8701.591796875, Train KLD: 39.188785552978516
+Val ELBO: 9265.84375, Val BCE: 9226.6171875, Val KLD: 39.230716705322266
+Test ELBO: 9253.390625, Test BCE: 9214.30078125, Test KLD: 39.086769104003906
+
+Epoch: 452
+Train ELBO: 8740.9150390625, Train BCE: 8701.708984375, Train KLD: 39.19906997680664
+Val ELBO: 9261.0927734375, Val BCE: 9222.091796875, Val KLD: 39.0035514831543
+Test ELBO: 9248.416015625, Test BCE: 9209.56640625, Test KLD: 38.84864044189453
+
+Epoch: 453
+Train ELBO: 8740.775390625, Train BCE: 8701.5712890625, Train KLD: 39.2021598815918
+Val ELBO: 9266.248046875, Val BCE: 9227.3232421875, Val KLD: 38.924407958984375
+Test ELBO: 9253.4609375, Test BCE: 9214.7001953125, Test KLD: 38.761749267578125
+
+Epoch: 454
+Train ELBO: 8740.5068359375, Train BCE: 8701.3056640625, Train KLD: 39.20509338378906
+Val ELBO: 9260.068359375, Val BCE: 9221.0458984375, Val KLD: 39.02862548828125
+Test ELBO: 9247.85546875, Test BCE: 9208.978515625, Test KLD: 38.871673583984375
+
+Epoch: 455
+Train ELBO: 8740.3876953125, Train BCE: 8701.1689453125, Train KLD: 39.218509674072266
+Val ELBO: 9277.3056640625, Val BCE: 9237.6806640625, Val KLD: 39.626991271972656
+Test ELBO: 9264.16015625, Test BCE: 9224.6806640625, Test KLD: 39.47560119628906
+
+Epoch: 456
+Train ELBO: 8740.328125, Train BCE: 8701.125, Train KLD: 39.20207595825195
+Val ELBO: 9286.03515625, Val BCE: 9246.8388671875, Val KLD: 39.19387435913086
+Test ELBO: 9272.0771484375, Test BCE: 9233.0361328125, Test KLD: 39.03584671020508
+
+Epoch: 457
+Train ELBO: 8740.646484375, Train BCE: 8701.4423828125, Train KLD: 39.19936752319336
+Val ELBO: 9262.4794921875, Val BCE: 9223.4638671875, Val KLD: 39.02130126953125
+Test ELBO: 9250.001953125, Test BCE: 9211.1318359375, Test KLD: 38.86625289916992
+
+Epoch: 458
+Train ELBO: 8740.0029296875, Train BCE: 8700.787109375, Train KLD: 39.218204498291016
+Val ELBO: 9262.9365234375, Val BCE: 9224.482421875, Val KLD: 38.456703186035156
+Test ELBO: 9250.1396484375, Test BCE: 9211.8349609375, Test KLD: 38.30754470825195
+
+Epoch: 459
+Train ELBO: 8740.1826171875, Train BCE: 8700.9462890625, Train KLD: 39.22700881958008
+Val ELBO: 9263.09375, Val BCE: 9224.0732421875, Val KLD: 39.023258209228516
+Test ELBO: 9250.71484375, Test BCE: 9211.8447265625, Test KLD: 38.86953353881836
+
+Epoch: 460
+Train ELBO: 8740.02734375, Train BCE: 8700.80859375, Train KLD: 39.23015594482422
+Val ELBO: 9266.9228515625, Val BCE: 9227.71484375, Val KLD: 39.208858489990234
+Test ELBO: 9253.609375, Test BCE: 9214.5517578125, Test KLD: 39.05122375488281
+
+Epoch: 461
+Train ELBO: 8740.0654296875, Train BCE: 8700.8427734375, Train KLD: 39.225399017333984
+Val ELBO: 9271.25390625, Val BCE: 9232.3525390625, Val KLD: 38.904544830322266
+Test ELBO: 9258.4423828125, Test BCE: 9219.693359375, Test KLD: 38.74965286254883
+
+Epoch: 462
+Train ELBO: 8739.828125, Train BCE: 8700.578125, Train KLD: 39.247074127197266
+Val ELBO: 9270.197265625, Val BCE: 9230.9404296875, Val KLD: 39.2552375793457
+Test ELBO: 9257.470703125, Test BCE: 9218.3681640625, Test KLD: 39.099945068359375
+
+Epoch: 463
+Train ELBO: 8739.7763671875, Train BCE: 8700.5595703125, Train KLD: 39.22383499145508
+Val ELBO: 9266.998046875, Val BCE: 9228.0263671875, Val KLD: 38.964298248291016
+Test ELBO: 9253.41015625, Test BCE: 9214.595703125, Test KLD: 38.81483459472656
+
+Epoch: 464
+Train ELBO: 8739.51171875, Train BCE: 8700.259765625, Train KLD: 39.24261474609375
+Val ELBO: 9260.150390625, Val BCE: 9221.5009765625, Val KLD: 38.6490592956543
+Test ELBO: 9247.0615234375, Test BCE: 9208.5693359375, Test KLD: 38.48847198486328
+
+Epoch: 465
+Train ELBO: 8739.6904296875, Train BCE: 8700.44140625, Train KLD: 39.25541305541992
+Val ELBO: 9257.1328125, Val BCE: 9218.046875, Val KLD: 39.085472106933594
+Test ELBO: 9244.70703125, Test BCE: 9205.7705078125, Test KLD: 38.93742370605469
+
+Epoch: 466
+Train ELBO: 8739.5322265625, Train BCE: 8700.298828125, Train KLD: 39.23495864868164
+Val ELBO: 9263.4365234375, Val BCE: 9224.169921875, Val KLD: 39.270347595214844
+Test ELBO: 9250.97265625, Test BCE: 9211.8525390625, Test KLD: 39.123329162597656
+
+Epoch: 467
+Train ELBO: 8739.46875, Train BCE: 8700.21484375, Train KLD: 39.248077392578125
+Val ELBO: 9268.95703125, Val BCE: 9229.80078125, Val KLD: 39.15135955810547
+Test ELBO: 9255.748046875, Test BCE: 9216.74609375, Test KLD: 39.00157928466797
+
+Epoch: 468
+Train ELBO: 8739.265625, Train BCE: 8700.021484375, Train KLD: 39.2483024597168
+Val ELBO: 9266.853515625, Val BCE: 9227.6767578125, Val KLD: 39.17765808105469
+Test ELBO: 9253.8076171875, Test BCE: 9214.7734375, Test KLD: 39.03005599975586
+
+Epoch: 469
+Train ELBO: 8739.390625, Train BCE: 8700.126953125, Train KLD: 39.267738342285156
+Val ELBO: 9274.5966796875, Val BCE: 9235.81640625, Val KLD: 38.7742805480957
+Test ELBO: 9261.2216796875, Test BCE: 9222.6123046875, Test KLD: 38.61212158203125
+
+Epoch: 470
+Train ELBO: 8739.0849609375, Train BCE: 8699.830078125, Train KLD: 39.24995040893555
+Val ELBO: 9276.6259765625, Val BCE: 9237.189453125, Val KLD: 39.43449783325195
+Test ELBO: 9264.1494140625, Test BCE: 9224.87109375, Test KLD: 39.28005599975586
+
+Epoch: 471
+Train ELBO: 8738.9677734375, Train BCE: 8699.705078125, Train KLD: 39.267486572265625
+Val ELBO: 9277.1455078125, Val BCE: 9237.6455078125, Val KLD: 39.49374008178711
+Test ELBO: 9264.333984375, Test BCE: 9224.9970703125, Test KLD: 39.33250427246094
+
+Epoch: 472
+Train ELBO: 8738.962890625, Train BCE: 8699.7001953125, Train KLD: 39.26728057861328
+Val ELBO: 9274.9853515625, Val BCE: 9236.076171875, Val KLD: 38.90422821044922
+Test ELBO: 9262.1015625, Test BCE: 9223.3486328125, Test KLD: 38.7573356628418
+
+Epoch: 473
+Train ELBO: 8738.8271484375, Train BCE: 8699.55859375, Train KLD: 39.265541076660156
+Val ELBO: 9276.021484375, Val BCE: 9236.9697265625, Val KLD: 39.05226135253906
+Test ELBO: 9263.84765625, Test BCE: 9224.9482421875, Test KLD: 38.89787673950195
+
+Epoch: 474
+Train ELBO: 8738.869140625, Train BCE: 8699.5849609375, Train KLD: 39.28242874145508
+Val ELBO: 9265.615234375, Val BCE: 9226.5029296875, Val KLD: 39.11083984375
+Test ELBO: 9253.123046875, Test BCE: 9214.1572265625, Test KLD: 38.96471405029297
+
+Epoch: 475
+Train ELBO: 8738.52734375, Train BCE: 8699.25, Train KLD: 39.28075408935547
+Val ELBO: 9263.0234375, Val BCE: 9224.0673828125, Val KLD: 38.9561882019043
+Test ELBO: 9250.52734375, Test BCE: 9211.724609375, Test KLD: 38.80365753173828
+
+Epoch: 476
+Train ELBO: 8738.630859375, Train BCE: 8699.3359375, Train KLD: 39.29299545288086
+Val ELBO: 9272.1015625, Val BCE: 9232.8212890625, Val KLD: 39.280052185058594
+Test ELBO: 9258.4423828125, Test BCE: 9219.3193359375, Test KLD: 39.125587463378906
+
+Epoch: 477
+Train ELBO: 8738.5400390625, Train BCE: 8699.2392578125, Train KLD: 39.293277740478516
+Val ELBO: 9274.4951171875, Val BCE: 9235.337890625, Val KLD: 39.1594123840332
+Test ELBO: 9261.494140625, Test BCE: 9222.484375, Test KLD: 39.003875732421875
+
+Epoch: 478
+Train ELBO: 8738.5888671875, Train BCE: 8699.3076171875, Train KLD: 39.27809143066406
+Val ELBO: 9277.3291015625, Val BCE: 9237.50390625, Val KLD: 39.82777404785156
+Test ELBO: 9264.283203125, Test BCE: 9224.609375, Test KLD: 39.67212677001953
+
+Epoch: 479
+Train ELBO: 8738.17578125, Train BCE: 8698.8681640625, Train KLD: 39.30628967285156
+Val ELBO: 9272.4501953125, Val BCE: 9233.1416015625, Val KLD: 39.31188201904297
+Test ELBO: 9259.5419921875, Test BCE: 9220.384765625, Test KLD: 39.157047271728516
+
+Epoch: 480
+Train ELBO: 8738.27734375, Train BCE: 8698.96875, Train KLD: 39.30219650268555
+Val ELBO: 9275.7421875, Val BCE: 9236.689453125, Val KLD: 39.056888580322266
+Test ELBO: 9262.58984375, Test BCE: 9223.681640625, Test KLD: 38.90388488769531
+
+Epoch: 481
+Train ELBO: 8738.23828125, Train BCE: 8698.9384765625, Train KLD: 39.30220413208008
+Val ELBO: 9276.10546875, Val BCE: 9236.8447265625, Val KLD: 39.25794982910156
+Test ELBO: 9262.54296875, Test BCE: 9223.4423828125, Test KLD: 39.10527420043945
+
+Epoch: 482
+Train ELBO: 8738.361328125, Train BCE: 8699.0439453125, Train KLD: 39.31717300415039
+Val ELBO: 9264.1484375, Val BCE: 9225.1845703125, Val KLD: 38.96874237060547
+Test ELBO: 9251.1845703125, Test BCE: 9212.3720703125, Test KLD: 38.818172454833984
+
+Epoch: 483
+Train ELBO: 8737.9775390625, Train BCE: 8698.6650390625, Train KLD: 39.31521224975586
+Val ELBO: 9270.9140625, Val BCE: 9231.701171875, Val KLD: 39.209007263183594
+Test ELBO: 9258.4716796875, Test BCE: 9219.4150390625, Test KLD: 39.06252670288086
+
+Epoch: 484
+Train ELBO: 8737.927734375, Train BCE: 8698.6044921875, Train KLD: 39.31978225708008
+Val ELBO: 9263.591796875, Val BCE: 9224.3017578125, Val KLD: 39.29478454589844
+Test ELBO: 9250.4072265625, Test BCE: 9211.2734375, Test KLD: 39.14070129394531
+
+Epoch: 485
+Train ELBO: 8737.7998046875, Train BCE: 8698.484375, Train KLD: 39.31801986694336
+Val ELBO: 9271.064453125, Val BCE: 9232.2265625, Val KLD: 38.839969635009766
+Test ELBO: 9257.998046875, Test BCE: 9219.306640625, Test KLD: 38.687522888183594
+
+Epoch: 486
+Train ELBO: 8737.6005859375, Train BCE: 8698.26953125, Train KLD: 39.32575988769531
+Val ELBO: 9270.2392578125, Val BCE: 9231.2373046875, Val KLD: 38.99873352050781
+Test ELBO: 9257.2646484375, Test BCE: 9218.4228515625, Test KLD: 38.84502029418945
+
+Epoch: 487
+Train ELBO: 8737.4697265625, Train BCE: 8698.146484375, Train KLD: 39.31946563720703
+Val ELBO: 9273.9609375, Val BCE: 9234.3330078125, Val KLD: 39.62840270996094
+Test ELBO: 9261.1943359375, Test BCE: 9221.7255859375, Test KLD: 39.46677780151367
+
+Epoch: 488
+Train ELBO: 8737.751953125, Train BCE: 8698.423828125, Train KLD: 39.325653076171875
+Val ELBO: 9266.875, Val BCE: 9227.55078125, Val KLD: 39.328773498535156
+Test ELBO: 9253.8916015625, Test BCE: 9214.7158203125, Test KLD: 39.17439651489258
+
+Epoch: 489
+Train ELBO: 8737.3486328125, Train BCE: 8698.025390625, Train KLD: 39.32680130004883
+Val ELBO: 9270.7705078125, Val BCE: 9231.6171875, Val KLD: 39.150108337402344
+Test ELBO: 9258.044921875, Test BCE: 9219.0478515625, Test KLD: 38.9975471496582
+
+Epoch: 490
+Train ELBO: 8737.359375, Train BCE: 8698.021484375, Train KLD: 39.336524963378906
+Val ELBO: 9275.9970703125, Val BCE: 9236.728515625, Val KLD: 39.257808685302734
+Test ELBO: 9262.87109375, Test BCE: 9223.7734375, Test KLD: 39.103973388671875
+
+Epoch: 491
+Train ELBO: 8737.4501953125, Train BCE: 8698.1083984375, Train KLD: 39.33391571044922
+Val ELBO: 9271.7744140625, Val BCE: 9232.5166015625, Val KLD: 39.258827209472656
+Test ELBO: 9258.9775390625, Test BCE: 9219.8759765625, Test KLD: 39.1072883605957
+
+Epoch: 492
+Train ELBO: 8737.1533203125, Train BCE: 8697.7880859375, Train KLD: 39.360191345214844
+Val ELBO: 9273.068359375, Val BCE: 9234.48046875, Val KLD: 38.59306335449219
+Test ELBO: 9260.70703125, Test BCE: 9222.263671875, Test KLD: 38.4442024230957
+
+Epoch: 493
+Train ELBO: 8737.14453125, Train BCE: 8697.80859375, Train KLD: 39.344242095947266
+Val ELBO: 9279.12890625, Val BCE: 9239.7021484375, Val KLD: 39.42885208129883
+Test ELBO: 9265.5712890625, Test BCE: 9226.2958984375, Test KLD: 39.2767219543457
+
+Epoch: 494
+Train ELBO: 8737.2998046875, Train BCE: 8697.9326171875, Train KLD: 39.36211395263672
+Val ELBO: 9281.212890625, Val BCE: 9242.228515625, Val KLD: 38.98860168457031
+Test ELBO: 9267.9326171875, Test BCE: 9229.10546875, Test KLD: 38.8253288269043
+
+Epoch: 495
+Train ELBO: 8736.95703125, Train BCE: 8697.595703125, Train KLD: 39.368751525878906
+Val ELBO: 9261.412109375, Val BCE: 9222.12109375, Val KLD: 39.28935623168945
+Test ELBO: 9248.62109375, Test BCE: 9209.4912109375, Test KLD: 39.13719177246094
+
+Epoch: 496
+Train ELBO: 8737.0029296875, Train BCE: 8697.6474609375, Train KLD: 39.358394622802734
+Val ELBO: 9273.4345703125, Val BCE: 9234.1240234375, Val KLD: 39.31094741821289
+Test ELBO: 9260.5517578125, Test BCE: 9221.3876953125, Test KLD: 39.156150817871094
+
+Epoch: 497
+Train ELBO: 8736.4609375, Train BCE: 8697.091796875, Train KLD: 39.36228942871094
+Val ELBO: 9258.228515625, Val BCE: 9219.4345703125, Val KLD: 38.79596710205078
+Test ELBO: 9244.8681640625, Test BCE: 9206.224609375, Test KLD: 38.64737319946289
+
+Epoch: 498
+Train ELBO: 8736.8310546875, Train BCE: 8697.4658203125, Train KLD: 39.37779235839844
+Val ELBO: 9281.162109375, Val BCE: 9241.5458984375, Val KLD: 39.6189079284668
+Test ELBO: 9267.630859375, Test BCE: 9228.1630859375, Test KLD: 39.467247009277344
+
+Epoch: 499
+Train ELBO: 8736.5673828125, Train BCE: 8697.197265625, Train KLD: 39.366493225097656
+Val ELBO: 9280.58984375, Val BCE: 9241.1865234375, Val KLD: 39.403053283691406
+Test ELBO: 9267.0888671875, Test BCE: 9227.8349609375, Test KLD: 39.249412536621094
+
+Epoch: 500
+Train ELBO: 8736.7333984375, Train BCE: 8697.3486328125, Train KLD: 39.378204345703125
+Val ELBO: 9280.5048828125, Val BCE: 9241.28125, Val KLD: 39.22303771972656
+Test ELBO: 9267.37890625, Test BCE: 9228.318359375, Test KLD: 39.061485290527344
+
+Epoch: 501
+Train ELBO: 8736.61328125, Train BCE: 8697.23046875, Train KLD: 39.375362396240234
+Val ELBO: 9268.0185546875, Val BCE: 9228.8359375, Val KLD: 39.18533706665039
+Test ELBO: 9255.8115234375, Test BCE: 9216.775390625, Test KLD: 39.036373138427734
+
+Epoch: 502
+Train ELBO: 8736.21484375, Train BCE: 8696.8203125, Train KLD: 39.397281646728516
+Val ELBO: 9278.03515625, Val BCE: 9239.01171875, Val KLD: 39.02688980102539
+Test ELBO: 9265.1611328125, Test BCE: 9226.2861328125, Test KLD: 38.87831497192383
+
+Epoch: 503
+Train ELBO: 8736.31640625, Train BCE: 8696.9482421875, Train KLD: 39.37981033325195
+Val ELBO: 9292.2294921875, Val BCE: 9252.2646484375, Val KLD: 39.96505355834961
+Test ELBO: 9279.7138671875, Test BCE: 9239.90234375, Test KLD: 39.810184478759766
+
+Epoch: 504
+Train ELBO: 8736.111328125, Train BCE: 8696.7197265625, Train KLD: 39.39710235595703
+Val ELBO: 9277.923828125, Val BCE: 9238.8740234375, Val KLD: 39.04610824584961
+Test ELBO: 9264.4912109375, Test BCE: 9225.595703125, Test KLD: 38.889251708984375
+
+Epoch: 505
+Train ELBO: 8736.1201171875, Train BCE: 8696.7314453125, Train KLD: 39.38909912109375
+Val ELBO: 9270.248046875, Val BCE: 9231.0634765625, Val KLD: 39.183876037597656
+Test ELBO: 9256.953125, Test BCE: 9217.92578125, Test KLD: 39.0349006652832
+
+Epoch: 506
+Train ELBO: 8736.1279296875, Train BCE: 8696.734375, Train KLD: 39.38971710205078
+Val ELBO: 9267.505859375, Val BCE: 9228.2705078125, Val KLD: 39.23286819458008
+Test ELBO: 9254.732421875, Test BCE: 9215.6611328125, Test KLD: 39.07769775390625
+
+Epoch: 507
+Train ELBO: 8736.0869140625, Train BCE: 8696.6708984375, Train KLD: 39.40757369995117
+Val ELBO: 9285.7373046875, Val BCE: 9246.1005859375, Val KLD: 39.63966369628906
+Test ELBO: 9272.712890625, Test BCE: 9233.224609375, Test KLD: 39.48386764526367
+
+Epoch: 508
+Train ELBO: 8735.931640625, Train BCE: 8696.5166015625, Train KLD: 39.41411209106445
+Val ELBO: 9270.6337890625, Val BCE: 9230.919921875, Val KLD: 39.712867736816406
+Test ELBO: 9258.0107421875, Test BCE: 9218.44921875, Test KLD: 39.559539794921875
+
+Epoch: 509
+Train ELBO: 8735.787109375, Train BCE: 8696.3662109375, Train KLD: 39.41455078125
+Val ELBO: 9273.4326171875, Val BCE: 9233.8310546875, Val KLD: 39.605167388916016
+Test ELBO: 9260.021484375, Test BCE: 9220.5771484375, Test KLD: 39.44847869873047
+
+Epoch: 510
+Train ELBO: 8735.7412109375, Train BCE: 8696.3212890625, Train KLD: 39.41437530517578
+Val ELBO: 9272.5947265625, Val BCE: 9233.42578125, Val KLD: 39.170169830322266
+Test ELBO: 9259.6484375, Test BCE: 9220.642578125, Test KLD: 39.0177116394043
+
+Epoch: 511
+Train ELBO: 8735.568359375, Train BCE: 8696.1474609375, Train KLD: 39.4113655090332
+Val ELBO: 9263.1962890625, Val BCE: 9223.984375, Val KLD: 39.212276458740234
+Test ELBO: 9250.5537109375, Test BCE: 9211.4951171875, Test KLD: 39.056922912597656
+
+Epoch: 512
+Train ELBO: 8735.544921875, Train BCE: 8696.1162109375, Train KLD: 39.41938018798828
+Val ELBO: 9271.236328125, Val BCE: 9231.7294921875, Val KLD: 39.505855560302734
+Test ELBO: 9258.279296875, Test BCE: 9218.921875, Test KLD: 39.35580825805664
+
+Epoch: 513
+Train ELBO: 8735.6083984375, Train BCE: 8696.1669921875, Train KLD: 39.429317474365234
+Val ELBO: 9279.95703125, Val BCE: 9241.072265625, Val KLD: 38.8797607421875
+Test ELBO: 9266.35546875, Test BCE: 9227.62890625, Test KLD: 38.72336196899414
+
+Epoch: 514
+Train ELBO: 8735.2490234375, Train BCE: 8695.8193359375, Train KLD: 39.430049896240234
+Val ELBO: 9278.25390625, Val BCE: 9238.6806640625, Val KLD: 39.57552719116211
+Test ELBO: 9265.25390625, Test BCE: 9225.8349609375, Test KLD: 39.42245864868164
+
+Epoch: 515
+Train ELBO: 8735.3779296875, Train BCE: 8695.9560546875, Train KLD: 39.42294692993164
+Val ELBO: 9279.6103515625, Val BCE: 9240.7802734375, Val KLD: 38.83183288574219
+Test ELBO: 9266.259765625, Test BCE: 9227.5771484375, Test KLD: 38.68095779418945
+
+Epoch: 516
+Train ELBO: 8735.3203125, Train BCE: 8695.8984375, Train KLD: 39.429656982421875
+Val ELBO: 9271.1318359375, Val BCE: 9232.166015625, Val KLD: 38.96543884277344
+Test ELBO: 9257.6533203125, Test BCE: 9218.8369140625, Test KLD: 38.814918518066406
+
+Epoch: 517
+Train ELBO: 8735.248046875, Train BCE: 8695.822265625, Train KLD: 39.4330940246582
+Val ELBO: 9268.599609375, Val BCE: 9229.173828125, Val KLD: 39.428627014160156
+Test ELBO: 9254.94140625, Test BCE: 9215.6611328125, Test KLD: 39.281524658203125
+
+Epoch: 518
+Train ELBO: 8735.03125, Train BCE: 8695.5947265625, Train KLD: 39.441497802734375
+Val ELBO: 9272.166015625, Val BCE: 9233.1123046875, Val KLD: 39.052711486816406
+Test ELBO: 9259.671875, Test BCE: 9220.7744140625, Test KLD: 38.89655303955078
+
+Epoch: 519
+Train ELBO: 8735.0341796875, Train BCE: 8695.5947265625, Train KLD: 39.44599533081055
+Val ELBO: 9272.12109375, Val BCE: 9233.00390625, Val KLD: 39.11325454711914
+Test ELBO: 9259.630859375, Test BCE: 9220.662109375, Test KLD: 38.96551513671875
+
+Epoch: 520
+Train ELBO: 8734.8955078125, Train BCE: 8695.4423828125, Train KLD: 39.447364807128906
+Val ELBO: 9275.6533203125, Val BCE: 9236.42578125, Val KLD: 39.23289489746094
+Test ELBO: 9262.80078125, Test BCE: 9223.7236328125, Test KLD: 39.08127212524414
+
+Epoch: 521
+Train ELBO: 8734.7314453125, Train BCE: 8695.287109375, Train KLD: 39.45269775390625
+Val ELBO: 9276.8349609375, Val BCE: 9237.7265625, Val KLD: 39.10575485229492
+Test ELBO: 9264.134765625, Test BCE: 9225.1865234375, Test KLD: 38.94709396362305
+
+Epoch: 522
+Train ELBO: 8734.767578125, Train BCE: 8695.3056640625, Train KLD: 39.46321487426758
+Val ELBO: 9284.53515625, Val BCE: 9245.4345703125, Val KLD: 39.09490966796875
+Test ELBO: 9271.5419921875, Test BCE: 9232.6025390625, Test KLD: 38.9437141418457
+
+Epoch: 523
+Train ELBO: 8734.81640625, Train BCE: 8695.3388671875, Train KLD: 39.4705696105957
+Val ELBO: 9268.845703125, Val BCE: 9229.703125, Val KLD: 39.14208984375
+Test ELBO: 9255.66796875, Test BCE: 9216.6689453125, Test KLD: 38.99579620361328
+
+Epoch: 524
+Train ELBO: 8734.63671875, Train BCE: 8695.173828125, Train KLD: 39.464351654052734
+Val ELBO: 9284.12109375, Val BCE: 9245.1826171875, Val KLD: 38.937774658203125
+Test ELBO: 9270.9794921875, Test BCE: 9232.1884765625, Test KLD: 38.783878326416016
+
+Epoch: 525
+Train ELBO: 8734.4384765625, Train BCE: 8694.96484375, Train KLD: 39.472381591796875
+Val ELBO: 9285.068359375, Val BCE: 9245.751953125, Val KLD: 39.31162643432617
+Test ELBO: 9271.2197265625, Test BCE: 9232.064453125, Test KLD: 39.154136657714844
+
+Epoch: 526
+Train ELBO: 8734.494140625, Train BCE: 8695.0283203125, Train KLD: 39.469913482666016
+Val ELBO: 9283.333984375, Val BCE: 9243.6494140625, Val KLD: 39.67881393432617
+Test ELBO: 9270.146484375, Test BCE: 9230.6357421875, Test KLD: 39.514408111572266
+
+Epoch: 527
+Train ELBO: 8734.564453125, Train BCE: 8695.0927734375, Train KLD: 39.47100830078125
+Val ELBO: 9278.919921875, Val BCE: 9239.6953125, Val KLD: 39.22492980957031
+Test ELBO: 9265.6806640625, Test BCE: 9226.6171875, Test KLD: 39.06632995605469
+
+Epoch: 528
+Train ELBO: 8734.19921875, Train BCE: 8694.7216796875, Train KLD: 39.477474212646484
+Val ELBO: 9281.2490234375, Val BCE: 9242.025390625, Val KLD: 39.22426223754883
+Test ELBO: 9267.7841796875, Test BCE: 9228.71484375, Test KLD: 39.07261276245117
+
+Epoch: 529
+Train ELBO: 8734.306640625, Train BCE: 8694.828125, Train KLD: 39.478878021240234
+Val ELBO: 9283.4345703125, Val BCE: 9244.087890625, Val KLD: 39.348304748535156
+Test ELBO: 9270.1513671875, Test BCE: 9230.951171875, Test KLD: 39.19620132446289
+
+Epoch: 530
+Train ELBO: 8734.2138671875, Train BCE: 8694.73046875, Train KLD: 39.48386764526367
+Val ELBO: 9287.796875, Val BCE: 9248.4931640625, Val KLD: 39.30544662475586
+Test ELBO: 9274.4716796875, Test BCE: 9235.3076171875, Test KLD: 39.157527923583984
+
+Epoch: 531
+Train ELBO: 8734.0400390625, Train BCE: 8694.5732421875, Train KLD: 39.47383499145508
+Val ELBO: 9276.412109375, Val BCE: 9237.05859375, Val KLD: 39.35679626464844
+Test ELBO: 9263.64453125, Test BCE: 9224.4501953125, Test KLD: 39.1944694519043
+
+Epoch: 532
+Train ELBO: 8734.1162109375, Train BCE: 8694.6240234375, Train KLD: 39.49201202392578
+Val ELBO: 9289.1669921875, Val BCE: 9249.5908203125, Val KLD: 39.57864761352539
+Test ELBO: 9275.7099609375, Test BCE: 9236.2880859375, Test KLD: 39.42535400390625
+
+Epoch: 533
+Train ELBO: 8733.931640625, Train BCE: 8694.4306640625, Train KLD: 39.49560546875
+Val ELBO: 9277.8994140625, Val BCE: 9238.5615234375, Val KLD: 39.328643798828125
+Test ELBO: 9264.5849609375, Test BCE: 9225.4130859375, Test KLD: 39.171573638916016
+
+Epoch: 534
+Train ELBO: 8733.7841796875, Train BCE: 8694.2978515625, Train KLD: 39.490604400634766
+Val ELBO: 9282.7744140625, Val BCE: 9243.5576171875, Val KLD: 39.220550537109375
+Test ELBO: 9269.322265625, Test BCE: 9230.2470703125, Test KLD: 39.066009521484375
+
+Epoch: 535
+Train ELBO: 8733.830078125, Train BCE: 8694.328125, Train KLD: 39.509151458740234
+Val ELBO: 9269.0732421875, Val BCE: 9229.826171875, Val KLD: 39.25307846069336
+Test ELBO: 9255.9404296875, Test BCE: 9216.8349609375, Test KLD: 39.10017013549805
+
+Epoch: 536
+Train ELBO: 8733.677734375, Train BCE: 8694.171875, Train KLD: 39.51124954223633
+Val ELBO: 9278.9609375, Val BCE: 9239.6806640625, Val KLD: 39.27656555175781
+Test ELBO: 9266.1435546875, Test BCE: 9227.0244140625, Test KLD: 39.11897277832031
+
+Epoch: 537
+Train ELBO: 8733.875, Train BCE: 8694.3623046875, Train KLD: 39.51072692871094
+Val ELBO: 9267.12890625, Val BCE: 9228.19921875, Val KLD: 38.93605422973633
+Test ELBO: 9254.6328125, Test BCE: 9215.8447265625, Test KLD: 38.789520263671875
+
+Epoch: 538
+Train ELBO: 8733.4814453125, Train BCE: 8693.9755859375, Train KLD: 39.505672454833984
+Val ELBO: 9276.3837890625, Val BCE: 9237.05078125, Val KLD: 39.32593536376953
+Test ELBO: 9263.1591796875, Test BCE: 9223.9853515625, Test KLD: 39.174442291259766
+
+Epoch: 539
+Train ELBO: 8733.6162109375, Train BCE: 8694.0986328125, Train KLD: 39.52000045776367
+Val ELBO: 9279.6552734375, Val BCE: 9240.21484375, Val KLD: 39.44108963012695
+Test ELBO: 9266.0390625, Test BCE: 9226.751953125, Test KLD: 39.28619384765625
+
+Epoch: 540
+Train ELBO: 8733.0615234375, Train BCE: 8693.533203125, Train KLD: 39.522300720214844
+Val ELBO: 9280.7470703125, Val BCE: 9241.3203125, Val KLD: 39.43437194824219
+Test ELBO: 9267.474609375, Test BCE: 9228.1962890625, Test KLD: 39.28071975708008
+
+Epoch: 541
+Train ELBO: 8733.333984375, Train BCE: 8693.806640625, Train KLD: 39.521968841552734
+Val ELBO: 9286.255859375, Val BCE: 9246.6943359375, Val KLD: 39.558509826660156
+Test ELBO: 9273.2998046875, Test BCE: 9233.88671875, Test KLD: 39.40836715698242
+
+Epoch: 542
+Train ELBO: 8733.2841796875, Train BCE: 8693.7578125, Train KLD: 39.524024963378906
+Val ELBO: 9271.498046875, Val BCE: 9232.658203125, Val KLD: 38.833396911621094
+Test ELBO: 9258.798828125, Test BCE: 9220.12109375, Test KLD: 38.680335998535156
+
+Epoch: 543
+Train ELBO: 8733.208984375, Train BCE: 8693.6787109375, Train KLD: 39.525230407714844
+Val ELBO: 9282.451171875, Val BCE: 9242.9501953125, Val KLD: 39.49443817138672
+Test ELBO: 9268.7646484375, Test BCE: 9229.4248046875, Test KLD: 39.340171813964844
+
+Epoch: 544
+Train ELBO: 8733.279296875, Train BCE: 8693.7412109375, Train KLD: 39.53208541870117
+Val ELBO: 9278.2646484375, Val BCE: 9238.662109375, Val KLD: 39.600337982177734
+Test ELBO: 9265.2841796875, Test BCE: 9225.83984375, Test KLD: 39.44422149658203
+
+Epoch: 545
+Train ELBO: 8732.9267578125, Train BCE: 8693.3984375, Train KLD: 39.53112030029297
+Val ELBO: 9277.865234375, Val BCE: 9238.845703125, Val KLD: 39.02265930175781
+Test ELBO: 9263.9404296875, Test BCE: 9225.0771484375, Test KLD: 38.86369323730469
+
+Epoch: 546
+Train ELBO: 8732.8974609375, Train BCE: 8693.3583984375, Train KLD: 39.53678512573242
+Val ELBO: 9270.9970703125, Val BCE: 9231.9599609375, Val KLD: 39.03023910522461
+Test ELBO: 9257.8984375, Test BCE: 9219.0224609375, Test KLD: 38.87538528442383
+
+Epoch: 547
+Train ELBO: 8732.8837890625, Train BCE: 8693.3349609375, Train KLD: 39.543426513671875
+Val ELBO: 9277.384765625, Val BCE: 9238.1201171875, Val KLD: 39.26512145996094
+Test ELBO: 9264.248046875, Test BCE: 9225.125, Test KLD: 39.127906799316406
+
+Epoch: 548
+Train ELBO: 8732.7529296875, Train BCE: 8693.2041015625, Train KLD: 39.54843521118164
+Val ELBO: 9280.3544921875, Val BCE: 9241.388671875, Val KLD: 38.96112060546875
+Test ELBO: 9266.58984375, Test BCE: 9227.7880859375, Test KLD: 38.8028678894043
+
+Epoch: 549
+Train ELBO: 8732.79296875, Train BCE: 8693.2373046875, Train KLD: 39.54773712158203
+Val ELBO: 9277.8896484375, Val BCE: 9238.48046875, Val KLD: 39.41408157348633
+Test ELBO: 9264.38671875, Test BCE: 9225.1318359375, Test KLD: 39.25568771362305
+
+Epoch: 550
+Train ELBO: 8732.861328125, Train BCE: 8693.3125, Train KLD: 39.54524230957031
+Val ELBO: 9281.6484375, Val BCE: 9242.37890625, Val KLD: 39.274940490722656
+Test ELBO: 9268.1318359375, Test BCE: 9229.0126953125, Test KLD: 39.12575149536133
+
+Epoch: 551
+Train ELBO: 8732.533203125, Train BCE: 8692.9833984375, Train KLD: 39.558128356933594
+Val ELBO: 9273.857421875, Val BCE: 9235.1083984375, Val KLD: 38.757991790771484
+Test ELBO: 9261.1416015625, Test BCE: 9222.53515625, Test KLD: 38.609413146972656
+
+Epoch: 552
+Train ELBO: 8732.6240234375, Train BCE: 8693.0654296875, Train KLD: 39.55535888671875
+Val ELBO: 9281.88671875, Val BCE: 9242.7373046875, Val KLD: 39.149288177490234
+Test ELBO: 9268.279296875, Test BCE: 9229.2919921875, Test KLD: 38.989173889160156
+
+Epoch: 553
+Train ELBO: 8732.3125, Train BCE: 8692.7646484375, Train KLD: 39.560611724853516
+Val ELBO: 9277.537109375, Val BCE: 9237.8525390625, Val KLD: 39.678829193115234
+Test ELBO: 9264.5048828125, Test BCE: 9224.9736328125, Test KLD: 39.52822494506836
+
+Epoch: 554
+Train ELBO: 8732.384765625, Train BCE: 8692.8173828125, Train KLD: 39.57188034057617
+Val ELBO: 9294.52734375, Val BCE: 9254.7236328125, Val KLD: 39.806419372558594
+Test ELBO: 9281.1708984375, Test BCE: 9241.517578125, Test KLD: 39.65033721923828
+
+Epoch: 555
+Train ELBO: 8732.4482421875, Train BCE: 8692.869140625, Train KLD: 39.574432373046875
+Val ELBO: 9272.1494140625, Val BCE: 9233.064453125, Val KLD: 39.08652877807617
+Test ELBO: 9259.0693359375, Test BCE: 9220.13671875, Test KLD: 38.93310546875
+
+Epoch: 556
+Train ELBO: 8732.275390625, Train BCE: 8692.7060546875, Train KLD: 39.568389892578125
+Val ELBO: 9270.658203125, Val BCE: 9231.603515625, Val KLD: 39.05908203125
+Test ELBO: 9257.3154296875, Test BCE: 9218.421875, Test KLD: 38.900821685791016
+
+Epoch: 557
+Train ELBO: 8732.212890625, Train BCE: 8692.6318359375, Train KLD: 39.576839447021484
+Val ELBO: 9283.7080078125, Val BCE: 9244.341796875, Val KLD: 39.36869812011719
+Test ELBO: 9270.6171875, Test BCE: 9231.400390625, Test KLD: 39.21848678588867
+
+Epoch: 558
+Train ELBO: 8732.234375, Train BCE: 8692.650390625, Train KLD: 39.5791130065918
+Val ELBO: 9281.55078125, Val BCE: 9241.6669921875, Val KLD: 39.88274383544922
+Test ELBO: 9268.3388671875, Test BCE: 9228.609375, Test KLD: 39.73472213745117
+
+Epoch: 559
+Train ELBO: 8731.974609375, Train BCE: 8692.390625, Train KLD: 39.587684631347656
+Val ELBO: 9276.9873046875, Val BCE: 9236.865234375, Val KLD: 40.12262725830078
+Test ELBO: 9264.060546875, Test BCE: 9224.09375, Test KLD: 39.97332000732422
+
+Epoch: 560
+Train ELBO: 8731.9501953125, Train BCE: 8692.3720703125, Train KLD: 39.58131790161133
+Val ELBO: 9291.3642578125, Val BCE: 9252.04296875, Val KLD: 39.318416595458984
+Test ELBO: 9277.810546875, Test BCE: 9238.6484375, Test KLD: 39.15995788574219
+
+Epoch: 561
+Train ELBO: 8732.2001953125, Train BCE: 8692.619140625, Train KLD: 39.5831298828125
+Val ELBO: 9268.0576171875, Val BCE: 9228.94921875, Val KLD: 39.11166763305664
+Test ELBO: 9255.529296875, Test BCE: 9216.5693359375, Test KLD: 38.962074279785156
+
+Epoch: 562
+Train ELBO: 8731.6494140625, Train BCE: 8692.064453125, Train KLD: 39.59235382080078
+Val ELBO: 9270.0556640625, Val BCE: 9230.16015625, Val KLD: 39.899375915527344
+Test ELBO: 9257.109375, Test BCE: 9217.3662109375, Test KLD: 39.74380874633789
+
+Epoch: 563
+Train ELBO: 8731.61328125, Train BCE: 8692.017578125, Train KLD: 39.597259521484375
+Val ELBO: 9287.166015625, Val BCE: 9247.748046875, Val KLD: 39.421321868896484
+Test ELBO: 9274.421875, Test BCE: 9235.1484375, Test KLD: 39.2682991027832
+
+Epoch: 564
+Train ELBO: 8731.845703125, Train BCE: 8692.2578125, Train KLD: 39.5957145690918
+Val ELBO: 9283.919921875, Val BCE: 9244.744140625, Val KLD: 39.175559997558594
+Test ELBO: 9270.4150390625, Test BCE: 9231.3857421875, Test KLD: 39.02130126953125
+
+Epoch: 565
+Train ELBO: 8731.814453125, Train BCE: 8692.208984375, Train KLD: 39.59550094604492
+Val ELBO: 9278.5107421875, Val BCE: 9238.8134765625, Val KLD: 39.705936431884766
+Test ELBO: 9264.779296875, Test BCE: 9225.2275390625, Test KLD: 39.55641174316406
+
+Epoch: 566
+Train ELBO: 8731.4345703125, Train BCE: 8691.828125, Train KLD: 39.61414337158203
+Val ELBO: 9289.96484375, Val BCE: 9250.9736328125, Val KLD: 38.98891830444336
+Test ELBO: 9276.4189453125, Test BCE: 9237.5791015625, Test KLD: 38.837860107421875
+
+Epoch: 567
+Train ELBO: 8731.53515625, Train BCE: 8691.923828125, Train KLD: 39.60814666748047
+Val ELBO: 9277.8310546875, Val BCE: 9238.2119140625, Val KLD: 39.623416900634766
+Test ELBO: 9264.7216796875, Test BCE: 9225.248046875, Test KLD: 39.467891693115234
+
+Epoch: 568
+Train ELBO: 8731.3203125, Train BCE: 8691.6982421875, Train KLD: 39.62213134765625
+Val ELBO: 9285.421875, Val BCE: 9245.66796875, Val KLD: 39.748470306396484
+Test ELBO: 9272.2080078125, Test BCE: 9232.603515625, Test KLD: 39.597900390625
+
+Epoch: 569
+Train ELBO: 8731.373046875, Train BCE: 8691.759765625, Train KLD: 39.61612319946289
+Val ELBO: 9277.173828125, Val BCE: 9237.8876953125, Val KLD: 39.284236907958984
+Test ELBO: 9264.8349609375, Test BCE: 9225.701171875, Test KLD: 39.133140563964844
+
+Epoch: 570
+Train ELBO: 8731.3427734375, Train BCE: 8691.7333984375, Train KLD: 39.60847854614258
+Val ELBO: 9286.5263671875, Val BCE: 9247.44921875, Val KLD: 39.08077621459961
+Test ELBO: 9273.37890625, Test BCE: 9234.4580078125, Test KLD: 38.920921325683594
+
+Epoch: 571
+Train ELBO: 8731.2802734375, Train BCE: 8691.6611328125, Train KLD: 39.614803314208984
+Val ELBO: 9281.400390625, Val BCE: 9241.94140625, Val KLD: 39.455902099609375
+Test ELBO: 9268.1123046875, Test BCE: 9228.814453125, Test KLD: 39.296138763427734
+
+Epoch: 572
+Train ELBO: 8731.076171875, Train BCE: 8691.46875, Train KLD: 39.61456298828125
+Val ELBO: 9279.72265625, Val BCE: 9240.0810546875, Val KLD: 39.638771057128906
+Test ELBO: 9266.609375, Test BCE: 9227.1171875, Test KLD: 39.48942565917969
+
+Epoch: 573
+Train ELBO: 8731.0986328125, Train BCE: 8691.458984375, Train KLD: 39.63092803955078
+Val ELBO: 9274.1171875, Val BCE: 9234.919921875, Val KLD: 39.19991683959961
+Test ELBO: 9260.978515625, Test BCE: 9221.935546875, Test KLD: 39.04161071777344
+
+Epoch: 574
+Train ELBO: 8730.8603515625, Train BCE: 8691.2216796875, Train KLD: 39.6369514465332
+Val ELBO: 9294.7529296875, Val BCE: 9254.787109375, Val KLD: 39.9686279296875
+Test ELBO: 9281.8349609375, Test BCE: 9242.0166015625, Test KLD: 39.81205749511719
+
+Epoch: 575
+Train ELBO: 8731.083984375, Train BCE: 8691.4462890625, Train KLD: 39.6351203918457
+Val ELBO: 9282.0654296875, Val BCE: 9242.615234375, Val KLD: 39.44991683959961
+Test ELBO: 9268.8359375, Test BCE: 9229.5380859375, Test KLD: 39.29806137084961
+
+Epoch: 576
+Train ELBO: 8730.8935546875, Train BCE: 8691.26171875, Train KLD: 39.64006423950195
+Val ELBO: 9286.2119140625, Val BCE: 9246.6259765625, Val KLD: 39.5825080871582
+Test ELBO: 9272.6533203125, Test BCE: 9233.2236328125, Test KLD: 39.4262580871582
+
+Epoch: 577
+Train ELBO: 8730.978515625, Train BCE: 8691.3466796875, Train KLD: 39.6328125
+Val ELBO: 9272.8134765625, Val BCE: 9233.525390625, Val KLD: 39.2894287109375
+Test ELBO: 9260.1376953125, Test BCE: 9220.998046875, Test KLD: 39.13923645019531
+
+Epoch: 578
+Train ELBO: 8730.6650390625, Train BCE: 8691.0107421875, Train KLD: 39.6519660949707
+Val ELBO: 9270.5048828125, Val BCE: 9231.0, Val KLD: 39.507381439208984
+Test ELBO: 9257.40234375, Test BCE: 9218.0341796875, Test KLD: 39.358699798583984
+
+Epoch: 579
+Train ELBO: 8730.7236328125, Train BCE: 8691.0859375, Train KLD: 39.64499282836914
+Val ELBO: 9276.2685546875, Val BCE: 9237.0390625, Val KLD: 39.23097229003906
+Test ELBO: 9263.6220703125, Test BCE: 9224.5419921875, Test KLD: 39.07647705078125
+
+Epoch: 580
+Train ELBO: 8730.4873046875, Train BCE: 8690.8486328125, Train KLD: 39.64239501953125
+Val ELBO: 9287.50390625, Val BCE: 9247.8310546875, Val KLD: 39.674007415771484
+Test ELBO: 9274.431640625, Test BCE: 9234.912109375, Test KLD: 39.51886749267578
+
+Epoch: 581
+Train ELBO: 8730.5390625, Train BCE: 8690.89453125, Train KLD: 39.64734649658203
+Val ELBO: 9291.533203125, Val BCE: 9251.6494140625, Val KLD: 39.88103485107422
+Test ELBO: 9278.494140625, Test BCE: 9238.76171875, Test KLD: 39.723915100097656
+
+Epoch: 582
+Train ELBO: 8730.4482421875, Train BCE: 8690.7900390625, Train KLD: 39.657997131347656
+Val ELBO: 9284.296875, Val BCE: 9244.81640625, Val KLD: 39.48113250732422
+Test ELBO: 9271.1328125, Test BCE: 9231.8046875, Test KLD: 39.33564376831055
+
+Epoch: 583
+Train ELBO: 8730.3056640625, Train BCE: 8690.6513671875, Train KLD: 39.65375900268555
+Val ELBO: 9279.9541015625, Val BCE: 9240.173828125, Val KLD: 39.78565979003906
+Test ELBO: 9267.275390625, Test BCE: 9227.6416015625, Test KLD: 39.63374328613281
+
+Epoch: 584
+Train ELBO: 8730.3779296875, Train BCE: 8690.728515625, Train KLD: 39.64987564086914
+Val ELBO: 9277.53515625, Val BCE: 9238.3212890625, Val KLD: 39.21166229248047
+Test ELBO: 9264.7099609375, Test BCE: 9225.6513671875, Test KLD: 39.06021499633789
+
+Epoch: 585
+Train ELBO: 8730.517578125, Train BCE: 8690.841796875, Train KLD: 39.668373107910156
+Val ELBO: 9279.9931640625, Val BCE: 9240.634765625, Val KLD: 39.36157989501953
+Test ELBO: 9266.521484375, Test BCE: 9227.314453125, Test KLD: 39.21153259277344
+
+Epoch: 586
+Train ELBO: 8730.0263671875, Train BCE: 8690.3720703125, Train KLD: 39.664947509765625
+Val ELBO: 9279.6455078125, Val BCE: 9240.30859375, Val KLD: 39.341983795166016
+Test ELBO: 9266.517578125, Test BCE: 9227.33203125, Test KLD: 39.19052505493164
+
+Epoch: 587
+Train ELBO: 8730.0458984375, Train BCE: 8690.390625, Train KLD: 39.65781784057617
+Val ELBO: 9301.0947265625, Val BCE: 9261.673828125, Val KLD: 39.41775894165039
+Test ELBO: 9288.111328125, Test BCE: 9248.8515625, Test KLD: 39.262760162353516
+
+Epoch: 588
+Train ELBO: 8730.146484375, Train BCE: 8690.46875, Train KLD: 39.670589447021484
+Val ELBO: 9298.275390625, Val BCE: 9259.0791015625, Val KLD: 39.201332092285156
+Test ELBO: 9284.2744140625, Test BCE: 9245.22265625, Test KLD: 39.04888153076172
+
+Epoch: 589
+Train ELBO: 8729.9775390625, Train BCE: 8690.318359375, Train KLD: 39.658935546875
+Val ELBO: 9277.2998046875, Val BCE: 9237.822265625, Val KLD: 39.482276916503906
+Test ELBO: 9264.546875, Test BCE: 9225.2138671875, Test KLD: 39.33293914794922
+
+Epoch: 590
+Train ELBO: 8730.1650390625, Train BCE: 8690.501953125, Train KLD: 39.66645431518555
+Val ELBO: 9280.376953125, Val BCE: 9241.1455078125, Val KLD: 39.23347091674805
+Test ELBO: 9267.1171875, Test BCE: 9228.0390625, Test KLD: 39.0821647644043
+
+Epoch: 591
+Train ELBO: 8730.0166015625, Train BCE: 8690.3388671875, Train KLD: 39.682090759277344
+Val ELBO: 9290.8486328125, Val BCE: 9251.1552734375, Val KLD: 39.693607330322266
+Test ELBO: 9277.5703125, Test BCE: 9238.0390625, Test KLD: 39.535831451416016
+
+Epoch: 592
+Train ELBO: 8729.951171875, Train BCE: 8690.259765625, Train KLD: 39.69291687011719
+Val ELBO: 9281.6826171875, Val BCE: 9242.560546875, Val KLD: 39.120689392089844
+Test ELBO: 9268.5341796875, Test BCE: 9229.5732421875, Test KLD: 38.961734771728516
+
+Epoch: 593
+Train ELBO: 8729.55859375, Train BCE: 8689.8759765625, Train KLD: 39.682838439941406
+Val ELBO: 9291.505859375, Val BCE: 9252.310546875, Val KLD: 39.197750091552734
+Test ELBO: 9278.23046875, Test BCE: 9239.193359375, Test KLD: 39.03905487060547
+
+Epoch: 594
+Train ELBO: 8729.498046875, Train BCE: 8689.8095703125, Train KLD: 39.69361114501953
+Val ELBO: 9282.61328125, Val BCE: 9242.826171875, Val KLD: 39.79349899291992
+Test ELBO: 9269.7158203125, Test BCE: 9230.07421875, Test KLD: 39.638553619384766
+
+Epoch: 595
+Train ELBO: 8729.716796875, Train BCE: 8690.0205078125, Train KLD: 39.70008087158203
+Val ELBO: 9285.4853515625, Val BCE: 9246.26953125, Val KLD: 39.21549987792969
+Test ELBO: 9272.14453125, Test BCE: 9233.0869140625, Test KLD: 39.05747985839844
+
+Epoch: 596
+Train ELBO: 8729.837890625, Train BCE: 8690.142578125, Train KLD: 39.68959045410156
+Val ELBO: 9290.4609375, Val BCE: 9250.8544921875, Val KLD: 39.601810455322266
+Test ELBO: 9277.2958984375, Test BCE: 9237.8515625, Test KLD: 39.44818115234375
+
+Epoch: 597
+Train ELBO: 8729.517578125, Train BCE: 8689.8232421875, Train KLD: 39.692832946777344
+Val ELBO: 9275.1796875, Val BCE: 9235.8583984375, Val KLD: 39.31591033935547
+Test ELBO: 9262.263671875, Test BCE: 9223.1044921875, Test KLD: 39.160614013671875
+
+Epoch: 598
+Train ELBO: 8729.134765625, Train BCE: 8689.43359375, Train KLD: 39.70502471923828
+Val ELBO: 9280.228515625, Val BCE: 9240.7451171875, Val KLD: 39.478878021240234
+Test ELBO: 9267.2392578125, Test BCE: 9227.9111328125, Test KLD: 39.32976150512695
+
+Epoch: 599
+Train ELBO: 8729.2607421875, Train BCE: 8689.552734375, Train KLD: 39.71380615234375
+Val ELBO: 9283.6611328125, Val BCE: 9243.9609375, Val KLD: 39.70398712158203
+Test ELBO: 9270.205078125, Test BCE: 9230.6611328125, Test KLD: 39.54841995239258
+
+Epoch: 600
+Train ELBO: 8729.3388671875, Train BCE: 8689.626953125, Train KLD: 39.71445846557617
+Val ELBO: 9288.66796875, Val BCE: 9249.7841796875, Val KLD: 38.881587982177734
+Test ELBO: 9275.3896484375, Test BCE: 9236.662109375, Test KLD: 38.725547790527344
+
+Epoch: 601
+Train ELBO: 8729.1201171875, Train BCE: 8689.4287109375, Train KLD: 39.70054626464844
+Val ELBO: 9291.8330078125, Val BCE: 9252.130859375, Val KLD: 39.706539154052734
+Test ELBO: 9278.599609375, Test BCE: 9239.0458984375, Test KLD: 39.553985595703125
+
+Epoch: 602
+Train ELBO: 8729.5458984375, Train BCE: 8689.833984375, Train KLD: 39.70903015136719
+Val ELBO: 9278.9033203125, Val BCE: 9239.4326171875, Val KLD: 39.47761917114258
+Test ELBO: 9266.361328125, Test BCE: 9227.037109375, Test KLD: 39.3253288269043
+
+Epoch: 603
+Train ELBO: 8728.9443359375, Train BCE: 8689.2275390625, Train KLD: 39.716094970703125
+Val ELBO: 9278.919921875, Val BCE: 9239.5830078125, Val KLD: 39.34385681152344
+Test ELBO: 9265.58984375, Test BCE: 9226.4033203125, Test KLD: 39.18702697753906
+
+Epoch: 604
+Train ELBO: 8729.0146484375, Train BCE: 8689.287109375, Train KLD: 39.72643280029297
+Val ELBO: 9285.4970703125, Val BCE: 9245.982421875, Val KLD: 39.515220642089844
+Test ELBO: 9272.0068359375, Test BCE: 9232.65234375, Test KLD: 39.356529235839844
+
+Epoch: 605
+Train ELBO: 8728.986328125, Train BCE: 8689.2685546875, Train KLD: 39.7144775390625
+Val ELBO: 9291.974609375, Val BCE: 9252.3388671875, Val KLD: 39.641258239746094
+Test ELBO: 9278.7099609375, Test BCE: 9239.2314453125, Test KLD: 39.48307418823242
+
+Epoch: 606
+Train ELBO: 8729.03125, Train BCE: 8689.306640625, Train KLD: 39.727970123291016
+Val ELBO: 9283.2529296875, Val BCE: 9243.830078125, Val KLD: 39.42186737060547
+Test ELBO: 9269.80078125, Test BCE: 9230.53515625, Test KLD: 39.26603317260742
+
+Epoch: 607
+Train ELBO: 8728.7421875, Train BCE: 8689.0126953125, Train KLD: 39.73405838012695
+Val ELBO: 9271.4853515625, Val BCE: 9231.7548828125, Val KLD: 39.726261138916016
+Test ELBO: 9259.158203125, Test BCE: 9219.5869140625, Test KLD: 39.575538635253906
+
+Epoch: 608
+Train ELBO: 8728.5576171875, Train BCE: 8688.8154296875, Train KLD: 39.73279571533203
+Val ELBO: 9277.6259765625, Val BCE: 9237.904296875, Val KLD: 39.72126007080078
+Test ELBO: 9264.3115234375, Test BCE: 9224.748046875, Test KLD: 39.56893539428711
+
+Epoch: 609
+Train ELBO: 8728.880859375, Train BCE: 8689.13671875, Train KLD: 39.739715576171875
+Val ELBO: 9278.896484375, Val BCE: 9239.8623046875, Val KLD: 39.038639068603516
+Test ELBO: 9265.3984375, Test BCE: 9226.51171875, Test KLD: 38.88926696777344
+
+Epoch: 610
+Train ELBO: 8728.494140625, Train BCE: 8688.75390625, Train KLD: 39.74150466918945
+Val ELBO: 9288.6357421875, Val BCE: 9249.25, Val KLD: 39.38611602783203
+Test ELBO: 9274.5576171875, Test BCE: 9235.3388671875, Test KLD: 39.223388671875
+
+Epoch: 611
+Train ELBO: 8728.4765625, Train BCE: 8688.734375, Train KLD: 39.744789123535156
+Val ELBO: 9288.19921875, Val BCE: 9248.7587890625, Val KLD: 39.4398193359375
+Test ELBO: 9274.9580078125, Test BCE: 9235.6767578125, Test KLD: 39.28459930419922
+
+Epoch: 612
+Train ELBO: 8728.4345703125, Train BCE: 8688.6904296875, Train KLD: 39.748172760009766
+Val ELBO: 9287.8544921875, Val BCE: 9248.298828125, Val KLD: 39.555240631103516
+Test ELBO: 9275.08984375, Test BCE: 9235.6953125, Test KLD: 39.39884948730469
+
+Epoch: 613
+Train ELBO: 8728.560546875, Train BCE: 8688.8056640625, Train KLD: 39.74937057495117
+Val ELBO: 9283.9169921875, Val BCE: 9244.01953125, Val KLD: 39.892635345458984
+Test ELBO: 9271.009765625, Test BCE: 9231.267578125, Test KLD: 39.738372802734375
+
+Epoch: 614
+Train ELBO: 8728.4345703125, Train BCE: 8688.68359375, Train KLD: 39.74406051635742
+Val ELBO: 9275.5595703125, Val BCE: 9235.8095703125, Val KLD: 39.752384185791016
+Test ELBO: 9262.923828125, Test BCE: 9223.3291015625, Test KLD: 39.59892272949219
+
+Epoch: 615
+Train ELBO: 8728.431640625, Train BCE: 8688.6953125, Train KLD: 39.747222900390625
+Val ELBO: 9294.5263671875, Val BCE: 9255.2294921875, Val KLD: 39.29423904418945
+Test ELBO: 9281.74609375, Test BCE: 9242.6240234375, Test KLD: 39.13166809082031
+
+Epoch: 616
+Train ELBO: 8728.271484375, Train BCE: 8688.50390625, Train KLD: 39.75932312011719
+Val ELBO: 9280.80859375, Val BCE: 9241.375, Val KLD: 39.43956756591797
+Test ELBO: 9267.2548828125, Test BCE: 9227.97265625, Test KLD: 39.285125732421875
+
+Epoch: 617
+Train ELBO: 8728.1865234375, Train BCE: 8688.412109375, Train KLD: 39.7642707824707
+Val ELBO: 9284.9052734375, Val BCE: 9245.451171875, Val KLD: 39.458335876464844
+Test ELBO: 9271.970703125, Test BCE: 9232.6689453125, Test KLD: 39.300567626953125
+
+Epoch: 618
+Train ELBO: 8728.21875, Train BCE: 8688.4658203125, Train KLD: 39.756046295166016
+Val ELBO: 9299.7216796875, Val BCE: 9260.29296875, Val KLD: 39.4334602355957
+Test ELBO: 9286.8623046875, Test BCE: 9247.5869140625, Test KLD: 39.277523040771484
+
+Epoch: 619
+Train ELBO: 8728.2470703125, Train BCE: 8688.4912109375, Train KLD: 39.75896453857422
+Val ELBO: 9290.8046875, Val BCE: 9251.6904296875, Val KLD: 39.112247467041016
+Test ELBO: 9277.599609375, Test BCE: 9238.640625, Test KLD: 38.95466613769531
+
+Epoch: 620
+Train ELBO: 8728.072265625, Train BCE: 8688.294921875, Train KLD: 39.77141189575195
+Val ELBO: 9294.2685546875, Val BCE: 9254.912109375, Val KLD: 39.35224914550781
+Test ELBO: 9281.1494140625, Test BCE: 9241.947265625, Test KLD: 39.1988525390625
+
+Epoch: 621
+Train ELBO: 8727.892578125, Train BCE: 8688.13671875, Train KLD: 39.76436996459961
+Val ELBO: 9290.5556640625, Val BCE: 9251.2890625, Val KLD: 39.26417541503906
+Test ELBO: 9277.3369140625, Test BCE: 9238.224609375, Test KLD: 39.11345291137695
+
+Epoch: 622
+Train ELBO: 8728.0908203125, Train BCE: 8688.3134765625, Train KLD: 39.77361297607422
+Val ELBO: 9289.3056640625, Val BCE: 9249.7646484375, Val KLD: 39.54209518432617
+Test ELBO: 9275.9267578125, Test BCE: 9236.5380859375, Test KLD: 39.38713455200195
+
+Epoch: 623
+Train ELBO: 8727.708984375, Train BCE: 8687.931640625, Train KLD: 39.7750358581543
+Val ELBO: 9292.3564453125, Val BCE: 9252.681640625, Val KLD: 39.6763916015625
+Test ELBO: 9279.4072265625, Test BCE: 9239.8857421875, Test KLD: 39.51840591430664
+
+Epoch: 624
+Train ELBO: 8727.609375, Train BCE: 8687.8271484375, Train KLD: 39.78152084350586
+Val ELBO: 9293.0986328125, Val BCE: 9254.005859375, Val KLD: 39.09235382080078
+Test ELBO: 9279.611328125, Test BCE: 9240.6767578125, Test KLD: 38.92917251586914
+
+Epoch: 625
+Train ELBO: 8727.78125, Train BCE: 8688.00390625, Train KLD: 39.78047180175781
+Val ELBO: 9275.8671875, Val BCE: 9236.216796875, Val KLD: 39.647613525390625
+Test ELBO: 9262.3203125, Test BCE: 9222.8251953125, Test KLD: 39.495079040527344
+
+Epoch: 626
+Train ELBO: 8727.61328125, Train BCE: 8687.81640625, Train KLD: 39.793975830078125
+Val ELBO: 9287.4580078125, Val BCE: 9247.6240234375, Val KLD: 39.83843994140625
+Test ELBO: 9274.57421875, Test BCE: 9234.8896484375, Test KLD: 39.690547943115234
+
+Epoch: 627
+Train ELBO: 8727.8564453125, Train BCE: 8688.07421875, Train KLD: 39.7832145690918
+Val ELBO: 9287.70703125, Val BCE: 9248.357421875, Val KLD: 39.350032806396484
+Test ELBO: 9274.798828125, Test BCE: 9235.60546875, Test KLD: 39.194156646728516
+
+Epoch: 628
+Train ELBO: 8727.431640625, Train BCE: 8687.6572265625, Train KLD: 39.7830810546875
+Val ELBO: 9282.4990234375, Val BCE: 9243.0556640625, Val KLD: 39.44501495361328
+Test ELBO: 9269.38671875, Test BCE: 9230.1025390625, Test KLD: 39.285797119140625
+
+Epoch: 629
+Train ELBO: 8727.7001953125, Train BCE: 8687.9111328125, Train KLD: 39.79041290283203
+Val ELBO: 9286.375, Val BCE: 9246.7666015625, Val KLD: 39.613792419433594
+Test ELBO: 9273.599609375, Test BCE: 9234.14453125, Test KLD: 39.455074310302734
+
+Epoch: 630
+Train ELBO: 8727.37109375, Train BCE: 8687.576171875, Train KLD: 39.78706741333008
+Val ELBO: 9287.45703125, Val BCE: 9247.7041015625, Val KLD: 39.75516128540039
+Test ELBO: 9274.2958984375, Test BCE: 9234.7060546875, Test KLD: 39.59193801879883
+
+Epoch: 631
+Train ELBO: 8727.4775390625, Train BCE: 8687.6787109375, Train KLD: 39.796993255615234
+Val ELBO: 9282.9169921875, Val BCE: 9243.5146484375, Val KLD: 39.40372085571289
+Test ELBO: 9269.900390625, Test BCE: 9230.6513671875, Test KLD: 39.24971389770508
+
+Epoch: 632
+Train ELBO: 8727.19140625, Train BCE: 8687.37890625, Train KLD: 39.810890197753906
+Val ELBO: 9305.349609375, Val BCE: 9265.7236328125, Val KLD: 39.62532424926758
+Test ELBO: 9291.7060546875, Test BCE: 9252.232421875, Test KLD: 39.47559356689453
+
+Epoch: 633
+Train ELBO: 8727.6640625, Train BCE: 8687.8642578125, Train KLD: 39.79860305786133
+Val ELBO: 9289.423828125, Val BCE: 9250.166015625, Val KLD: 39.25572967529297
+Test ELBO: 9276.166015625, Test BCE: 9237.0654296875, Test KLD: 39.10063934326172
+
+Epoch: 634
+Train ELBO: 8727.1904296875, Train BCE: 8687.373046875, Train KLD: 39.8143310546875
+Val ELBO: 9295.19140625, Val BCE: 9255.546875, Val KLD: 39.651023864746094
+Test ELBO: 9281.3701171875, Test BCE: 9241.8701171875, Test KLD: 39.49613952636719
+
+Epoch: 635
+Train ELBO: 8727.0322265625, Train BCE: 8687.224609375, Train KLD: 39.80500411987305
+Val ELBO: 9289.0634765625, Val BCE: 9249.5625, Val KLD: 39.50148010253906
+Test ELBO: 9276.0390625, Test BCE: 9236.6904296875, Test KLD: 39.35061264038086
+
+Epoch: 636
+Train ELBO: 8727.29296875, Train BCE: 8687.4765625, Train KLD: 39.811031341552734
+Val ELBO: 9291.8525390625, Val BCE: 9251.859375, Val KLD: 39.9963493347168
+Test ELBO: 9277.9052734375, Test BCE: 9238.05859375, Test KLD: 39.8416862487793
+
+Epoch: 637
+Train ELBO: 8726.84375, Train BCE: 8687.0205078125, Train KLD: 39.81718063354492
+Val ELBO: 9285.9404296875, Val BCE: 9246.64453125, Val KLD: 39.29637145996094
+Test ELBO: 9273.240234375, Test BCE: 9234.1005859375, Test KLD: 39.135616302490234
+
+Epoch: 638
+Train ELBO: 8727.078125, Train BCE: 8687.2490234375, Train KLD: 39.8275260925293
+Val ELBO: 9285.9912109375, Val BCE: 9246.7353515625, Val KLD: 39.253868103027344
+Test ELBO: 9272.869140625, Test BCE: 9233.7705078125, Test KLD: 39.099693298339844
+
+Epoch: 639
+Train ELBO: 8726.9306640625, Train BCE: 8687.11328125, Train KLD: 39.82125473022461
+Val ELBO: 9281.841796875, Val BCE: 9241.9326171875, Val KLD: 39.90608215332031
+Test ELBO: 9268.7119140625, Test BCE: 9228.962890625, Test KLD: 39.75160598754883
+
+Epoch: 640
+Train ELBO: 8726.9423828125, Train BCE: 8687.111328125, Train KLD: 39.82969665527344
+Val ELBO: 9290.625, Val BCE: 9250.90234375, Val KLD: 39.714019775390625
+Test ELBO: 9277.6923828125, Test BCE: 9238.13671875, Test KLD: 39.55706787109375
+
+Epoch: 641
+Train ELBO: 8726.849609375, Train BCE: 8687.017578125, Train KLD: 39.82415771484375
+Val ELBO: 9289.751953125, Val BCE: 9250.3740234375, Val KLD: 39.378570556640625
+Test ELBO: 9276.8896484375, Test BCE: 9237.6689453125, Test KLD: 39.220680236816406
+
+Epoch: 642
+Train ELBO: 8726.8046875, Train BCE: 8686.9765625, Train KLD: 39.822086334228516
+Val ELBO: 9283.7314453125, Val BCE: 9244.3583984375, Val KLD: 39.369049072265625
+Test ELBO: 9270.990234375, Test BCE: 9231.7724609375, Test KLD: 39.21635437011719
+
+Epoch: 643
+Train ELBO: 8726.8046875, Train BCE: 8686.982421875, Train KLD: 39.82673263549805
+Val ELBO: 9278.677734375, Val BCE: 9238.9951171875, Val KLD: 39.68502426147461
+Test ELBO: 9265.396484375, Test BCE: 9225.869140625, Test KLD: 39.53250503540039
+
+Epoch: 644
+Train ELBO: 8726.7353515625, Train BCE: 8686.8955078125, Train KLD: 39.83222579956055
+Val ELBO: 9285.2646484375, Val BCE: 9245.7509765625, Val KLD: 39.516822814941406
+Test ELBO: 9271.748046875, Test BCE: 9232.39453125, Test KLD: 39.35835266113281
+
+Epoch: 645
+Train ELBO: 8726.630859375, Train BCE: 8686.8017578125, Train KLD: 39.83295822143555
+Val ELBO: 9276.869140625, Val BCE: 9237.0595703125, Val KLD: 39.80640411376953
+Test ELBO: 9263.921875, Test BCE: 9224.2685546875, Test KLD: 39.65211486816406
+
+Epoch: 646
+Train ELBO: 8726.568359375, Train BCE: 8686.724609375, Train KLD: 39.83894348144531
+Val ELBO: 9283.0908203125, Val BCE: 9243.5390625, Val KLD: 39.549888610839844
+Test ELBO: 9269.6767578125, Test BCE: 9230.27734375, Test KLD: 39.39619064331055
+
+Epoch: 647
+Train ELBO: 8726.4306640625, Train BCE: 8686.5830078125, Train KLD: 39.84224319458008
+Val ELBO: 9286.1025390625, Val BCE: 9246.7431640625, Val KLD: 39.35573196411133
+Test ELBO: 9272.7880859375, Test BCE: 9233.591796875, Test KLD: 39.19721603393555
+
+Epoch: 648
+Train ELBO: 8726.4130859375, Train BCE: 8686.5771484375, Train KLD: 39.83837127685547
+Val ELBO: 9297.3564453125, Val BCE: 9257.2197265625, Val KLD: 40.13017654418945
+Test ELBO: 9284.15234375, Test BCE: 9244.1728515625, Test KLD: 39.978431701660156
+
+Epoch: 649
+Train ELBO: 8726.373046875, Train BCE: 8686.5224609375, Train KLD: 39.852664947509766
+Val ELBO: 9288.46875, Val BCE: 9248.8193359375, Val KLD: 39.647804260253906
+Test ELBO: 9275.140625, Test BCE: 9235.65625, Test KLD: 39.48830032348633
+
+Epoch: 650
+Train ELBO: 8726.337890625, Train BCE: 8686.498046875, Train KLD: 39.84891128540039
+Val ELBO: 9300.4306640625, Val BCE: 9260.298828125, Val KLD: 40.131813049316406
+Test ELBO: 9287.236328125, Test BCE: 9247.2646484375, Test KLD: 39.97683334350586
+
+Epoch: 651
+Train ELBO: 8726.32421875, Train BCE: 8686.470703125, Train KLD: 39.84987258911133
+Val ELBO: 9282.724609375, Val BCE: 9243.296875, Val KLD: 39.42755126953125
+Test ELBO: 9269.4306640625, Test BCE: 9230.162109375, Test KLD: 39.27116394042969
+
+Epoch: 652
+Train ELBO: 8726.2001953125, Train BCE: 8686.341796875, Train KLD: 39.8524169921875
+Val ELBO: 9282.5673828125, Val BCE: 9243.2783203125, Val KLD: 39.292213439941406
+Test ELBO: 9269.2529296875, Test BCE: 9230.11328125, Test KLD: 39.136409759521484
+
+Epoch: 653
+Train ELBO: 8726.2451171875, Train BCE: 8686.3916015625, Train KLD: 39.85517120361328
+Val ELBO: 9286.064453125, Val BCE: 9246.0009765625, Val KLD: 40.06679153442383
+Test ELBO: 9273.001953125, Test BCE: 9233.091796875, Test KLD: 39.90754699707031
+
+Epoch: 654
+Train ELBO: 8725.7890625, Train BCE: 8685.931640625, Train KLD: 39.85981750488281
+Val ELBO: 9309.7890625, Val BCE: 9269.5595703125, Val KLD: 40.23023986816406
+Test ELBO: 9295.6572265625, Test BCE: 9255.5927734375, Test KLD: 40.068363189697266
+
+Epoch: 655
+Train ELBO: 8725.9609375, Train BCE: 8686.080078125, Train KLD: 39.88139343261719
+Val ELBO: 9276.8779296875, Val BCE: 9237.173828125, Val KLD: 39.707374572753906
+Test ELBO: 9264.279296875, Test BCE: 9224.734375, Test KLD: 39.54154586791992
+
+Epoch: 656
+Train ELBO: 8726.064453125, Train BCE: 8686.212890625, Train KLD: 39.85844802856445
+Val ELBO: 9277.0390625, Val BCE: 9237.6005859375, Val KLD: 39.44012451171875
+Test ELBO: 9264.0615234375, Test BCE: 9224.7783203125, Test KLD: 39.279571533203125
+
+Epoch: 657
+Train ELBO: 8725.8466796875, Train BCE: 8685.96875, Train KLD: 39.87868881225586
+Val ELBO: 9290.703125, Val BCE: 9251.1494140625, Val KLD: 39.556697845458984
+Test ELBO: 9277.5341796875, Test BCE: 9238.14453125, Test KLD: 39.39711380004883
+
+Epoch: 658
+Train ELBO: 8726.064453125, Train BCE: 8686.18359375, Train KLD: 39.87628173828125
+Val ELBO: 9293.6005859375, Val BCE: 9253.80078125, Val KLD: 39.80223083496094
+Test ELBO: 9279.6044921875, Test BCE: 9239.9580078125, Test KLD: 39.64900207519531
+
+Epoch: 659
+Train ELBO: 8725.5439453125, Train BCE: 8685.671875, Train KLD: 39.876747131347656
+Val ELBO: 9289.1533203125, Val BCE: 9249.53515625, Val KLD: 39.619136810302734
+Test ELBO: 9275.517578125, Test BCE: 9236.0625, Test KLD: 39.45335006713867
+
+Epoch: 660
+Train ELBO: 8725.9404296875, Train BCE: 8686.064453125, Train KLD: 39.88078308105469
+Val ELBO: 9297.2587890625, Val BCE: 9257.2783203125, Val KLD: 39.982269287109375
+Test ELBO: 9284.287109375, Test BCE: 9244.45703125, Test KLD: 39.83160400390625
+
+Epoch: 661
+Train ELBO: 8725.5771484375, Train BCE: 8685.68359375, Train KLD: 39.8885612487793
+Val ELBO: 9299.482421875, Val BCE: 9259.744140625, Val KLD: 39.735992431640625
+Test ELBO: 9286.2529296875, Test BCE: 9246.677734375, Test KLD: 39.57733154296875
+slurmstepd: error: *** JOB 611519 ON str-gpu7 CANCELLED AT 2021-02-26T02:17:03 ***

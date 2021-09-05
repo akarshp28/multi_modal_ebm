@@ -1,0 +1,617 @@
+2021-05-28 14:30:19.253998: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-05-28 14:30:19.329804: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:3f:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-05-28 14:30:19.331090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 1 with properties: 
+pciBusID: 0000:40:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-05-28 14:30:19.332051: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-28 14:30:19.334750: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-28 14:30:19.338472: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-05-28 14:30:19.339279: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-05-28 14:30:19.341866: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-05-28 14:30:19.343512: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-05-28 14:30:19.348146: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-28 14:30:19.353048: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0, 1
+2021-05-28 14:30:19.353548: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2021-05-28 14:30:19.360944: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3200000000 Hz
+2021-05-28 14:30:19.361419: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c2ade28070 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-28 14:30:19.361438: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-28 14:30:19.562467: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c2ade4b760 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-05-28 14:30:19.562506: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): TITAN RTX, Compute Capability 7.5
+2021-05-28 14:30:19.562515: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): TITAN RTX, Compute Capability 7.5
+2021-05-28 14:30:19.564211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:3f:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-05-28 14:30:19.565385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 1 with properties: 
+pciBusID: 0000:40:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-05-28 14:30:19.565432: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-28 14:30:19.565443: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-28 14:30:19.565451: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-05-28 14:30:19.565460: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-05-28 14:30:19.565468: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-05-28 14:30:19.565480: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-05-28 14:30:19.565490: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-28 14:30:19.570027: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0, 1
+2021-05-28 14:30:19.570064: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-28 14:30:19.572893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-28 14:30:19.572922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 1 
+2021-05-28 14:30:19.572930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N N 
+2021-05-28 14:30:19.572934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 1:   N N 
+2021-05-28 14:30:19.576447: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 22605 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:3f:00.0, compute capability: 7.5)
+2021-05-28 14:30:19.578121: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 22605 MB memory) -> physical GPU (device: 1, name: TITAN RTX, pci bus id: 0000:40:00.0, compute capability: 7.5)
+
+Number of devices: 2
+/users/apokkunu/trial/img/annotations/captions_train2014.json /users/apokkunu/trial/img/train2014/
+
+dataset size: 82783
+
+temp dataset size: 100
+/users/apokkunu/trial/img/annotations/captions_val2014.json /users/apokkunu/trial/img/val2014/
+
+dataset size: 40504
+
+temp dataset size: 100
+/users/apokkunu/trial/img/annotations/image_info_test2014.json /users/apokkunu/trial/img/test2014/
+
+dataset size: 40775
+
+temp dataset size: 100
+
+dataset size: 100
+
+dataset size: 100
+
+dataset size: 100
+Model: "preprocess"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+image (InputLayer)           [(None, 128, 128, 3)]     0         
+_________________________________________________________________
+spectral_normalization (Spec (None, 128, 128, 8)       232       
+_________________________________________________________________
+bn_swish_conv (BNSwishConv)  (None, 128, 128, 8)       1324      
+_________________________________________________________________
+bn_swish_conv_1 (BNSwishConv (None, 128, 128, 8)       1324      
+_________________________________________________________________
+bn_swish_conv_2 (BNSwishConv (None, 64, 64, 16)        3924      
+_________________________________________________________________
+bn_swish_conv_3 (BNSwishConv (None, 64, 64, 16)        4948      
+_________________________________________________________________
+bn_swish_conv_4 (BNSwishConv (None, 64, 64, 16)        4948      
+_________________________________________________________________
+bn_swish_conv_5 (BNSwishConv (None, 32, 32, 32)        15012     
+=================================================================
+Total params: 31,712
+Trainable params: 31,128
+Non-trainable params: 584
+_________________________________________________________________
+4 (32, 32, 32)
+
+ENCODER
+
+Group:  0
+Output_channels:  32
+res block
+res block
+combiner
+Output_channels:  32
+res block
+res block
+combiner
+Output_channels:  32
+res block
+res block
+combiner
+Output_channels:  32
+res block
+res block
+combiner
+Rescaler
+New output_channels:  64
+
+Group:  1
+Output_channels:  64
+res block
+res block
+combiner
+Output_channels:  64
+res block
+res block
+combiner
+Output_channels:  64
+res block
+res block
+combiner
+Output_channels:  64
+res block
+res block
+combiner
+Rescaler
+New output_channels:  128
+
+Group:  2
+Output_channels:  128
+res block
+res block
+combiner
+Output_channels:  128
+res block
+res block
+combiner
+Output_channels:  128
+res block
+res block
+combiner
+Output_channels:  128
+res block
+res block
+
+DECODER
+
+Group:  0
+Output channels 128
+Decoder Combiner
+Output channels 128
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 128
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 128
+Gen Res block
+Gen Res block
+Decoder Combiner
+Rescaler
+
+Group:  1
+Output channels 64
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 64
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 64
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 64
+Gen Res block
+Gen Res block
+Decoder Combiner
+Rescaler
+
+Group:  2
+Output channels 32
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 32
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 32
+Gen Res block
+Gen Res block
+Decoder Combiner
+Output channels 32
+Gen Res block
+Gen Res block
+Decoder Combiner
+Model: "decoder"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+encoder_input (InputLayer)      [(None, 32, 32, 32)] 0                                            
+__________________________________________________________________________________________________
+res_block_0_0_0 (EncodingResidu (None, 32, 32, 32)   19108       encoder_input[0][0]              
+__________________________________________________________________________________________________
+res_block_0_0_1 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_0_0[0][0]            
+__________________________________________________________________________________________________
+res_block_0_1_0 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_0_1[0][0]            
+__________________________________________________________________________________________________
+res_block_0_1_1 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_1_0[0][0]            
+__________________________________________________________________________________________________
+res_block_0_2_0 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_1_1[0][0]            
+__________________________________________________________________________________________________
+res_block_0_2_1 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_2_0[0][0]            
+__________________________________________________________________________________________________
+res_block_0_3_0 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_2_1[0][0]            
+__________________________________________________________________________________________________
+res_block_0_3_1 (EncodingResidu (None, 32, 32, 32)   19108       res_block_0_3_0[0][0]            
+__________________________________________________________________________________________________
+rescaler (Rescaler)             (None, 16, 16, 64)   18688       res_block_0_3_1[0][0]            
+__________________________________________________________________________________________________
+res_block_1_0_0 (EncodingResidu (None, 16, 16, 64)   75076       rescaler[0][0]                   
+__________________________________________________________________________________________________
+res_block_1_0_1 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_0_0[0][0]            
+__________________________________________________________________________________________________
+res_block_1_1_0 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_0_1[0][0]            
+__________________________________________________________________________________________________
+res_block_1_1_1 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_1_0[0][0]            
+__________________________________________________________________________________________________
+res_block_1_2_0 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_1_1[0][0]            
+__________________________________________________________________________________________________
+res_block_1_2_1 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_2_0[0][0]            
+__________________________________________________________________________________________________
+res_block_1_3_0 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_2_1[0][0]            
+__________________________________________________________________________________________________
+res_block_1_3_1 (EncodingResidu (None, 16, 16, 64)   75076       res_block_1_3_0[0][0]            
+__________________________________________________________________________________________________
+rescaler_1 (Rescaler)           (None, 8, 8, 128)    74240       res_block_1_3_1[0][0]            
+__________________________________________________________________________________________________
+res_block_2_0_0 (EncodingResidu (None, 8, 8, 128)    298632      rescaler_1[0][0]                 
+__________________________________________________________________________________________________
+res_block_2_0_1 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_0_0[0][0]            
+__________________________________________________________________________________________________
+res_block_2_1_0 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_0_1[0][0]            
+__________________________________________________________________________________________________
+res_block_2_1_1 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_1_0[0][0]            
+__________________________________________________________________________________________________
+res_block_2_2_0 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_1_1[0][0]            
+__________________________________________________________________________________________________
+res_block_2_2_1 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_2_0[0][0]            
+__________________________________________________________________________________________________
+res_block_2_3_0 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_2_1[0][0]            
+__________________________________________________________________________________________________
+res_block_2_3_1 (EncodingResidu (None, 8, 8, 128)    298632      res_block_2_3_0[0][0]            
+__________________________________________________________________________________________________
+elu (ELU)                       (None, 8, 8, 128)    0           res_block_2_3_1[0][0]            
+__________________________________________________________________________________________________
+spectral_normalization_82 (Spec (None, 8, 8, 128)    16640       elu[0][0]                        
+__________________________________________________________________________________________________
+elu_1 (ELU)                     (None, 8, 8, 128)    0           spectral_normalization_82[0][0]  
+__________________________________________________________________________________________________
+sampler (Sampler)               multiple             355120      elu_1[0][0]                      
+                                                                 generative_residual_cell_1[0][0] 
+                                                                 generative_residual_cell_3[0][0] 
+                                                                 generative_residual_cell_5[0][0] 
+                                                                 generative_residual_cell_7[0][0] 
+                                                                 generative_residual_cell_9[0][0] 
+                                                                 generative_residual_cell_11[0][0]
+                                                                 generative_residual_cell_13[0][0]
+                                                                 generative_residual_cell_15[0][0]
+                                                                 generative_residual_cell_17[0][0]
+                                                                 generative_residual_cell_19[0][0]
+                                                                 generative_residual_cell_21[0][0]
+__________________________________________________________________________________________________
+tf_op_layer_Shape (TensorFlowOp [(4,)]               0           sampler[0][0]                    
+__________________________________________________________________________________________________
+tf_op_layer_strided_slice (Tens [()]                 0           tf_op_layer_Shape[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Tile/multiples (Ten [(4,)]               0           tf_op_layer_strided_slice[0][0]  
+__________________________________________________________________________________________________
+tf_op_layer_Tile (TensorFlowOpL [(None, 8, 8, 8)]    0           tf_op_layer_Tile/multiples[0][0] 
+__________________________________________________________________________________________________
+decoder_sample_combiner (Decode (None, 8, 8, 128)    3840        tf_op_layer_Tile[0][0]           
+__________________________________________________________________________________________________
+generative_residual_cell (Gener (None, 8, 8, 128)    227720      decoder_sample_combiner[0][0]    
+__________________________________________________________________________________________________
+generative_residual_cell_1 (Gen (None, 8, 8, 128)    227720      generative_residual_cell[0][0]   
+__________________________________________________________________________________________________
+encoder_decoder_combiner_10 (En (None, 8, 8, 128)    16640       res_block_2_2_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_1 (Deco (None, 8, 8, 128)    19200       generative_residual_cell_1[0][0] 
+__________________________________________________________________________________________________
+generative_residual_cell_2 (Gen (None, 8, 8, 128)    227720      decoder_sample_combiner_1[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_3 (Gen (None, 8, 8, 128)    227720      generative_residual_cell_2[0][0] 
+__________________________________________________________________________________________________
+encoder_decoder_combiner_9 (Enc (None, 8, 8, 128)    16640       res_block_2_1_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_2 (Deco (None, 8, 8, 128)    19200       generative_residual_cell_3[0][0] 
+__________________________________________________________________________________________________
+generative_residual_cell_4 (Gen (None, 8, 8, 128)    227720      decoder_sample_combiner_2[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_5 (Gen (None, 8, 8, 128)    227720      generative_residual_cell_4[0][0] 
+__________________________________________________________________________________________________
+encoder_decoder_combiner_8 (Enc (None, 8, 8, 128)    16640       res_block_2_0_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_3 (Deco (None, 8, 8, 128)    19200       generative_residual_cell_5[0][0] 
+__________________________________________________________________________________________________
+rescaler_2 (Rescaler)           (None, 16, 16, 64)   74368       decoder_sample_combiner_3[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_6 (Gen (None, 16, 16, 64)   64196       rescaler_2[0][0]                 
+__________________________________________________________________________________________________
+generative_residual_cell_7 (Gen (None, 16, 16, 64)   64196       generative_residual_cell_6[0][0] 
+__________________________________________________________________________________________________
+encoder_decoder_combiner_7 (Enc (None, 16, 16, 64)   4224        res_block_1_3_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_4 (Deco (None, 16, 16, 64)   5504        generative_residual_cell_7[0][0] 
+__________________________________________________________________________________________________
+generative_residual_cell_8 (Gen (None, 16, 16, 64)   64196       decoder_sample_combiner_4[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_9 (Gen (None, 16, 16, 64)   64196       generative_residual_cell_8[0][0] 
+__________________________________________________________________________________________________
+encoder_decoder_combiner_6 (Enc (None, 16, 16, 64)   4224        res_block_1_2_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_5 (Deco (None, 16, 16, 64)   5504        generative_residual_cell_9[0][0] 
+__________________________________________________________________________________________________
+generative_residual_cell_10 (Ge (None, 16, 16, 64)   64196       decoder_sample_combiner_5[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_11 (Ge (None, 16, 16, 64)   64196       generative_residual_cell_10[0][0]
+__________________________________________________________________________________________________
+encoder_decoder_combiner_5 (Enc (None, 16, 16, 64)   4224        res_block_1_1_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_6 (Deco (None, 16, 16, 64)   5504        generative_residual_cell_11[0][0]
+__________________________________________________________________________________________________
+generative_residual_cell_12 (Ge (None, 16, 16, 64)   64196       decoder_sample_combiner_6[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_13 (Ge (None, 16, 16, 64)   64196       generative_residual_cell_12[0][0]
+__________________________________________________________________________________________________
+encoder_decoder_combiner_4 (Enc (None, 16, 16, 64)   4224        res_block_1_0_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_7 (Deco (None, 16, 16, 64)   5504        generative_residual_cell_13[0][0]
+__________________________________________________________________________________________________
+rescaler_3 (Rescaler)           (None, 32, 32, 32)   18752       decoder_sample_combiner_7[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_14 (Ge (None, 32, 32, 32)   19812       rescaler_3[0][0]                 
+__________________________________________________________________________________________________
+generative_residual_cell_15 (Ge (None, 32, 32, 32)   19812       generative_residual_cell_14[0][0]
+__________________________________________________________________________________________________
+encoder_decoder_combiner_3 (Enc (None, 32, 32, 32)   1088        res_block_0_3_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_8 (Deco (None, 32, 32, 32)   1728        generative_residual_cell_15[0][0]
+__________________________________________________________________________________________________
+generative_residual_cell_16 (Ge (None, 32, 32, 32)   19812       decoder_sample_combiner_8[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_17 (Ge (None, 32, 32, 32)   19812       generative_residual_cell_16[0][0]
+__________________________________________________________________________________________________
+encoder_decoder_combiner_2 (Enc (None, 32, 32, 32)   1088        res_block_0_2_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_9 (Deco (None, 32, 32, 32)   1728        generative_residual_cell_17[0][0]
+__________________________________________________________________________________________________
+generative_residual_cell_18 (Ge (None, 32, 32, 32)   19812       decoder_sample_combiner_9[0][0]  
+__________________________________________________________________________________________________
+generative_residual_cell_19 (Ge (None, 32, 32, 32)   19812       generative_residual_cell_18[0][0]
+__________________________________________________________________________________________________
+encoder_decoder_combiner_1 (Enc (None, 32, 32, 32)   1088        res_block_0_1_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_10 (Dec (None, 32, 32, 32)   1728        generative_residual_cell_19[0][0]
+__________________________________________________________________________________________________
+generative_residual_cell_20 (Ge (None, 32, 32, 32)   19812       decoder_sample_combiner_10[0][0] 
+__________________________________________________________________________________________________
+generative_residual_cell_21 (Ge (None, 32, 32, 32)   19812       generative_residual_cell_20[0][0]
+__________________________________________________________________________________________________
+encoder_decoder_combiner (Encod (None, 32, 32, 32)   1088        res_block_0_0_1[0][0]            
+__________________________________________________________________________________________________
+decoder_sample_combiner_11 (Dec (None, 32, 32, 32)   1728        generative_residual_cell_21[0][0]
+==================================================================================================
+Total params: 5,900,256
+Trainable params: 5,832,168
+Non-trainable params: 68,088
+__________________________________________________________________________________________________
+
+Post-process
+add post process cell
+add post process cell
+add post process cell
+add post process cell
+add post process cell
+add post process cell
+add elu-conv
+add elu-conv
+Model: "post_process"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+post_process (InputLayer)    [(None, 32, 32, 32)]      0         
+_________________________________________________________________
+postprocess_cell (Postproces (None, 64, 64, 16)        244260    
+_________________________________________________________________
+postprocess_cell_1 (Postproc (None, 64, 64, 16)        234724    
+_________________________________________________________________
+postprocess_cell_2 (Postproc (None, 64, 64, 16)        234724    
+_________________________________________________________________
+postprocess_cell_3 (Postproc (None, 128, 128, 8)       61460     
+_________________________________________________________________
+postprocess_cell_4 (Postproc (None, 128, 128, 8)       58996     
+_________________________________________________________________
+postprocess_cell_5 (Postproc (None, 128, 128, 8)       58996     
+_________________________________________________________________
+activation_24 (Activation)   (None, 128, 128, 8)       0         
+_________________________________________________________________
+spectral_normalization_186 ( (None, 128, 128, 100)     7400      
+_________________________________________________________________
+activation_25 (Activation)   (None, 128, 128, 100)     0         
+_________________________________________________________________
+spectral_normalization_187 ( (None, 128, 128, 100)     90200     
+=================================================================
+Total params: 990,760
+Trainable params: 987,368
+Non-trainable params: 3,392
+_________________________________________________________________
+
+Hyperparameters:
+Use full dataset: False, Drop stray batches: False, Multi_GPU: True
+Max Epochs: 500, BatchSize: 19, Batches per Epoch: 6, Initial LR: 0.01
+EN CH: 8, DEC CH: 8
+Pre-process Blocks: 2, Pre-process Cells: 3
+Post-process Blocks: 2, Post-process Cells: 3
+Num Groups: [4, 4, 4], Latent Vars per Group: 20, Res Blocks per Group: 2
+Spectral Reg: 0.01, IMG Scale: 2, Step based KL-Warmup: False
+
+Epoch: 0
+Training NVAE
+2021-05-28 14:32:31.138402: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-28 14:32:31.494845: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+WARNING:tensorflow:5 out of the last 5 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:6 out of the last 6 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Validating NVAE
+WARNING:tensorflow:5 out of the last 5 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:6 out of the last 6 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Testing NVAE
+WARNING:tensorflow:7 out of the last 7 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:8 out of the last 8 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:9 out of the last 9 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:10 out of the last 10 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Train ELBO: 639970.3125, Train BCE: 2642211.25, Train KLD: 0.0, Train BN: 1.3803783655166626
+Val ELBO: 596117.75, Val BCE: 2470453.0, Val KLD: 0.0, Val BN: 1.3570576906204224
+Test ELBO: 596392.9375, Test BCE: 2469099.0, Test KLD: 0.0, Test BN: 1.3570576906204224
+Train MSE: 3828.91796875, Val MSE: 3975.345703125, Test MSE: 4084.844970703125
+Best Val MSE: 3975.345703125, Best Epoch: 0
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Loop Time:  675.8112460989505 secs
+
+Epoch: 1
+Training NVAE
+WARNING:tensorflow:7 out of the last 7 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:8 out of the last 8 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:9 out of the last 9 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:10 out of the last 10 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Validating NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Testing NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Train ELBO: 568077.75, Train BCE: 2351803.25, Train KLD: 265.01153564453125, Train BN: 1.3432831764221191
+Val ELBO: 580923.375, Val BCE: 2406894.75, Val KLD: 36.37535858154297, Val BN: 1.325574278831482
+Test ELBO: 583339.0, Test BCE: 2416052.0, Test KLD: 35.6921272277832, Test BN: 1.325574278831482
+Train MSE: 2977.513671875, Val MSE: 2892.119384765625, Test MSE: 2950.7978515625
+Best Val MSE: 2892.119384765625, Best Epoch: 1
+Loop Time:  606.3247620612383 secs
+
+Epoch: 2
+Training NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Validating NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Testing NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Train ELBO: 571429.75, Train BCE: 2363395.0, Train KLD: 93.63697052001953, Train BN: 1.315373182296753
+Val ELBO: 561060.3125, Val BCE: 2319253.25, Val KLD: 112.49864959716797, Val BN: 1.3048704862594604
+Test ELBO: 560039.5625, Test BCE: 2314416.75, Test KLD: 112.2476577758789, Test BN: 1.3048704862594604
+Train MSE: 2715.611328125, Val MSE: 2015.4722900390625, Test MSE: 2060.720458984375
+Best Val MSE: 2015.4722900390625, Best Epoch: 2
+Loop Time:  601.6492913793772 secs
+
+Epoch: 3
+Training NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Validating NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Testing NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Train ELBO: 543120.5, Train BCE: 2246969.0, Train KLD: 203.47964477539062, Train BN: 1.2985272407531738
+Val ELBO: 530718.5625, Val BCE: 2193903.75, Val KLD: 1686.0040283203125, Val BN: 1.2893978357315063
+Test ELBO: 531141.0, Test BCE: 2197518.75, Test KLD: 1742.9569091796875, Test BN: 1.2893978357315063
+Train MSE: 2097.017822265625, Val MSE: 2196.033447265625, Test MSE: 2266.34033203125
+Best Val MSE: 2015.4722900390625, Best Epoch: 2
+Loop Time:  600.5414455514401 secs
+
+Epoch: 4
+Training NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Validating NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Testing NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Train ELBO: 520638.84375, Train BCE: 2150107.75, Train KLD: 1120.077392578125, Train BN: 1.2843528985977173
+Val ELBO: 499518.15625, Val BCE: 2065977.125, Val KLD: 408.33172607421875, Val BN: 1.2785989046096802
+Test ELBO: 498563.59375, Test BCE: 2065966.375, Test KLD: 408.33050537109375, Test BN: 1.2785989046096802
+Train MSE: 2477.489990234375, Val MSE: 2912.900390625, Test MSE: 2997.9052734375
+Best Val MSE: 2015.4722900390625, Best Epoch: 2
+Loop Time:  602.3936229199171 secs
+
+Epoch: 5
+Training NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Validating NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Testing NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_test_step at 0x2b07e6f1ee60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+Train ELBO: 503607.15625, Train BCE: 2083099.625, Train KLD: 717.44677734375, Train BN: 1.275068759918213
+Val ELBO: 500954.15625, Val BCE: 2073347.375, Val KLD: 647.6648559570312, Val BN: 1.2702668905258179
+Test ELBO: 502958.40625, Test BCE: 2079201.625, Test KLD: 647.3084106445312, Test BN: 1.2702668905258179
+Train MSE: 2741.052001953125, Val MSE: 2497.023681640625, Test MSE: 2557.0009765625
+Best Val MSE: 2015.4722900390625, Best Epoch: 2
+Loop Time:  607.3087151926011 secs
+
+Epoch: 6
+Training NVAE
+WARNING:tensorflow:11 out of the last 11 calls to <function distributed_train_step at 0x2b07e6f1ed40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+/var/spool/slurm/slurmd/job844798/slurm_script: line 15: 48422 Killed                  python3 train_multigpu.py -path /users/apokkunu/trial/img/nvae/
+slurmstepd: error: Detected 1 oom-kill event(s) in step 844798.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.

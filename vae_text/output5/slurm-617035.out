@@ -1,0 +1,1357 @@
+Total data size:  414113
+Total data size:  202654
+616767
+Found 28444 unique tokens
+Shape of data tensor: (616767, 50)
+Found 400000 word vectors.
+Null word embeddings: 0
+Check Null:  False
+Emb vector shape:  (28444, 300)
+(414113, 50) (202654, 50)
+2021-02-24 05:38:04.412275: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-02-24 05:38:04.445970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1b:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-02-24 05:38:04.446507: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 05:38:04.458290: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-02-24 05:38:04.468003: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-02-24 05:38:04.468963: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-02-24 05:38:04.476993: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-02-24 05:38:04.479650: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-02-24 05:38:04.487708: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-02-24 05:38:04.490311: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2021-02-24 05:38:04.490787: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2021-02-24 05:38:04.507226: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3200000000 Hz
+2021-02-24 05:38:04.507712: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5599b46151a0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-02-24 05:38:04.507738: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-02-24 05:38:04.613688: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5599b473efb0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-02-24 05:38:04.613762: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): TITAN RTX, Compute Capability 7.5
+2021-02-24 05:38:04.615399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1b:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-02-24 05:38:04.615451: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 05:38:04.615461: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-02-24 05:38:04.615471: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-02-24 05:38:04.615479: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-02-24 05:38:04.615487: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-02-24 05:38:04.615496: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-02-24 05:38:04.615505: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-02-24 05:38:04.617836: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2021-02-24 05:38:04.617870: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 05:38:04.619623: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-02-24 05:38:04.619633: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2021-02-24 05:38:04.619642: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2021-02-24 05:38:04.622080: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 22605 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:1b:00.0, compute capability: 7.5)
+WARNING:tensorflow:Layer lstm will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer lstm will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer lstm will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:From /users/apokkunu/trial/akarsh/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:1666: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2021-02-24 05:38:04.657078: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1b:00.0 name: TITAN RTX computeCapability: 7.5
+coreClock: 1.77GHz coreCount: 72 deviceMemorySize: 23.65GiB deviceMemoryBandwidth: 625.94GiB/s
+2021-02-24 05:38:04.657147: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-02-24 05:38:04.657157: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-02-24 05:38:04.657166: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-02-24 05:38:04.657175: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-02-24 05:38:04.657183: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-02-24 05:38:04.657192: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-02-24 05:38:04.657201: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-02-24 05:38:04.659545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2021-02-24 05:38:04.659578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-02-24 05:38:04.659584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2021-02-24 05:38:04.659589: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2021-02-24 05:38:04.661954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 22605 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:1b:00.0, compute capability: 7.5)
+WARNING:tensorflow:Layer lstm_1 will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer lstm_2 will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+Model: "VAE"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            [(None, 50)]         0                                            
+__________________________________________________________________________________________________
+embedding (Embedding)           (None, 50, 300)      8533200     input_1[0][0]                    
+__________________________________________________________________________________________________
+custom_lstm (custom_lstm)       (None, 512)          1140736     embedding[0][0]                  
+__________________________________________________________________________________________________
+z_mean (Dense)                  (None, 128)          65664       custom_lstm[0][0]                
+__________________________________________________________________________________________________
+z_log_var (Dense)               (None, 128)          65664       custom_lstm[0][0]                
+__________________________________________________________________________________________________
+sampling (Sampling)             (None, 128)          0           z_mean[0][0]                     
+                                                                 z_log_var[0][0]                  
+__________________________________________________________________________________________________
+custom_decoder (custom_decoder) (None, 50, 28444)    16560924    sampling[0][0]                   
+__________________________________________________________________________________________________
+elbo__layer (ELBO_Layer)        (None, 50)           0           custom_decoder[0][0]             
+==================================================================================================
+Total params: 26,366,188
+Trainable params: 17,832,988
+Non-trainable params: 8,533,200
+__________________________________________________________________________________________________
+layer 0: <tensorflow.python.keras.engine.input_layer.InputLayer object at 0x2b4e71d2f690>
+has input mask: None
+has output mask: None
+layer 1: <tensorflow.python.keras.layers.embeddings.Embedding object at 0x2b4e71d2f650>
+has input mask: None
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+layer 2: <__main__.custom_lstm object at 0x2b4e71d7fd10>
+has input mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+layer 3: <tensorflow.python.keras.layers.core.Dense object at 0x2b4e71fa1b50>
+has input mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+layer 4: <tensorflow.python.keras.layers.core.Dense object at 0x2b4e72c9fed0>
+has input mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+layer 5: <__main__.Sampling object at 0x2b4e72cd2bd0>
+has input mask: [<tf.Tensor 'embedding/NotEqual:0' shape=(None, 50) dtype=bool>, <tf.Tensor 'embedding/NotEqual:0' shape=(None, 50) dtype=bool>]
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+layer 6: <__main__.custom_decoder object at 0x2b4e747d2c90>
+has input mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+layer 7: <__main__.ELBO_Layer object at 0x2b4e72ce8510>
+has input mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+has output mask: Tensor("embedding/NotEqual:0", shape=(None, 50), dtype=bool)
+
+
+Sent Length: 50, Vocab size: 28444, store_dir: output5
+Epochs: 500, BS: 256, LR: 0.0005, EMB DIM: 300, Z_DIM: 128, INTR_DIM: 256, Dropout: 0.2, KLW: 0.01
+
+
+2021-02-24 05:38:13.126045: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+Train on 414113 samples, validate on 202654 samples
+Epoch 1/500
+
+Epoch 00001: val_loss improved from inf to 55.28277, saving model to /users/apokkunu/trial/text/output5/weights.01-55.28.h5
+414113/414113 - 841s - loss: 59.7024 - kl_loss: 0.2016 - val_loss: 55.2828 - val_kl_loss: 0.2401
+Epoch 2/500
+
+Epoch 00002: val_loss improved from 55.28277 to 45.07887, saving model to /users/apokkunu/trial/text/output5/weights.02-45.08.h5
+414113/414113 - 846s - loss: 51.5931 - kl_loss: 0.3461 - val_loss: 45.0789 - val_kl_loss: 0.5198
+Epoch 3/500
+
+Epoch 00003: val_loss improved from 45.07887 to 30.80118, saving model to /users/apokkunu/trial/text/output5/weights.03-30.80.h5
+414113/414113 - 845s - loss: 38.6880 - kl_loss: 0.8331 - val_loss: 30.8012 - val_kl_loss: 1.0196
+Epoch 4/500
+
+Epoch 00004: val_loss improved from 30.80118 to 22.79317, saving model to /users/apokkunu/trial/text/output5/weights.04-22.79.h5
+414113/414113 - 823s - loss: 28.4682 - kl_loss: 1.1983 - val_loss: 22.7932 - val_kl_loss: 1.2844
+Epoch 5/500
+
+Epoch 00005: val_loss improved from 22.79317 to 18.12993, saving model to /users/apokkunu/trial/text/output5/weights.05-18.13.h5
+414113/414113 - 823s - loss: 22.6383 - kl_loss: 1.3886 - val_loss: 18.1299 - val_kl_loss: 1.4456
+Epoch 6/500
+
+Epoch 00006: val_loss improved from 18.12993 to 14.97586, saving model to /users/apokkunu/trial/text/output5/weights.06-14.98.h5
+414113/414113 - 834s - loss: 18.8520 - kl_loss: 1.5096 - val_loss: 14.9759 - val_kl_loss: 1.4941
+Epoch 7/500
+
+Epoch 00007: val_loss improved from 14.97586 to 12.86396, saving model to /users/apokkunu/trial/text/output5/weights.07-12.86.h5
+414113/414113 - 830s - loss: 16.2156 - kl_loss: 1.5797 - val_loss: 12.8640 - val_kl_loss: 1.5787
+Epoch 8/500
+
+Epoch 00008: val_loss improved from 12.86396 to 11.23678, saving model to /users/apokkunu/trial/text/output5/weights.08-11.24.h5
+414113/414113 - 819s - loss: 14.2778 - kl_loss: 1.6251 - val_loss: 11.2368 - val_kl_loss: 1.6175
+Epoch 9/500
+
+Epoch 00009: val_loss improved from 11.23678 to 10.03845, saving model to /users/apokkunu/trial/text/output5/weights.09-10.04.h5
+414113/414113 - 822s - loss: 12.7233 - kl_loss: 1.6613 - val_loss: 10.0384 - val_kl_loss: 1.6305
+Epoch 10/500
+
+Epoch 00010: val_loss improved from 10.03845 to 9.10767, saving model to /users/apokkunu/trial/text/output5/weights.10-9.11.h5
+414113/414113 - 830s - loss: 11.5085 - kl_loss: 1.6814 - val_loss: 9.1077 - val_kl_loss: 1.6696
+Epoch 11/500
+
+Epoch 00011: val_loss improved from 9.10767 to 8.38156, saving model to /users/apokkunu/trial/text/output5/weights.11-8.38.h5
+414113/414113 - 824s - loss: 10.5403 - kl_loss: 1.6896 - val_loss: 8.3816 - val_kl_loss: 1.6494
+Epoch 12/500
+
+Epoch 00012: val_loss improved from 8.38156 to 7.96481, saving model to /users/apokkunu/trial/text/output5/weights.12-7.96.h5
+414113/414113 - 817s - loss: 9.7974 - kl_loss: 1.6926 - val_loss: 7.9648 - val_kl_loss: 1.6294
+Epoch 13/500
+
+Epoch 00013: val_loss improved from 7.96481 to 7.43599, saving model to /users/apokkunu/trial/text/output5/weights.13-7.44.h5
+414113/414113 - 824s - loss: 9.1447 - kl_loss: 1.6952 - val_loss: 7.4360 - val_kl_loss: 1.6520
+Epoch 14/500
+
+Epoch 00014: val_loss improved from 7.43599 to 7.00890, saving model to /users/apokkunu/trial/text/output5/weights.14-7.01.h5
+414113/414113 - 831s - loss: 8.5958 - kl_loss: 1.6915 - val_loss: 7.0089 - val_kl_loss: 1.6601
+Epoch 15/500
+
+Epoch 00015: val_loss improved from 7.00890 to 6.66440, saving model to /users/apokkunu/trial/text/output5/weights.15-6.66.h5
+414113/414113 - 823s - loss: 8.1321 - kl_loss: 1.6882 - val_loss: 6.6644 - val_kl_loss: 1.6504
+Epoch 16/500
+
+Epoch 00016: val_loss improved from 6.66440 to 6.37414, saving model to /users/apokkunu/trial/text/output5/weights.16-6.37.h5
+414113/414113 - 820s - loss: 7.7392 - kl_loss: 1.6905 - val_loss: 6.3741 - val_kl_loss: 1.6107
+Epoch 17/500
+
+Epoch 00017: val_loss improved from 6.37414 to 6.15717, saving model to /users/apokkunu/trial/text/output5/weights.17-6.16.h5
+414113/414113 - 824s - loss: 7.3866 - kl_loss: 1.6865 - val_loss: 6.1572 - val_kl_loss: 1.6406
+Epoch 18/500
+
+Epoch 00018: val_loss improved from 6.15717 to 5.90187, saving model to /users/apokkunu/trial/text/output5/weights.18-5.90.h5
+414113/414113 - 830s - loss: 7.0677 - kl_loss: 1.6833 - val_loss: 5.9019 - val_kl_loss: 1.6238
+Epoch 19/500
+
+Epoch 00019: val_loss improved from 5.90187 to 5.75361, saving model to /users/apokkunu/trial/text/output5/weights.19-5.75.h5
+414113/414113 - 819s - loss: 6.7937 - kl_loss: 1.6815 - val_loss: 5.7536 - val_kl_loss: 1.6166
+Epoch 20/500
+
+Epoch 00020: val_loss improved from 5.75361 to 5.59164, saving model to /users/apokkunu/trial/text/output5/weights.20-5.59.h5
+414113/414113 - 819s - loss: 6.5739 - kl_loss: 1.6812 - val_loss: 5.5916 - val_kl_loss: 1.6443
+Epoch 21/500
+
+Epoch 00021: val_loss improved from 5.59164 to 5.42477, saving model to /users/apokkunu/trial/text/output5/weights.21-5.42.h5
+414113/414113 - 827s - loss: 6.3514 - kl_loss: 1.6783 - val_loss: 5.4248 - val_kl_loss: 1.5988
+Epoch 22/500
+
+Epoch 00022: val_loss improved from 5.42477 to 5.36998, saving model to /users/apokkunu/trial/text/output5/weights.22-5.37.h5
+414113/414113 - 830s - loss: 6.1612 - kl_loss: 1.6716 - val_loss: 5.3700 - val_kl_loss: 1.6469
+Epoch 23/500
+
+Epoch 00023: val_loss improved from 5.36998 to 5.23146, saving model to /users/apokkunu/trial/text/output5/weights.23-5.23.h5
+414113/414113 - 819s - loss: 5.9821 - kl_loss: 1.6688 - val_loss: 5.2315 - val_kl_loss: 1.6425
+Epoch 24/500
+
+Epoch 00024: val_loss improved from 5.23146 to 5.15305, saving model to /users/apokkunu/trial/text/output5/weights.24-5.15.h5
+414113/414113 - 820s - loss: 5.8425 - kl_loss: 1.6694 - val_loss: 5.1530 - val_kl_loss: 1.6163
+Epoch 25/500
+
+Epoch 00025: val_loss improved from 5.15305 to 5.02054, saving model to /users/apokkunu/trial/text/output5/weights.25-5.02.h5
+414113/414113 - 828s - loss: 5.6994 - kl_loss: 1.6640 - val_loss: 5.0205 - val_kl_loss: 1.5902
+Epoch 26/500
+
+Epoch 00026: val_loss improved from 5.02054 to 4.97742, saving model to /users/apokkunu/trial/text/output5/weights.26-4.98.h5
+414113/414113 - 825s - loss: 5.5712 - kl_loss: 1.6609 - val_loss: 4.9774 - val_kl_loss: 1.6142
+Epoch 27/500
+
+Epoch 00027: val_loss improved from 4.97742 to 4.89815, saving model to /users/apokkunu/trial/text/output5/weights.27-4.90.h5
+414113/414113 - 817s - loss: 5.4468 - kl_loss: 1.6585 - val_loss: 4.8982 - val_kl_loss: 1.6251
+Epoch 28/500
+
+Epoch 00028: val_loss improved from 4.89815 to 4.86646, saving model to /users/apokkunu/trial/text/output5/weights.28-4.87.h5
+414113/414113 - 820s - loss: 5.3415 - kl_loss: 1.6548 - val_loss: 4.8665 - val_kl_loss: 1.6392
+Epoch 29/500
+
+Epoch 00029: val_loss improved from 4.86646 to 4.78143, saving model to /users/apokkunu/trial/text/output5/weights.29-4.78.h5
+414113/414113 - 830s - loss: 5.2477 - kl_loss: 1.6539 - val_loss: 4.7814 - val_kl_loss: 1.6091
+Epoch 30/500
+
+Epoch 00030: val_loss improved from 4.78143 to 4.72851, saving model to /users/apokkunu/trial/text/output5/weights.30-4.73.h5
+414113/414113 - 828s - loss: 5.1426 - kl_loss: 1.6502 - val_loss: 4.7285 - val_kl_loss: 1.6233
+Epoch 31/500
+
+Epoch 00031: val_loss improved from 4.72851 to 4.66641, saving model to /users/apokkunu/trial/text/output5/weights.31-4.67.h5
+414113/414113 - 817s - loss: 5.0569 - kl_loss: 1.6504 - val_loss: 4.6664 - val_kl_loss: 1.5667
+Epoch 32/500
+
+Epoch 00032: val_loss improved from 4.66641 to 4.60686, saving model to /users/apokkunu/trial/text/output5/weights.32-4.61.h5
+414113/414113 - 823s - loss: 4.9817 - kl_loss: 1.6481 - val_loss: 4.6069 - val_kl_loss: 1.5641
+Epoch 33/500
+
+Epoch 00033: val_loss did not improve from 4.60686
+414113/414113 - 833s - loss: 4.9039 - kl_loss: 1.6462 - val_loss: 4.6134 - val_kl_loss: 1.5954
+Epoch 34/500
+
+Epoch 00034: val_loss improved from 4.60686 to 4.55119, saving model to /users/apokkunu/trial/text/output5/weights.34-4.55.h5
+414113/414113 - 832s - loss: 4.8403 - kl_loss: 1.6470 - val_loss: 4.5512 - val_kl_loss: 1.6067
+Epoch 35/500
+
+Epoch 00035: val_loss improved from 4.55119 to 4.47179, saving model to /users/apokkunu/trial/text/output5/weights.35-4.47.h5
+414113/414113 - 825s - loss: 4.7701 - kl_loss: 1.6421 - val_loss: 4.4718 - val_kl_loss: 1.5726
+Epoch 36/500
+
+Epoch 00036: val_loss improved from 4.47179 to 4.43461, saving model to /users/apokkunu/trial/text/output5/weights.36-4.43.h5
+414113/414113 - 835s - loss: 4.7251 - kl_loss: 1.6430 - val_loss: 4.4346 - val_kl_loss: 1.5592
+Epoch 37/500
+
+Epoch 00037: val_loss did not improve from 4.43461
+414113/414113 - 842s - loss: 4.6451 - kl_loss: 1.6402 - val_loss: 4.4588 - val_kl_loss: 1.5993
+Epoch 38/500
+
+Epoch 00038: val_loss improved from 4.43461 to 4.40438, saving model to /users/apokkunu/trial/text/output5/weights.38-4.40.h5
+414113/414113 - 832s - loss: 4.6125 - kl_loss: 1.6408 - val_loss: 4.4044 - val_kl_loss: 1.6119
+Epoch 39/500
+
+Epoch 00039: val_loss did not improve from 4.40438
+414113/414113 - 829s - loss: 4.5393 - kl_loss: 1.6382 - val_loss: 4.4163 - val_kl_loss: 1.6394
+Epoch 40/500
+
+Epoch 00040: val_loss improved from 4.40438 to 4.33098, saving model to /users/apokkunu/trial/text/output5/weights.40-4.33.h5
+414113/414113 - 835s - loss: 4.5133 - kl_loss: 1.6389 - val_loss: 4.3310 - val_kl_loss: 1.5795
+Epoch 41/500
+
+Epoch 00041: val_loss improved from 4.33098 to 4.30368, saving model to /users/apokkunu/trial/text/output5/weights.41-4.30.h5
+414113/414113 - 842s - loss: 4.4609 - kl_loss: 1.6355 - val_loss: 4.3037 - val_kl_loss: 1.5719
+Epoch 42/500
+
+Epoch 00042: val_loss improved from 4.30368 to 4.26231, saving model to /users/apokkunu/trial/text/output5/weights.42-4.26.h5
+414113/414113 - 823s - loss: 4.4173 - kl_loss: 1.6338 - val_loss: 4.2623 - val_kl_loss: 1.5612
+Epoch 43/500
+
+Epoch 00043: val_loss did not improve from 4.26231
+414113/414113 - 831s - loss: 4.3776 - kl_loss: 1.6352 - val_loss: 4.3189 - val_kl_loss: 1.6290
+Epoch 44/500
+
+Epoch 00044: val_loss improved from 4.26231 to 4.20785, saving model to /users/apokkunu/trial/text/output5/weights.44-4.21.h5
+414113/414113 - 837s - loss: 4.3467 - kl_loss: 1.6333 - val_loss: 4.2078 - val_kl_loss: 1.5447
+Epoch 45/500
+
+Epoch 00045: val_loss did not improve from 4.20785
+414113/414113 - 839s - loss: 4.2840 - kl_loss: 1.6284 - val_loss: 4.2184 - val_kl_loss: 1.5340
+Epoch 46/500
+
+Epoch 00046: val_loss improved from 4.20785 to 4.17323, saving model to /users/apokkunu/trial/text/output5/weights.46-4.17.h5
+414113/414113 - 826s - loss: 4.2513 - kl_loss: 1.6270 - val_loss: 4.1732 - val_kl_loss: 1.5721
+Epoch 47/500
+
+Epoch 00047: val_loss improved from 4.17323 to 4.14937, saving model to /users/apokkunu/trial/text/output5/weights.47-4.15.h5
+414113/414113 - 826s - loss: 4.2286 - kl_loss: 1.6281 - val_loss: 4.1494 - val_kl_loss: 1.5656
+Epoch 48/500
+
+Epoch 00048: val_loss did not improve from 4.14937
+414113/414113 - 841s - loss: 4.2032 - kl_loss: 1.6299 - val_loss: 4.1791 - val_kl_loss: 1.5944
+Epoch 49/500
+
+Epoch 00049: val_loss improved from 4.14937 to 4.12204, saving model to /users/apokkunu/trial/text/output5/weights.49-4.12.h5
+414113/414113 - 837s - loss: 4.1471 - kl_loss: 1.6223 - val_loss: 4.1220 - val_kl_loss: 1.5322
+Epoch 50/500
+
+Epoch 00050: val_loss improved from 4.12204 to 4.10024, saving model to /users/apokkunu/trial/text/output5/weights.50-4.10.h5
+414113/414113 - 828s - loss: 4.1393 - kl_loss: 1.6254 - val_loss: 4.1002 - val_kl_loss: 1.5539
+Epoch 51/500
+
+Epoch 00051: val_loss did not improve from 4.10024
+414113/414113 - 835s - loss: 4.1091 - kl_loss: 1.6237 - val_loss: 4.1378 - val_kl_loss: 1.5747
+Epoch 52/500
+
+Epoch 00052: val_loss improved from 4.10024 to 4.07227, saving model to /users/apokkunu/trial/text/output5/weights.52-4.07.h5
+414113/414113 - 839s - loss: 4.0715 - kl_loss: 1.6197 - val_loss: 4.0723 - val_kl_loss: 1.5546
+Epoch 53/500
+
+Epoch 00053: val_loss did not improve from 4.07227
+414113/414113 - 824s - loss: 4.0500 - kl_loss: 1.6187 - val_loss: 4.0785 - val_kl_loss: 1.5225
+Epoch 54/500
+
+Epoch 00054: val_loss improved from 4.07227 to 4.05346, saving model to /users/apokkunu/trial/text/output5/weights.54-4.05.h5
+414113/414113 - 818s - loss: 4.0271 - kl_loss: 1.6166 - val_loss: 4.0535 - val_kl_loss: 1.5424
+Epoch 55/500
+
+Epoch 00055: val_loss did not improve from 4.05346
+414113/414113 - 823s - loss: 4.0067 - kl_loss: 1.6175 - val_loss: 4.0746 - val_kl_loss: 1.5373
+Epoch 56/500
+
+Epoch 00056: val_loss improved from 4.05346 to 4.03420, saving model to /users/apokkunu/trial/text/output5/weights.56-4.03.h5
+414113/414113 - 827s - loss: 3.9708 - kl_loss: 1.6138 - val_loss: 4.0342 - val_kl_loss: 1.5665
+Epoch 57/500
+
+Epoch 00057: val_loss improved from 4.03420 to 4.02086, saving model to /users/apokkunu/trial/text/output5/weights.57-4.02.h5
+414113/414113 - 819s - loss: 3.9619 - kl_loss: 1.6144 - val_loss: 4.0209 - val_kl_loss: 1.5496
+Epoch 58/500
+
+Epoch 00058: val_loss did not improve from 4.02086
+414113/414113 - 816s - loss: 3.9342 - kl_loss: 1.6124 - val_loss: 4.0441 - val_kl_loss: 1.5288
+Epoch 59/500
+
+Epoch 00059: val_loss improved from 4.02086 to 4.00241, saving model to /users/apokkunu/trial/text/output5/weights.59-4.00.h5
+414113/414113 - 831s - loss: 3.9033 - kl_loss: 1.6093 - val_loss: 4.0024 - val_kl_loss: 1.5392
+Epoch 60/500
+
+Epoch 00060: val_loss did not improve from 4.00241
+414113/414113 - 842s - loss: 3.8872 - kl_loss: 1.6081 - val_loss: 4.0207 - val_kl_loss: 1.5358
+Epoch 61/500
+
+Epoch 00061: val_loss improved from 4.00241 to 3.97854, saving model to /users/apokkunu/trial/text/output5/weights.61-3.98.h5
+414113/414113 - 830s - loss: 3.8880 - kl_loss: 1.6105 - val_loss: 3.9785 - val_kl_loss: 1.5265
+Epoch 62/500
+
+Epoch 00062: val_loss did not improve from 3.97854
+414113/414113 - 830s - loss: 3.8488 - kl_loss: 1.6052 - val_loss: 4.0041 - val_kl_loss: 1.5261
+Epoch 63/500
+
+Epoch 00063: val_loss did not improve from 3.97854
+414113/414113 - 840s - loss: 3.8336 - kl_loss: 1.6053 - val_loss: 3.9849 - val_kl_loss: 1.5468
+Epoch 64/500
+
+Epoch 00064: val_loss did not improve from 3.97854
+414113/414113 - 827s - loss: 3.8192 - kl_loss: 1.6043 - val_loss: 3.9865 - val_kl_loss: 1.5527
+Epoch 65/500
+
+Epoch 00065: val_loss improved from 3.97854 to 3.96984, saving model to /users/apokkunu/trial/text/output5/weights.65-3.97.h5
+414113/414113 - 818s - loss: 3.8008 - kl_loss: 1.6063 - val_loss: 3.9698 - val_kl_loss: 1.5302
+Epoch 66/500
+
+Epoch 00066: val_loss did not improve from 3.96984
+414113/414113 - 821s - loss: 3.7888 - kl_loss: 1.6037 - val_loss: 4.0721 - val_kl_loss: 1.5628
+Epoch 67/500
+
+Epoch 00067: val_loss improved from 3.96984 to 3.92466, saving model to /users/apokkunu/trial/text/output5/weights.67-3.92.h5
+414113/414113 - 831s - loss: 3.7657 - kl_loss: 1.6031 - val_loss: 3.9247 - val_kl_loss: 1.5259
+Epoch 68/500
+
+Epoch 00068: val_loss did not improve from 3.92466
+414113/414113 - 824s - loss: 3.7567 - kl_loss: 1.6034 - val_loss: 3.9476 - val_kl_loss: 1.5388
+Epoch 69/500
+
+Epoch 00069: val_loss did not improve from 3.92466
+414113/414113 - 815s - loss: 3.7380 - kl_loss: 1.5993 - val_loss: 3.9821 - val_kl_loss: 1.5429
+Epoch 70/500
+
+Epoch 00070: val_loss did not improve from 3.92466
+414113/414113 - 824s - loss: 3.7211 - kl_loss: 1.6002 - val_loss: 3.9778 - val_kl_loss: 1.5247
+Epoch 71/500
+
+Epoch 00071: val_loss did not improve from 3.92466
+414113/414113 - 840s - loss: 3.7159 - kl_loss: 1.5996 - val_loss: 3.9314 - val_kl_loss: 1.5258
+Epoch 72/500
+
+Epoch 00072: val_loss did not improve from 3.92466
+414113/414113 - 831s - loss: 3.6910 - kl_loss: 1.5968 - val_loss: 3.9362 - val_kl_loss: 1.5382
+Epoch 73/500
+
+Epoch 00073: val_loss did not improve from 3.92466
+414113/414113 - 820s - loss: 3.6810 - kl_loss: 1.5977 - val_loss: 3.9353 - val_kl_loss: 1.5466
+Epoch 74/500
+
+Epoch 00074: val_loss did not improve from 3.92466
+414113/414113 - 825s - loss: 3.6732 - kl_loss: 1.5957 - val_loss: 3.9484 - val_kl_loss: 1.5618
+Epoch 75/500
+
+Epoch 00075: val_loss improved from 3.92466 to 3.91040, saving model to /users/apokkunu/trial/text/output5/weights.75-3.91.h5
+414113/414113 - 827s - loss: 3.6574 - kl_loss: 1.5937 - val_loss: 3.9104 - val_kl_loss: 1.5551
+Epoch 76/500
+
+Epoch 00076: val_loss improved from 3.91040 to 3.90843, saving model to /users/apokkunu/trial/text/output5/weights.76-3.91.h5
+414113/414113 - 820s - loss: 3.6384 - kl_loss: 1.5920 - val_loss: 3.9084 - val_kl_loss: 1.5402
+Epoch 77/500
+
+Epoch 00077: val_loss improved from 3.90843 to 3.89433, saving model to /users/apokkunu/trial/text/output5/weights.77-3.89.h5
+414113/414113 - 821s - loss: 3.6306 - kl_loss: 1.5922 - val_loss: 3.8943 - val_kl_loss: 1.5322
+Epoch 78/500
+
+Epoch 00078: val_loss improved from 3.89433 to 3.88987, saving model to /users/apokkunu/trial/text/output5/weights.78-3.89.h5
+414113/414113 - 827s - loss: 3.6121 - kl_loss: 1.5899 - val_loss: 3.8899 - val_kl_loss: 1.5157
+Epoch 79/500
+
+Epoch 00079: val_loss improved from 3.88987 to 3.88378, saving model to /users/apokkunu/trial/text/output5/weights.79-3.88.h5
+414113/414113 - 830s - loss: 3.6148 - kl_loss: 1.5931 - val_loss: 3.8838 - val_kl_loss: 1.5326
+Epoch 80/500
+
+Epoch 00080: val_loss improved from 3.88378 to 3.86829, saving model to /users/apokkunu/trial/text/output5/weights.80-3.87.h5
+414113/414113 - 815s - loss: 3.5844 - kl_loss: 1.5873 - val_loss: 3.8683 - val_kl_loss: 1.5265
+Epoch 81/500
+
+Epoch 00081: val_loss did not improve from 3.86829
+414113/414113 - 818s - loss: 3.5821 - kl_loss: 1.5876 - val_loss: 3.8805 - val_kl_loss: 1.5277
+Epoch 82/500
+
+Epoch 00082: val_loss did not improve from 3.86829
+414113/414113 - 830s - loss: 3.5693 - kl_loss: 1.5874 - val_loss: 3.8807 - val_kl_loss: 1.5357
+Epoch 83/500
+
+Epoch 00083: val_loss improved from 3.86829 to 3.85231, saving model to /users/apokkunu/trial/text/output5/weights.83-3.85.h5
+414113/414113 - 828s - loss: 3.5599 - kl_loss: 1.5875 - val_loss: 3.8523 - val_kl_loss: 1.5015
+Epoch 84/500
+
+Epoch 00084: val_loss did not improve from 3.85231
+414113/414113 - 820s - loss: 3.5523 - kl_loss: 1.5875 - val_loss: 3.8636 - val_kl_loss: 1.4849
+Epoch 85/500
+
+Epoch 00085: val_loss did not improve from 3.85231
+414113/414113 - 821s - loss: 3.5463 - kl_loss: 1.5883 - val_loss: 3.8735 - val_kl_loss: 1.5462
+Epoch 86/500
+
+Epoch 00086: val_loss did not improve from 3.85231
+414113/414113 - 827s - loss: 3.5313 - kl_loss: 1.5847 - val_loss: 3.8624 - val_kl_loss: 1.5341
+Epoch 87/500
+
+Epoch 00087: val_loss improved from 3.85231 to 3.84817, saving model to /users/apokkunu/trial/text/output5/weights.87-3.85.h5
+414113/414113 - 825s - loss: 3.5135 - kl_loss: 1.5846 - val_loss: 3.8482 - val_kl_loss: 1.5216
+Epoch 88/500
+
+Epoch 00088: val_loss improved from 3.84817 to 3.82423, saving model to /users/apokkunu/trial/text/output5/weights.88-3.82.h5
+414113/414113 - 819s - loss: 3.5100 - kl_loss: 1.5824 - val_loss: 3.8242 - val_kl_loss: 1.5067
+Epoch 89/500
+
+Epoch 00089: val_loss did not improve from 3.82423
+414113/414113 - 823s - loss: 3.4874 - kl_loss: 1.5815 - val_loss: 3.8732 - val_kl_loss: 1.5355
+Epoch 90/500
+
+Epoch 00090: val_loss did not improve from 3.82423
+414113/414113 - 830s - loss: 3.4817 - kl_loss: 1.5808 - val_loss: 3.8327 - val_kl_loss: 1.5200
+Epoch 91/500
+
+Epoch 00091: val_loss did not improve from 3.82423
+414113/414113 - 824s - loss: 3.4878 - kl_loss: 1.5822 - val_loss: 3.8709 - val_kl_loss: 1.5125
+Epoch 92/500
+
+Epoch 00092: val_loss improved from 3.82423 to 3.81464, saving model to /users/apokkunu/trial/text/output5/weights.92-3.81.h5
+414113/414113 - 819s - loss: 3.4790 - kl_loss: 1.5827 - val_loss: 3.8146 - val_kl_loss: 1.4981
+Epoch 93/500
+
+Epoch 00093: val_loss did not improve from 3.81464
+414113/414113 - 825s - loss: 3.4703 - kl_loss: 1.5836 - val_loss: 3.8501 - val_kl_loss: 1.5271
+Epoch 94/500
+
+Epoch 00094: val_loss improved from 3.81464 to 3.80306, saving model to /users/apokkunu/trial/text/output5/weights.94-3.80.h5
+414113/414113 - 830s - loss: 3.4487 - kl_loss: 1.5780 - val_loss: 3.8031 - val_kl_loss: 1.4916
+Epoch 95/500
+
+Epoch 00095: val_loss did not improve from 3.80306
+414113/414113 - 819s - loss: 3.4432 - kl_loss: 1.5768 - val_loss: 3.8396 - val_kl_loss: 1.5329
+Epoch 96/500
+
+Epoch 00096: val_loss did not improve from 3.80306
+414113/414113 - 818s - loss: 3.4295 - kl_loss: 1.5770 - val_loss: 3.8164 - val_kl_loss: 1.5168
+Epoch 97/500
+
+Epoch 00097: val_loss did not improve from 3.80306
+414113/414113 - 827s - loss: 3.4235 - kl_loss: 1.5762 - val_loss: 3.8195 - val_kl_loss: 1.5215
+Epoch 98/500
+
+Epoch 00098: val_loss did not improve from 3.80306
+414113/414113 - 829s - loss: 3.4213 - kl_loss: 1.5733 - val_loss: 3.8319 - val_kl_loss: 1.5146
+Epoch 99/500
+
+Epoch 00099: val_loss did not improve from 3.80306
+414113/414113 - 815s - loss: 3.4142 - kl_loss: 1.5780 - val_loss: 3.8953 - val_kl_loss: 1.5442
+Epoch 100/500
+
+Epoch 00100: val_loss did not improve from 3.80306
+414113/414113 - 818s - loss: 3.4043 - kl_loss: 1.5747 - val_loss: 3.8152 - val_kl_loss: 1.5276
+Epoch 101/500
+
+Epoch 00101: val_loss did not improve from 3.80306
+414113/414113 - 829s - loss: 3.3888 - kl_loss: 1.5728 - val_loss: 3.8073 - val_kl_loss: 1.4934
+Epoch 102/500
+
+Epoch 00102: val_loss improved from 3.80306 to 3.79403, saving model to /users/apokkunu/trial/text/output5/weights.102-3.79.h5
+414113/414113 - 829s - loss: 3.3956 - kl_loss: 1.5750 - val_loss: 3.7940 - val_kl_loss: 1.5114
+Epoch 103/500
+
+Epoch 00103: val_loss improved from 3.79403 to 3.79276, saving model to /users/apokkunu/trial/text/output5/weights.103-3.79.h5
+414113/414113 - 818s - loss: 3.3726 - kl_loss: 1.5701 - val_loss: 3.7928 - val_kl_loss: 1.5085
+Epoch 104/500
+
+Epoch 00104: val_loss improved from 3.79276 to 3.78831, saving model to /users/apokkunu/trial/text/output5/weights.104-3.79.h5
+414113/414113 - 818s - loss: 3.3694 - kl_loss: 1.5721 - val_loss: 3.7883 - val_kl_loss: 1.5072
+Epoch 105/500
+
+Epoch 00105: val_loss did not improve from 3.78831
+414113/414113 - 829s - loss: 3.3823 - kl_loss: 1.5759 - val_loss: 3.7976 - val_kl_loss: 1.5206
+Epoch 106/500
+
+Epoch 00106: val_loss improved from 3.78831 to 3.77936, saving model to /users/apokkunu/trial/text/output5/weights.106-3.78.h5
+414113/414113 - 827s - loss: 3.3556 - kl_loss: 1.5703 - val_loss: 3.7794 - val_kl_loss: 1.4978
+Epoch 107/500
+
+Epoch 00107: val_loss did not improve from 3.77936
+414113/414113 - 817s - loss: 3.3431 - kl_loss: 1.5676 - val_loss: 3.8221 - val_kl_loss: 1.5375
+Epoch 108/500
+
+Epoch 00108: val_loss did not improve from 3.77936
+414113/414113 - 823s - loss: 3.3381 - kl_loss: 1.5678 - val_loss: 3.7998 - val_kl_loss: 1.5102
+Epoch 109/500
+
+Epoch 00109: val_loss did not improve from 3.77936
+414113/414113 - 828s - loss: 3.3952 - kl_loss: 1.5786 - val_loss: 3.8656 - val_kl_loss: 1.5634
+Epoch 110/500
+
+Epoch 00110: val_loss did not improve from 3.77936
+414113/414113 - 823s - loss: 3.4002 - kl_loss: 1.5872 - val_loss: 3.7814 - val_kl_loss: 1.5252
+Epoch 111/500
+
+Epoch 00111: val_loss improved from 3.77936 to 3.77294, saving model to /users/apokkunu/trial/text/output5/weights.111-3.77.h5
+414113/414113 - 819s - loss: 3.3261 - kl_loss: 1.5708 - val_loss: 3.7729 - val_kl_loss: 1.5004
+Epoch 112/500
+
+Epoch 00112: val_loss improved from 3.77294 to 3.77067, saving model to /users/apokkunu/trial/text/output5/weights.112-3.77.h5
+414113/414113 - 826s - loss: 3.3056 - kl_loss: 1.5654 - val_loss: 3.7707 - val_kl_loss: 1.4936
+Epoch 113/500
+
+Epoch 00113: val_loss improved from 3.77067 to 3.75006, saving model to /users/apokkunu/trial/text/output5/weights.113-3.75.h5
+414113/414113 - 829s - loss: 3.3123 - kl_loss: 1.5685 - val_loss: 3.7501 - val_kl_loss: 1.4903
+Epoch 114/500
+
+Epoch 00114: val_loss did not improve from 3.75006
+414113/414113 - 822s - loss: 3.3180 - kl_loss: 1.5670 - val_loss: 3.7811 - val_kl_loss: 1.5082
+Epoch 115/500
+
+Epoch 00115: val_loss did not improve from 3.75006
+414113/414113 - 818s - loss: 3.3019 - kl_loss: 1.5652 - val_loss: 3.7941 - val_kl_loss: 1.4977
+Epoch 116/500
+
+Epoch 00116: val_loss did not improve from 3.75006
+414113/414113 - 826s - loss: 3.2888 - kl_loss: 1.5644 - val_loss: 3.7782 - val_kl_loss: 1.5008
+Epoch 117/500
+
+Epoch 00117: val_loss did not improve from 3.75006
+414113/414113 - 827s - loss: 3.2934 - kl_loss: 1.5642 - val_loss: 3.7617 - val_kl_loss: 1.5061
+Epoch 118/500
+
+Epoch 00118: val_loss did not improve from 3.75006
+414113/414113 - 819s - loss: 3.2894 - kl_loss: 1.5652 - val_loss: 3.7733 - val_kl_loss: 1.4917
+Epoch 119/500
+
+Epoch 00119: val_loss did not improve from 3.75006
+414113/414113 - 820s - loss: 3.2790 - kl_loss: 1.5613 - val_loss: 3.7962 - val_kl_loss: 1.5227
+Epoch 120/500
+
+Epoch 00120: val_loss did not improve from 3.75006
+414113/414113 - 827s - loss: 3.2764 - kl_loss: 1.5629 - val_loss: 3.7771 - val_kl_loss: 1.4794
+Epoch 121/500
+
+Epoch 00121: val_loss did not improve from 3.75006
+414113/414113 - 835s - loss: 3.2595 - kl_loss: 1.5609 - val_loss: 3.7660 - val_kl_loss: 1.4731
+Epoch 122/500
+
+Epoch 00122: val_loss did not improve from 3.75006
+414113/414113 - 831s - loss: 3.2530 - kl_loss: 1.5582 - val_loss: 3.7812 - val_kl_loss: 1.5100
+Epoch 123/500
+
+Epoch 00123: val_loss improved from 3.75006 to 3.74042, saving model to /users/apokkunu/trial/text/output5/weights.123-3.74.h5
+414113/414113 - 834s - loss: 3.2595 - kl_loss: 1.5599 - val_loss: 3.7404 - val_kl_loss: 1.4982
+Epoch 124/500
+
+Epoch 00124: val_loss did not improve from 3.74042
+414113/414113 - 828s - loss: 3.2521 - kl_loss: 1.5607 - val_loss: 3.7445 - val_kl_loss: 1.4815
+Epoch 125/500
+
+Epoch 00125: val_loss did not improve from 3.74042
+414113/414113 - 829s - loss: 3.2373 - kl_loss: 1.5579 - val_loss: 3.7412 - val_kl_loss: 1.4913
+Epoch 126/500
+
+Epoch 00126: val_loss improved from 3.74042 to 3.73460, saving model to /users/apokkunu/trial/text/output5/weights.126-3.73.h5
+414113/414113 - 817s - loss: 3.2493 - kl_loss: 1.5603 - val_loss: 3.7346 - val_kl_loss: 1.4959
+Epoch 127/500
+
+Epoch 00127: val_loss did not improve from 3.73460
+414113/414113 - 817s - loss: 3.2236 - kl_loss: 1.5579 - val_loss: 3.7710 - val_kl_loss: 1.4945
+Epoch 128/500
+
+Epoch 00128: val_loss did not improve from 3.73460
+414113/414113 - 826s - loss: 3.2292 - kl_loss: 1.5601 - val_loss: 3.7449 - val_kl_loss: 1.4710
+Epoch 129/500
+
+Epoch 00129: val_loss did not improve from 3.73460
+414113/414113 - 828s - loss: 3.2350 - kl_loss: 1.5599 - val_loss: 3.7497 - val_kl_loss: 1.4895
+Epoch 130/500
+
+Epoch 00130: val_loss did not improve from 3.73460
+414113/414113 - 825s - loss: 3.2089 - kl_loss: 1.5566 - val_loss: 3.7527 - val_kl_loss: 1.4841
+Epoch 131/500
+
+Epoch 00131: val_loss did not improve from 3.73460
+414113/414113 - 829s - loss: 3.2181 - kl_loss: 1.5599 - val_loss: 3.7505 - val_kl_loss: 1.4831
+Epoch 132/500
+
+Epoch 00132: val_loss improved from 3.73460 to 3.73384, saving model to /users/apokkunu/trial/text/output5/weights.132-3.73.h5
+414113/414113 - 832s - loss: 3.1997 - kl_loss: 1.5551 - val_loss: 3.7338 - val_kl_loss: 1.4736
+Epoch 133/500
+
+Epoch 00133: val_loss did not improve from 3.73384
+414113/414113 - 836s - loss: 3.1905 - kl_loss: 1.5525 - val_loss: 3.7564 - val_kl_loss: 1.5109
+Epoch 134/500
+
+Epoch 00134: val_loss did not improve from 3.73384
+414113/414113 - 834s - loss: 3.1957 - kl_loss: 1.5544 - val_loss: 3.7448 - val_kl_loss: 1.5145
+Epoch 135/500
+
+Epoch 00135: val_loss did not improve from 3.73384
+414113/414113 - 829s - loss: 3.1797 - kl_loss: 1.5527 - val_loss: 3.7387 - val_kl_loss: 1.4937
+Epoch 136/500
+
+Epoch 00136: val_loss did not improve from 3.73384
+414113/414113 - 827s - loss: 3.1933 - kl_loss: 1.5537 - val_loss: 3.7766 - val_kl_loss: 1.5279
+Epoch 137/500
+
+Epoch 00137: val_loss improved from 3.73384 to 3.72089, saving model to /users/apokkunu/trial/text/output5/weights.137-3.72.h5
+414113/414113 - 836s - loss: 3.1714 - kl_loss: 1.5507 - val_loss: 3.7209 - val_kl_loss: 1.4779
+Epoch 138/500
+
+Epoch 00138: val_loss did not improve from 3.72089
+414113/414113 - 837s - loss: 3.1824 - kl_loss: 1.5532 - val_loss: 3.7242 - val_kl_loss: 1.4937
+Epoch 139/500
+
+Epoch 00139: val_loss did not improve from 3.72089
+414113/414113 - 824s - loss: 3.1716 - kl_loss: 1.5533 - val_loss: 3.7423 - val_kl_loss: 1.4934
+Epoch 140/500
+
+Epoch 00140: val_loss did not improve from 3.72089
+414113/414113 - 815s - loss: 3.1740 - kl_loss: 1.5519 - val_loss: 3.7375 - val_kl_loss: 1.4736
+Epoch 141/500
+
+Epoch 00141: val_loss did not improve from 3.72089
+414113/414113 - 815s - loss: 3.1570 - kl_loss: 1.5493 - val_loss: 3.7353 - val_kl_loss: 1.4937
+Epoch 142/500
+
+Epoch 00142: val_loss improved from 3.72089 to 3.70587, saving model to /users/apokkunu/trial/text/output5/weights.142-3.71.h5
+414113/414113 - 825s - loss: 3.1558 - kl_loss: 1.5486 - val_loss: 3.7059 - val_kl_loss: 1.4734
+Epoch 143/500
+
+Epoch 00143: val_loss did not improve from 3.70587
+414113/414113 - 825s - loss: 3.1523 - kl_loss: 1.5504 - val_loss: 3.7143 - val_kl_loss: 1.4926
+Epoch 144/500
+
+Epoch 00144: val_loss did not improve from 3.70587
+414113/414113 - 818s - loss: 3.1478 - kl_loss: 1.5483 - val_loss: 3.7240 - val_kl_loss: 1.4841
+Epoch 145/500
+
+Epoch 00145: val_loss did not improve from 3.70587
+414113/414113 - 818s - loss: 3.1343 - kl_loss: 1.5457 - val_loss: 3.7231 - val_kl_loss: 1.4876
+Epoch 146/500
+
+Epoch 00146: val_loss did not improve from 3.70587
+414113/414113 - 820s - loss: 3.1340 - kl_loss: 1.5466 - val_loss: 3.7150 - val_kl_loss: 1.4746
+Epoch 147/500
+
+Epoch 00147: val_loss did not improve from 3.70587
+414113/414113 - 825s - loss: 3.1461 - kl_loss: 1.5485 - val_loss: 3.7265 - val_kl_loss: 1.4832
+Epoch 148/500
+
+Epoch 00148: val_loss improved from 3.70587 to 3.68724, saving model to /users/apokkunu/trial/text/output5/weights.148-3.69.h5
+414113/414113 - 825s - loss: 3.1331 - kl_loss: 1.5464 - val_loss: 3.6872 - val_kl_loss: 1.4674
+Epoch 149/500
+
+Epoch 00149: val_loss did not improve from 3.68724
+414113/414113 - 817s - loss: 3.1339 - kl_loss: 1.5477 - val_loss: 3.7063 - val_kl_loss: 1.4723
+Epoch 150/500
+
+Epoch 00150: val_loss did not improve from 3.68724
+414113/414113 - 815s - loss: 3.1308 - kl_loss: 1.5482 - val_loss: 3.7147 - val_kl_loss: 1.4724
+Epoch 151/500
+
+Epoch 00151: val_loss did not improve from 3.68724
+414113/414113 - 829s - loss: 3.1155 - kl_loss: 1.5447 - val_loss: 3.7317 - val_kl_loss: 1.4941
+Epoch 152/500
+
+Epoch 00152: val_loss did not improve from 3.68724
+414113/414113 - 863s - loss: 3.1175 - kl_loss: 1.5474 - val_loss: 3.6960 - val_kl_loss: 1.4760
+Epoch 153/500
+
+Epoch 00153: val_loss improved from 3.68724 to 3.68631, saving model to /users/apokkunu/trial/text/output5/weights.153-3.69.h5
+414113/414113 - 860s - loss: 3.1179 - kl_loss: 1.5460 - val_loss: 3.6863 - val_kl_loss: 1.4558
+Epoch 154/500
+
+Epoch 00154: val_loss did not improve from 3.68631
+414113/414113 - 848s - loss: 3.1118 - kl_loss: 1.5450 - val_loss: 3.7122 - val_kl_loss: 1.4961
+Epoch 155/500
+
+Epoch 00155: val_loss did not improve from 3.68631
+414113/414113 - 843s - loss: 3.1010 - kl_loss: 1.5430 - val_loss: 3.7109 - val_kl_loss: 1.4838
+Epoch 156/500
+
+Epoch 00156: val_loss did not improve from 3.68631
+414113/414113 - 848s - loss: 3.1061 - kl_loss: 1.5449 - val_loss: 3.6976 - val_kl_loss: 1.4745
+Epoch 157/500
+
+Epoch 00157: val_loss did not improve from 3.68631
+414113/414113 - 856s - loss: 3.0984 - kl_loss: 1.5425 - val_loss: 3.7102 - val_kl_loss: 1.4761
+Epoch 158/500
+
+Epoch 00158: val_loss did not improve from 3.68631
+414113/414113 - 853s - loss: 3.0947 - kl_loss: 1.5415 - val_loss: 3.7300 - val_kl_loss: 1.5086
+Epoch 159/500
+
+Epoch 00159: val_loss did not improve from 3.68631
+414113/414113 - 851s - loss: 3.0855 - kl_loss: 1.5399 - val_loss: 3.7137 - val_kl_loss: 1.4735
+Epoch 160/500
+
+Epoch 00160: val_loss did not improve from 3.68631
+414113/414113 - 844s - loss: 3.0917 - kl_loss: 1.5434 - val_loss: 3.6987 - val_kl_loss: 1.4702
+Epoch 161/500
+
+Epoch 00161: val_loss did not improve from 3.68631
+414113/414113 - 851s - loss: 3.0751 - kl_loss: 1.5389 - val_loss: 3.6970 - val_kl_loss: 1.4840
+Epoch 162/500
+
+Epoch 00162: val_loss did not improve from 3.68631
+414113/414113 - 852s - loss: 3.0907 - kl_loss: 1.5434 - val_loss: 3.7172 - val_kl_loss: 1.4817
+Epoch 163/500
+
+Epoch 00163: val_loss did not improve from 3.68631
+414113/414113 - 853s - loss: 3.0704 - kl_loss: 1.5396 - val_loss: 3.7185 - val_kl_loss: 1.5025
+Epoch 164/500
+
+Epoch 00164: val_loss did not improve from 3.68631
+414113/414113 - 852s - loss: 3.0772 - kl_loss: 1.5394 - val_loss: 3.7059 - val_kl_loss: 1.4895
+Epoch 165/500
+
+Epoch 00165: val_loss improved from 3.68631 to 3.68235, saving model to /users/apokkunu/trial/text/output5/weights.165-3.68.h5
+414113/414113 - 851s - loss: 3.0682 - kl_loss: 1.5416 - val_loss: 3.6824 - val_kl_loss: 1.4512
+Epoch 166/500
+
+Epoch 00166: val_loss did not improve from 3.68235
+414113/414113 - 849s - loss: 3.0616 - kl_loss: 1.5379 - val_loss: 3.7069 - val_kl_loss: 1.4697
+Epoch 167/500
+
+Epoch 00167: val_loss did not improve from 3.68235
+414113/414113 - 846s - loss: 3.0656 - kl_loss: 1.5379 - val_loss: 3.7743 - val_kl_loss: 1.5184
+Epoch 168/500
+
+Epoch 00168: val_loss did not improve from 3.68235
+414113/414113 - 849s - loss: 3.0612 - kl_loss: 1.5401 - val_loss: 3.6909 - val_kl_loss: 1.4524
+Epoch 169/500
+
+Epoch 00169: val_loss improved from 3.68235 to 3.67534, saving model to /users/apokkunu/trial/text/output5/weights.169-3.68.h5
+414113/414113 - 852s - loss: 3.0493 - kl_loss: 1.5367 - val_loss: 3.6753 - val_kl_loss: 1.4377
+Epoch 170/500
+
+Epoch 00170: val_loss did not improve from 3.67534
+414113/414113 - 857s - loss: 3.0508 - kl_loss: 1.5370 - val_loss: 3.6997 - val_kl_loss: 1.4738
+Epoch 171/500
+
+Epoch 00171: val_loss did not improve from 3.67534
+414113/414113 - 848s - loss: 3.0618 - kl_loss: 1.5397 - val_loss: 3.6807 - val_kl_loss: 1.4719
+Epoch 172/500
+
+Epoch 00172: val_loss did not improve from 3.67534
+414113/414113 - 844s - loss: 3.0448 - kl_loss: 1.5377 - val_loss: 3.7019 - val_kl_loss: 1.4740
+Epoch 173/500
+
+Epoch 00173: val_loss did not improve from 3.67534
+414113/414113 - 848s - loss: 3.0327 - kl_loss: 1.5340 - val_loss: 3.6854 - val_kl_loss: 1.4554
+Epoch 174/500
+
+Epoch 00174: val_loss did not improve from 3.67534
+414113/414113 - 857s - loss: 3.0372 - kl_loss: 1.5365 - val_loss: 3.7804 - val_kl_loss: 1.4820
+Epoch 175/500
+
+Epoch 00175: val_loss improved from 3.67534 to 3.67173, saving model to /users/apokkunu/trial/text/output5/weights.175-3.67.h5
+414113/414113 - 860s - loss: 3.0252 - kl_loss: 1.5317 - val_loss: 3.6717 - val_kl_loss: 1.4752
+Epoch 176/500
+
+Epoch 00176: val_loss did not improve from 3.67173
+414113/414113 - 848s - loss: 3.0388 - kl_loss: 1.5353 - val_loss: 3.6881 - val_kl_loss: 1.4714
+Epoch 177/500
+
+Epoch 00177: val_loss did not improve from 3.67173
+414113/414113 - 842s - loss: 3.0257 - kl_loss: 1.5350 - val_loss: 3.7193 - val_kl_loss: 1.4990
+Epoch 178/500
+
+Epoch 00178: val_loss did not improve from 3.67173
+414113/414113 - 842s - loss: 3.0286 - kl_loss: 1.5335 - val_loss: 3.6943 - val_kl_loss: 1.4750
+Epoch 179/500
+
+Epoch 00179: val_loss did not improve from 3.67173
+414113/414113 - 857s - loss: 3.0098 - kl_loss: 1.5318 - val_loss: 3.6853 - val_kl_loss: 1.4644
+Epoch 180/500
+
+Epoch 00180: val_loss did not improve from 3.67173
+414113/414113 - 859s - loss: 3.0146 - kl_loss: 1.5324 - val_loss: 3.6729 - val_kl_loss: 1.4628
+Epoch 181/500
+
+Epoch 00181: val_loss did not improve from 3.67173
+414113/414113 - 848s - loss: 3.0306 - kl_loss: 1.5331 - val_loss: 3.6868 - val_kl_loss: 1.4578
+Epoch 182/500
+
+Epoch 00182: val_loss did not improve from 3.67173
+414113/414113 - 843s - loss: 3.0119 - kl_loss: 1.5345 - val_loss: 3.6750 - val_kl_loss: 1.4476
+Epoch 183/500
+
+Epoch 00183: val_loss did not improve from 3.67173
+414113/414113 - 845s - loss: 3.0124 - kl_loss: 1.5328 - val_loss: 3.6883 - val_kl_loss: 1.4728
+Epoch 184/500
+
+Epoch 00184: val_loss improved from 3.67173 to 3.67094, saving model to /users/apokkunu/trial/text/output5/weights.184-3.67.h5
+414113/414113 - 856s - loss: 3.0043 - kl_loss: 1.5310 - val_loss: 3.6709 - val_kl_loss: 1.4522
+Epoch 185/500
+
+Epoch 00185: val_loss did not improve from 3.67094
+414113/414113 - 858s - loss: 3.0159 - kl_loss: 1.5338 - val_loss: 3.6943 - val_kl_loss: 1.4614
+Epoch 186/500
+
+Epoch 00186: val_loss improved from 3.67094 to 3.65075, saving model to /users/apokkunu/trial/text/output5/weights.186-3.65.h5
+414113/414113 - 853s - loss: 2.9900 - kl_loss: 1.5300 - val_loss: 3.6508 - val_kl_loss: 1.4427
+Epoch 187/500
+
+Epoch 00187: val_loss did not improve from 3.65075
+414113/414113 - 844s - loss: 3.0061 - kl_loss: 1.5309 - val_loss: 3.6851 - val_kl_loss: 1.4759
+Epoch 188/500
+
+Epoch 00188: val_loss did not improve from 3.65075
+414113/414113 - 849s - loss: 2.9814 - kl_loss: 1.5263 - val_loss: 3.6669 - val_kl_loss: 1.4530
+Epoch 189/500
+
+Epoch 00189: val_loss did not improve from 3.65075
+414113/414113 - 851s - loss: 2.9953 - kl_loss: 1.5287 - val_loss: 3.6759 - val_kl_loss: 1.4744
+Epoch 190/500
+
+Epoch 00190: val_loss did not improve from 3.65075
+414113/414113 - 855s - loss: 2.9827 - kl_loss: 1.5272 - val_loss: 3.6737 - val_kl_loss: 1.4601
+Epoch 191/500
+
+Epoch 00191: val_loss did not improve from 3.65075
+414113/414113 - 851s - loss: 2.9861 - kl_loss: 1.5265 - val_loss: 3.6534 - val_kl_loss: 1.4357
+Epoch 192/500
+
+Epoch 00192: val_loss did not improve from 3.65075
+414113/414113 - 850s - loss: 2.9761 - kl_loss: 1.5256 - val_loss: 3.6706 - val_kl_loss: 1.4280
+Epoch 193/500
+
+Epoch 00193: val_loss did not improve from 3.65075
+414113/414113 - 849s - loss: 2.9838 - kl_loss: 1.5291 - val_loss: 3.6604 - val_kl_loss: 1.4554
+Epoch 194/500
+
+Epoch 00194: val_loss did not improve from 3.65075
+414113/414113 - 849s - loss: 2.9653 - kl_loss: 1.5255 - val_loss: 3.6547 - val_kl_loss: 1.4507
+Epoch 195/500
+
+Epoch 00195: val_loss did not improve from 3.65075
+414113/414113 - 848s - loss: 2.9759 - kl_loss: 1.5284 - val_loss: 3.6644 - val_kl_loss: 1.4593
+Epoch 196/500
+
+Epoch 00196: val_loss did not improve from 3.65075
+414113/414113 - 850s - loss: 2.9702 - kl_loss: 1.5269 - val_loss: 3.6805 - val_kl_loss: 1.4701
+Epoch 197/500
+
+Epoch 00197: val_loss did not improve from 3.65075
+414113/414113 - 855s - loss: 2.9728 - kl_loss: 1.5286 - val_loss: 3.6668 - val_kl_loss: 1.4662
+Epoch 198/500
+
+Epoch 00198: val_loss did not improve from 3.65075
+414113/414113 - 849s - loss: 2.9612 - kl_loss: 1.5266 - val_loss: 3.6900 - val_kl_loss: 1.4849
+Epoch 199/500
+
+Epoch 00199: val_loss did not improve from 3.65075
+414113/414113 - 846s - loss: 2.9616 - kl_loss: 1.5245 - val_loss: 3.6617 - val_kl_loss: 1.4587
+Epoch 200/500
+
+Epoch 00200: val_loss did not improve from 3.65075
+414113/414113 - 844s - loss: 2.9643 - kl_loss: 1.5256 - val_loss: 3.7434 - val_kl_loss: 1.4577
+Epoch 201/500
+
+Epoch 00201: val_loss did not improve from 3.65075
+414113/414113 - 853s - loss: 2.9538 - kl_loss: 1.5237 - val_loss: 3.6810 - val_kl_loss: 1.4541
+Epoch 202/500
+
+Epoch 00202: val_loss did not improve from 3.65075
+414113/414113 - 859s - loss: 2.9566 - kl_loss: 1.5254 - val_loss: 3.6696 - val_kl_loss: 1.4711
+Epoch 203/500
+
+Epoch 00203: val_loss did not improve from 3.65075
+414113/414113 - 854s - loss: 2.9609 - kl_loss: 1.5249 - val_loss: 3.6565 - val_kl_loss: 1.4494
+Epoch 204/500
+
+Epoch 00204: val_loss did not improve from 3.65075
+414113/414113 - 842s - loss: 2.9472 - kl_loss: 1.5226 - val_loss: 3.6768 - val_kl_loss: 1.4818
+Epoch 205/500
+
+Epoch 00205: val_loss did not improve from 3.65075
+414113/414113 - 844s - loss: 2.9487 - kl_loss: 1.5229 - val_loss: 3.6843 - val_kl_loss: 1.4689
+Epoch 206/500
+
+Epoch 00206: val_loss did not improve from 3.65075
+414113/414113 - 854s - loss: 2.9559 - kl_loss: 1.5270 - val_loss: 3.6542 - val_kl_loss: 1.4518
+Epoch 207/500
+
+Epoch 00207: val_loss did not improve from 3.65075
+414113/414113 - 859s - loss: 2.9428 - kl_loss: 1.5231 - val_loss: 3.7165 - val_kl_loss: 1.4939
+Epoch 208/500
+
+Epoch 00208: val_loss improved from 3.65075 to 3.64877, saving model to /users/apokkunu/trial/text/output5/weights.208-3.65.h5
+414113/414113 - 854s - loss: 2.9459 - kl_loss: 1.5257 - val_loss: 3.6488 - val_kl_loss: 1.4477
+Epoch 209/500
+
+Epoch 00209: val_loss did not improve from 3.64877
+414113/414113 - 844s - loss: 2.9275 - kl_loss: 1.5178 - val_loss: 3.6548 - val_kl_loss: 1.4304
+Epoch 210/500
+
+Epoch 00210: val_loss did not improve from 3.64877
+414113/414113 - 846s - loss: 2.9373 - kl_loss: 1.5223 - val_loss: 3.6522 - val_kl_loss: 1.4249
+Epoch 211/500
+
+Epoch 00211: val_loss did not improve from 3.64877
+414113/414113 - 851s - loss: 2.9339 - kl_loss: 1.5192 - val_loss: 3.6522 - val_kl_loss: 1.4449
+Epoch 212/500
+
+Epoch 00212: val_loss did not improve from 3.64877
+414113/414113 - 861s - loss: 2.9366 - kl_loss: 1.5223 - val_loss: 3.6951 - val_kl_loss: 1.4690
+Epoch 213/500
+
+Epoch 00213: val_loss did not improve from 3.64877
+414113/414113 - 854s - loss: 2.9302 - kl_loss: 1.5220 - val_loss: 3.6532 - val_kl_loss: 1.4255
+Epoch 214/500
+
+Epoch 00214: val_loss did not improve from 3.64877
+414113/414113 - 845s - loss: 2.9177 - kl_loss: 1.5196 - val_loss: 3.6935 - val_kl_loss: 1.4776
+Epoch 215/500
+
+Epoch 00215: val_loss improved from 3.64877 to 3.64602, saving model to /users/apokkunu/trial/text/output5/weights.215-3.65.h5
+414113/414113 - 845s - loss: 2.9165 - kl_loss: 1.5202 - val_loss: 3.6460 - val_kl_loss: 1.4491
+Epoch 216/500
+
+Epoch 00216: val_loss did not improve from 3.64602
+414113/414113 - 851s - loss: 2.9223 - kl_loss: 1.5213 - val_loss: 3.6601 - val_kl_loss: 1.4508
+Epoch 217/500
+
+Epoch 00217: val_loss did not improve from 3.64602
+414113/414113 - 857s - loss: 2.9217 - kl_loss: 1.5220 - val_loss: 3.6688 - val_kl_loss: 1.4619
+Epoch 218/500
+
+Epoch 00218: val_loss did not improve from 3.64602
+414113/414113 - 853s - loss: 2.9213 - kl_loss: 1.5200 - val_loss: 3.6696 - val_kl_loss: 1.4544
+Epoch 219/500
+
+Epoch 00219: val_loss did not improve from 3.64602
+414113/414113 - 848s - loss: 2.9166 - kl_loss: 1.5194 - val_loss: 3.6623 - val_kl_loss: 1.4264
+Epoch 220/500
+
+Epoch 00220: val_loss did not improve from 3.64602
+414113/414113 - 845s - loss: 2.9105 - kl_loss: 1.5188 - val_loss: 3.6699 - val_kl_loss: 1.4662
+Epoch 221/500
+
+Epoch 00221: val_loss did not improve from 3.64602
+414113/414113 - 850s - loss: 2.9120 - kl_loss: 1.5199 - val_loss: 3.6632 - val_kl_loss: 1.4468
+Epoch 222/500
+
+Epoch 00222: val_loss did not improve from 3.64602
+414113/414113 - 848s - loss: 2.9068 - kl_loss: 1.5170 - val_loss: 3.6757 - val_kl_loss: 1.4703
+Epoch 223/500
+
+Epoch 00223: val_loss did not improve from 3.64602
+414113/414113 - 852s - loss: 2.8985 - kl_loss: 1.5184 - val_loss: 3.6587 - val_kl_loss: 1.4507
+Epoch 224/500
+
+Epoch 00224: val_loss did not improve from 3.64602
+414113/414113 - 852s - loss: 2.8942 - kl_loss: 1.5140 - val_loss: 3.6492 - val_kl_loss: 1.4326
+Epoch 225/500
+
+Epoch 00225: val_loss did not improve from 3.64602
+414113/414113 - 850s - loss: 2.9103 - kl_loss: 1.5185 - val_loss: 3.6546 - val_kl_loss: 1.4455
+Epoch 226/500
+
+Epoch 00226: val_loss did not improve from 3.64602
+414113/414113 - 851s - loss: 2.8921 - kl_loss: 1.5152 - val_loss: 3.6857 - val_kl_loss: 1.4449
+Epoch 227/500
+
+Epoch 00227: val_loss improved from 3.64602 to 3.63325, saving model to /users/apokkunu/trial/text/output5/weights.227-3.63.h5
+414113/414113 - 844s - loss: 2.9023 - kl_loss: 1.5165 - val_loss: 3.6332 - val_kl_loss: 1.4333
+Epoch 228/500
+
+Epoch 00228: val_loss did not improve from 3.63325
+414113/414113 - 849s - loss: 2.8883 - kl_loss: 1.5176 - val_loss: 3.6745 - val_kl_loss: 1.4627
+Epoch 229/500
+
+Epoch 00229: val_loss did not improve from 3.63325
+414113/414113 - 856s - loss: 2.8883 - kl_loss: 1.5140 - val_loss: 3.6410 - val_kl_loss: 1.4310
+Epoch 230/500
+
+Epoch 00230: val_loss did not improve from 3.63325
+414113/414113 - 855s - loss: 2.8918 - kl_loss: 1.5150 - val_loss: 3.6530 - val_kl_loss: 1.4589
+Epoch 231/500
+
+Epoch 00231: val_loss did not improve from 3.63325
+414113/414113 - 845s - loss: 2.8867 - kl_loss: 1.5165 - val_loss: 3.6980 - val_kl_loss: 1.4601
+Epoch 232/500
+
+Epoch 00232: val_loss did not improve from 3.63325
+414113/414113 - 842s - loss: 2.8824 - kl_loss: 1.5165 - val_loss: 3.6390 - val_kl_loss: 1.4275
+Epoch 233/500
+
+Epoch 00233: val_loss did not improve from 3.63325
+414113/414113 - 848s - loss: 2.8907 - kl_loss: 1.5169 - val_loss: 3.6507 - val_kl_loss: 1.4428
+Epoch 234/500
+
+Epoch 00234: val_loss did not improve from 3.63325
+414113/414113 - 859s - loss: 2.8926 - kl_loss: 1.5180 - val_loss: 3.6451 - val_kl_loss: 1.4528
+Epoch 235/500
+
+Epoch 00235: val_loss did not improve from 3.63325
+414113/414113 - 859s - loss: 2.8731 - kl_loss: 1.5139 - val_loss: 3.6722 - val_kl_loss: 1.4608
+Epoch 236/500
+
+Epoch 00236: val_loss did not improve from 3.63325
+414113/414113 - 843s - loss: 2.8742 - kl_loss: 1.5129 - val_loss: 3.6582 - val_kl_loss: 1.4538
+Epoch 237/500
+
+Epoch 00237: val_loss did not improve from 3.63325
+414113/414113 - 842s - loss: 2.8823 - kl_loss: 1.5160 - val_loss: 3.6567 - val_kl_loss: 1.4310
+Epoch 238/500
+
+Epoch 00238: val_loss did not improve from 3.63325
+414113/414113 - 847s - loss: 2.8758 - kl_loss: 1.5136 - val_loss: 3.6933 - val_kl_loss: 1.4536
+Epoch 239/500
+
+Epoch 00239: val_loss did not improve from 3.63325
+414113/414113 - 860s - loss: 2.8650 - kl_loss: 1.5133 - val_loss: 3.6716 - val_kl_loss: 1.4654
+Epoch 240/500
+
+Epoch 00240: val_loss did not improve from 3.63325
+414113/414113 - 857s - loss: 2.8780 - kl_loss: 1.5175 - val_loss: 3.6484 - val_kl_loss: 1.4574
+Epoch 241/500
+
+Epoch 00241: val_loss did not improve from 3.63325
+414113/414113 - 847s - loss: 2.8604 - kl_loss: 1.5098 - val_loss: 3.6476 - val_kl_loss: 1.4388
+Epoch 242/500
+
+Epoch 00242: val_loss did not improve from 3.63325
+414113/414113 - 842s - loss: 2.8644 - kl_loss: 1.5131 - val_loss: 3.6809 - val_kl_loss: 1.4715
+Epoch 243/500
+
+Epoch 00243: val_loss did not improve from 3.63325
+414113/414113 - 848s - loss: 2.8598 - kl_loss: 1.5118 - val_loss: 3.6465 - val_kl_loss: 1.4461
+Epoch 244/500
+
+Epoch 00244: val_loss did not improve from 3.63325
+414113/414113 - 855s - loss: 2.8662 - kl_loss: 1.5122 - val_loss: 3.6667 - val_kl_loss: 1.4463
+Epoch 245/500
+
+Epoch 00245: val_loss did not improve from 3.63325
+414113/414113 - 856s - loss: 2.8547 - kl_loss: 1.5123 - val_loss: 3.6602 - val_kl_loss: 1.4630
+Epoch 246/500
+
+Epoch 00246: val_loss did not improve from 3.63325
+414113/414113 - 851s - loss: 2.8593 - kl_loss: 1.5116 - val_loss: 3.6677 - val_kl_loss: 1.4483
+Epoch 247/500
+
+Epoch 00247: val_loss improved from 3.63325 to 3.63262, saving model to /users/apokkunu/trial/text/output5/weights.247-3.63.h5
+414113/414113 - 842s - loss: 2.8478 - kl_loss: 1.5096 - val_loss: 3.6326 - val_kl_loss: 1.4372
+Epoch 248/500
+
+Epoch 00248: val_loss did not improve from 3.63262
+414113/414113 - 850s - loss: 2.8560 - kl_loss: 1.5102 - val_loss: 3.6459 - val_kl_loss: 1.4374
+Epoch 249/500
+
+Epoch 00249: val_loss did not improve from 3.63262
+414113/414113 - 851s - loss: 2.8508 - kl_loss: 1.5118 - val_loss: 3.6528 - val_kl_loss: 1.4362
+Epoch 250/500
+
+Epoch 00250: val_loss did not improve from 3.63262
+414113/414113 - 851s - loss: 2.8434 - kl_loss: 1.5101 - val_loss: 3.6789 - val_kl_loss: 1.4895
+Epoch 251/500
+
+Epoch 00251: val_loss did not improve from 3.63262
+414113/414113 - 853s - loss: 2.8485 - kl_loss: 1.5105 - val_loss: 3.6847 - val_kl_loss: 1.4767
+Epoch 252/500
+
+Epoch 00252: val_loss did not improve from 3.63262
+414113/414113 - 851s - loss: 2.8358 - kl_loss: 1.5081 - val_loss: 3.6344 - val_kl_loss: 1.4417
+Epoch 253/500
+
+Epoch 00253: val_loss did not improve from 3.63262
+414113/414113 - 848s - loss: 2.8505 - kl_loss: 1.5124 - val_loss: 3.6696 - val_kl_loss: 1.4581
+Epoch 254/500
+
+Epoch 00254: val_loss did not improve from 3.63262
+414113/414113 - 847s - loss: 2.8386 - kl_loss: 1.5083 - val_loss: 3.6501 - val_kl_loss: 1.4260
+Epoch 255/500
+
+Epoch 00255: val_loss did not improve from 3.63262
+414113/414113 - 848s - loss: 2.8365 - kl_loss: 1.5095 - val_loss: 3.6490 - val_kl_loss: 1.4391
+Epoch 256/500
+
+Epoch 00256: val_loss did not improve from 3.63262
+414113/414113 - 850s - loss: 2.8311 - kl_loss: 1.5071 - val_loss: 3.6428 - val_kl_loss: 1.4476
+Epoch 257/500
+
+Epoch 00257: val_loss did not improve from 3.63262
+414113/414113 - 857s - loss: 2.8362 - kl_loss: 1.5095 - val_loss: 3.6635 - val_kl_loss: 1.4474
+Epoch 258/500
+
+Epoch 00258: val_loss did not improve from 3.63262
+414113/414113 - 848s - loss: 2.8174 - kl_loss: 1.5057 - val_loss: 3.6365 - val_kl_loss: 1.4311
+Epoch 259/500
+
+Epoch 00259: val_loss did not improve from 3.63262
+414113/414113 - 845s - loss: 2.8249 - kl_loss: 1.5086 - val_loss: 3.6352 - val_kl_loss: 1.4453
+Epoch 260/500
+
+Epoch 00260: val_loss did not improve from 3.63262
+414113/414113 - 846s - loss: 2.8253 - kl_loss: 1.5095 - val_loss: 3.6327 - val_kl_loss: 1.4265
+Epoch 261/500
+
+Epoch 00261: val_loss improved from 3.63262 to 3.61956, saving model to /users/apokkunu/trial/text/output5/weights.261-3.62.h5
+414113/414113 - 855s - loss: 2.8142 - kl_loss: 1.5055 - val_loss: 3.6196 - val_kl_loss: 1.4335
+Epoch 262/500
+
+Epoch 00262: val_loss did not improve from 3.61956
+414113/414113 - 860s - loss: 2.8327 - kl_loss: 1.5087 - val_loss: 3.6684 - val_kl_loss: 1.4131
+Epoch 263/500
+
+Epoch 00263: val_loss did not improve from 3.61956
+414113/414113 - 851s - loss: 2.8195 - kl_loss: 1.5071 - val_loss: 3.6389 - val_kl_loss: 1.4394
+Epoch 264/500
+
+Epoch 00264: val_loss did not improve from 3.61956
+414113/414113 - 841s - loss: 2.8112 - kl_loss: 1.5046 - val_loss: 3.6398 - val_kl_loss: 1.4332
+Epoch 265/500
+
+Epoch 00265: val_loss improved from 3.61956 to 3.61837, saving model to /users/apokkunu/trial/text/output5/weights.265-3.62.h5
+414113/414113 - 842s - loss: 2.8231 - kl_loss: 1.5097 - val_loss: 3.6184 - val_kl_loss: 1.4205
+Epoch 266/500
+
+Epoch 00266: val_loss did not improve from 3.61837
+414113/414113 - 857s - loss: 2.8289 - kl_loss: 1.5086 - val_loss: 3.6308 - val_kl_loss: 1.4416
+Epoch 267/500
+
+Epoch 00267: val_loss did not improve from 3.61837
+414113/414113 - 859s - loss: 2.8235 - kl_loss: 1.5074 - val_loss: 3.6566 - val_kl_loss: 1.4399
+Epoch 268/500
+
+Epoch 00268: val_loss did not improve from 3.61837
+414113/414113 - 851s - loss: 2.8137 - kl_loss: 1.5062 - val_loss: 3.6569 - val_kl_loss: 1.4459
+Epoch 269/500
+
+Epoch 00269: val_loss did not improve from 3.61837
+414113/414113 - 842s - loss: 2.8132 - kl_loss: 1.5068 - val_loss: 3.6618 - val_kl_loss: 1.4581
+Epoch 270/500
+
+Epoch 00270: val_loss did not improve from 3.61837
+414113/414113 - 845s - loss: 2.8081 - kl_loss: 1.5039 - val_loss: 3.6573 - val_kl_loss: 1.4342
+Epoch 271/500
+
+Epoch 00271: val_loss did not improve from 3.61837
+414113/414113 - 856s - loss: 2.8120 - kl_loss: 1.5048 - val_loss: 3.6419 - val_kl_loss: 1.4624
+Epoch 272/500
+
+Epoch 00272: val_loss improved from 3.61837 to 3.61092, saving model to /users/apokkunu/trial/text/output5/weights.272-3.61.h5
+414113/414113 - 860s - loss: 2.8031 - kl_loss: 1.5043 - val_loss: 3.6109 - val_kl_loss: 1.4098
+Epoch 273/500
+
+Epoch 00273: val_loss did not improve from 3.61092
+414113/414113 - 851s - loss: 2.8079 - kl_loss: 1.5067 - val_loss: 3.6282 - val_kl_loss: 1.4316
+Epoch 274/500
+
+Epoch 00274: val_loss did not improve from 3.61092
+414113/414113 - 844s - loss: 2.8034 - kl_loss: 1.5042 - val_loss: 3.6182 - val_kl_loss: 1.4284
+Epoch 275/500
+
+Epoch 00275: val_loss did not improve from 3.61092
+414113/414113 - 849s - loss: 2.7928 - kl_loss: 1.5017 - val_loss: 3.6312 - val_kl_loss: 1.4283
+Epoch 276/500
+
+Epoch 00276: val_loss did not improve from 3.61092
+414113/414113 - 850s - loss: 2.8039 - kl_loss: 1.5023 - val_loss: 3.6332 - val_kl_loss: 1.4547
+Epoch 277/500
+
+Epoch 00277: val_loss did not improve from 3.61092
+414113/414113 - 854s - loss: 2.8097 - kl_loss: 1.5089 - val_loss: 3.6551 - val_kl_loss: 1.4404
+Epoch 278/500
+
+Epoch 00278: val_loss improved from 3.61092 to 3.60708, saving model to /users/apokkunu/trial/text/output5/weights.278-3.61.h5
+414113/414113 - 853s - loss: 2.7896 - kl_loss: 1.5053 - val_loss: 3.6071 - val_kl_loss: 1.4163
+Epoch 279/500
+
+Epoch 00279: val_loss did not improve from 3.60708
+414113/414113 - 846s - loss: 2.7970 - kl_loss: 1.5025 - val_loss: 3.6481 - val_kl_loss: 1.4411
+Epoch 280/500
+
+Epoch 00280: val_loss did not improve from 3.60708
+414113/414113 - 849s - loss: 2.7898 - kl_loss: 1.5021 - val_loss: 3.6390 - val_kl_loss: 1.4570
+Epoch 281/500
+
+Epoch 00281: val_loss did not improve from 3.60708
+414113/414113 - 851s - loss: 2.7911 - kl_loss: 1.5030 - val_loss: 3.6175 - val_kl_loss: 1.4452
+Epoch 282/500
+
+Epoch 00282: val_loss did not improve from 3.60708
+414113/414113 - 847s - loss: 2.7864 - kl_loss: 1.5015 - val_loss: 3.6547 - val_kl_loss: 1.4226
+Epoch 283/500
+
+Epoch 00283: val_loss did not improve from 3.60708
+414113/414113 - 852s - loss: 2.7995 - kl_loss: 1.5056 - val_loss: 3.6394 - val_kl_loss: 1.4341
+Epoch 284/500
+
+Epoch 00284: val_loss did not improve from 3.60708
+414113/414113 - 857s - loss: 2.7954 - kl_loss: 1.5055 - val_loss: 3.6486 - val_kl_loss: 1.4621
+Epoch 285/500
+
+Epoch 00285: val_loss did not improve from 3.60708
+414113/414113 - 850s - loss: 2.7889 - kl_loss: 1.5027 - val_loss: 3.6372 - val_kl_loss: 1.4224
+Epoch 286/500
+
+Epoch 00286: val_loss did not improve from 3.60708
+414113/414113 - 847s - loss: 2.7810 - kl_loss: 1.5031 - val_loss: 3.6707 - val_kl_loss: 1.4503
+Epoch 287/500
+
+Epoch 00287: val_loss did not improve from 3.60708
+414113/414113 - 843s - loss: 2.7790 - kl_loss: 1.5022 - val_loss: 3.6373 - val_kl_loss: 1.4360
+Epoch 288/500
+
+Epoch 00288: val_loss did not improve from 3.60708
+414113/414113 - 852s - loss: 2.7845 - kl_loss: 1.5018 - val_loss: 3.6329 - val_kl_loss: 1.4217
+Epoch 289/500
+
+Epoch 00289: val_loss did not improve from 3.60708
+414113/414113 - 858s - loss: 2.7752 - kl_loss: 1.5019 - val_loss: 3.6195 - val_kl_loss: 1.4185
+Epoch 290/500
+
+Epoch 00290: val_loss did not improve from 3.60708
+414113/414113 - 855s - loss: 2.7808 - kl_loss: 1.5036 - val_loss: 3.6478 - val_kl_loss: 1.4482
+Epoch 291/500
+
+Epoch 00291: val_loss improved from 3.60708 to 3.60606, saving model to /users/apokkunu/trial/text/output5/weights.291-3.61.h5
+414113/414113 - 844s - loss: 2.7794 - kl_loss: 1.5038 - val_loss: 3.6061 - val_kl_loss: 1.4245
+Epoch 292/500
+
+Epoch 00292: val_loss did not improve from 3.60606
+414113/414113 - 843s - loss: 2.7777 - kl_loss: 1.5022 - val_loss: 3.6151 - val_kl_loss: 1.4247
+Epoch 293/500
+
+Epoch 00293: val_loss did not improve from 3.60606
+414113/414113 - 852s - loss: 2.7680 - kl_loss: 1.5004 - val_loss: 3.6353 - val_kl_loss: 1.4441
+Epoch 294/500
+
+Epoch 00294: val_loss did not improve from 3.60606
+414113/414113 - 859s - loss: 2.7752 - kl_loss: 1.5004 - val_loss: 3.6177 - val_kl_loss: 1.4298
+Epoch 295/500
+
+Epoch 00295: val_loss did not improve from 3.60606
+414113/414113 - 859s - loss: 2.7757 - kl_loss: 1.5016 - val_loss: 3.6675 - val_kl_loss: 1.4629
+Epoch 296/500
+
+Epoch 00296: val_loss did not improve from 3.60606
+414113/414113 - 841s - loss: 2.7664 - kl_loss: 1.5000 - val_loss: 3.6375 - val_kl_loss: 1.4585
+Epoch 297/500
+
+Epoch 00297: val_loss did not improve from 3.60606
+414113/414113 - 843s - loss: 2.7794 - kl_loss: 1.5011 - val_loss: 3.6217 - val_kl_loss: 1.4210
+Epoch 298/500
+
+Epoch 00298: val_loss did not improve from 3.60606
+414113/414113 - 850s - loss: 2.7718 - kl_loss: 1.5012 - val_loss: 3.6255 - val_kl_loss: 1.4434
+Epoch 299/500
+
+Epoch 00299: val_loss did not improve from 3.60606
+414113/414113 - 860s - loss: 2.7605 - kl_loss: 1.4983 - val_loss: 3.6466 - val_kl_loss: 1.4197
+Epoch 300/500
+
+Epoch 00300: val_loss improved from 3.60606 to 3.60316, saving model to /users/apokkunu/trial/text/output5/weights.300-3.60.h5
+414113/414113 - 857s - loss: 2.7681 - kl_loss: 1.5011 - val_loss: 3.6032 - val_kl_loss: 1.4165
+Epoch 301/500
+
+Epoch 00301: val_loss did not improve from 3.60316
+414113/414113 - 847s - loss: 2.7594 - kl_loss: 1.4980 - val_loss: 3.6154 - val_kl_loss: 1.4316
+Epoch 302/500
+
+Epoch 00302: val_loss did not improve from 3.60316
+414113/414113 - 843s - loss: 2.7660 - kl_loss: 1.4995 - val_loss: 3.6468 - val_kl_loss: 1.4263
+Epoch 303/500
+
+Epoch 00303: val_loss did not improve from 3.60316
+414113/414113 - 848s - loss: 2.7650 - kl_loss: 1.5005 - val_loss: 3.6151 - val_kl_loss: 1.4202
+Epoch 304/500
+
+Epoch 00304: val_loss did not improve from 3.60316
+414113/414113 - 858s - loss: 2.7466 - kl_loss: 1.4946 - val_loss: 3.6247 - val_kl_loss: 1.4391
+Epoch 305/500
+
+Epoch 00305: val_loss improved from 3.60316 to 3.60244, saving model to /users/apokkunu/trial/text/output5/weights.305-3.60.h5
+414113/414113 - 852s - loss: 2.7529 - kl_loss: 1.4995 - val_loss: 3.6024 - val_kl_loss: 1.4079
+Epoch 306/500
+
+Epoch 00306: val_loss did not improve from 3.60244
+414113/414113 - 852s - loss: 2.7567 - kl_loss: 1.5001 - val_loss: 3.6393 - val_kl_loss: 1.4433
+Epoch 307/500
+
+Epoch 00307: val_loss did not improve from 3.60244
+414113/414113 - 844s - loss: 2.7546 - kl_loss: 1.4992 - val_loss: 3.6178 - val_kl_loss: 1.4178
+Epoch 308/500
+
+Epoch 00308: val_loss did not improve from 3.60244
+414113/414113 - 851s - loss: 2.7452 - kl_loss: 1.4948 - val_loss: 3.6148 - val_kl_loss: 1.4104
+slurmstepd: error: *** JOB 617035 ON str-gpu1 CANCELLED AT 2021-02-27T05:37:45 DUE TO TIME LIMIT ***
